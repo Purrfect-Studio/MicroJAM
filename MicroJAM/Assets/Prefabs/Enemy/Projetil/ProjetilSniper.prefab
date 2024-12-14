@@ -102,6 +102,7 @@ MonoBehaviour:
   playerHealthSystem: {fileID: 0}
   playerController: {fileID: 0}
   damage: 1
+  projetil: 1
 --- !u!50 &9008992326949002306
 Rigidbody2D:
   serializedVersion: 4
