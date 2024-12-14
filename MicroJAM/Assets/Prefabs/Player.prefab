@@ -163,6 +163,7 @@ MonoBehaviour:
   fireRate: 0.2
   maxAmmo: 10
   currentAmmo: 0
+  bulletCount: 0
   reloadTime: 2
 --- !u!114 &1038233150
 MonoBehaviour:
