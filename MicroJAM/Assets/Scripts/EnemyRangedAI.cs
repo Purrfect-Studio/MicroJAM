@@ -5,15 +5,15 @@ using System.Collections;
 public class EnemyRangedAI : MonoBehaviour
 {
     public float speed = 3f; // Velocidade do inimigo
-    public float areaDeDistancia = 5f; // Raio de distância segura do alvo
+    public float areaDeDistancia = 10f; // Raio de distância segura do alvo
 
-    private TargetsScanner targetsScanner;
+    public TargetsScanner targetsScanner;
     public GameObject target; // Alvo mais próximo
     public Vector2 pontoDestino; // Próximo ponto de destino
     public bool emMovimento = false;
     public float raioMovimentoAleatorio = 10f; // Raio de movimento aleatório
 
-
+    private bool followPlayer = true;
     void Start()
     {
         targetsScanner = GetComponent<TargetsScanner>();
@@ -30,6 +30,11 @@ public class EnemyRangedAI : MonoBehaviour
 
             if (target != null)
             {
+                if(followPlayer)
+                {
+                    GetComponent<EnemyAI>().enabled = false;
+                    followPlayer = false;
+                }
                 float distanciaAoAlvo = Vector2.Distance(transform.position, target.transform.position);
 
                 if (distanciaAoAlvo < areaDeDistancia)
@@ -45,12 +50,20 @@ public class EnemyRangedAI : MonoBehaviour
             }
             else
             {
+                if (!followPlayer)
+                {
+                    GetComponent<EnemyAI>().enabled = true;
+                    followPlayer = true;
+                }
                 // Se não houver alvo, mover para posição aleatória
-                EscolherNovoPontoAleatorio();
+                //EscolherNovoPontoAleatorio();
             }
 
             // Move até o ponto de destino
-            yield return StartCoroutine(MoverParaPontoDestino());
+            if (!followPlayer)
+            {
+                yield return StartCoroutine(MoverParaPontoDestino());
+            }
 
             // Aguarda um intervalo antes de executar a próxima ação
             yield return new WaitForSeconds(speed);
