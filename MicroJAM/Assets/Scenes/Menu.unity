@@ -1146,7 +1146,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.767999, g: 1, b: 0.5801887, a: 1}
+      maxColor: {r: 0.767999, g: 1, b: 0.5801887, a: 0.13725491}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -5739,11 +5739,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0, g: 0, b: 0, a: 1}
-    m_HighlightedColor: {r: 0.11320752, g: 0.11320752, b: 0.11320752, a: 1}
-    m_PressedColor: {r: 0.20754719, g: 0.20754719, b: 0.20754719, a: 1}
-    m_SelectedColor: {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 1}
-    m_DisabledColor: {r: 0.20754719, g: 0.20754719, b: 0.20754719, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.3882353, g: 1, b: 0.34509805, a: 1}
+    m_PressedColor: {r: 0.07450981, g: 0.40392157, b: 0.16078432, a: 1}
+    m_SelectedColor: {r: 0.05268779, g: 0.3018868, b: 0.11795419, a: 1}
+    m_DisabledColor: {r: 0.03671236, g: 0.23584908, b: 0.08886721, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.2
   m_SpriteState:
@@ -5758,7 +5758,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 643154114}
+  m_TargetGraphic: {fileID: 928813514}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -5885,11 +5885,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0, g: 0, b: 0, a: 1}
-    m_HighlightedColor: {r: 1, g: 0.81960785, b: 0, a: 1}
-    m_PressedColor: {r: 0.20754719, g: 0.20754719, b: 0.20754719, a: 1}
-    m_SelectedColor: {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 1}
-    m_DisabledColor: {r: 0.20754719, g: 0.20754719, b: 0.20754719, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.3882353, g: 1, b: 0.34509805, a: 1}
+    m_PressedColor: {r: 0.07450981, g: 0.40392157, b: 0.16078432, a: 1}
+    m_SelectedColor: {r: 0.05268779, g: 0.3018868, b: 0.11795419, a: 1}
+    m_DisabledColor: {r: 0.03671236, g: 0.23584908, b: 0.08886721, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.2
   m_SpriteState:
@@ -5904,7 +5904,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 786884508}
+  m_TargetGraphic: {fileID: 2087056254}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -6334,6 +6334,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!81 &1108010312
 AudioListener:
   m_ObjectHideFlags: 0
@@ -6915,8 +6936,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 13.3810005}
+  m_SizeDelta: {x: 0, y: -4.573}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1358981670
 MonoBehaviour:
@@ -6931,7 +6952,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.22352941}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.5882353}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7017,11 +7038,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0, g: 0, b: 0, a: 1}
-    m_HighlightedColor: {r: 1, g: 0.81960785, b: 0, a: 1}
-    m_PressedColor: {r: 0.20754719, g: 0.20754719, b: 0.20754719, a: 1}
-    m_SelectedColor: {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 1}
-    m_DisabledColor: {r: 0.20754719, g: 0.20754719, b: 0.20754719, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.3882353, g: 1, b: 0.34509805, a: 1}
+    m_PressedColor: {r: 0.07450981, g: 0.40392157, b: 0.16078432, a: 1}
+    m_SelectedColor: {r: 0.05268779, g: 0.3018868, b: 0.11795419, a: 1}
+    m_DisabledColor: {r: 0.03671236, g: 0.23584908, b: 0.08886721, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.2
   m_SpriteState:
@@ -7036,7 +7057,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1452464884}
+  m_TargetGraphic: {fileID: 514923658}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -7196,11 +7217,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0, g: 0, b: 0, a: 1}
-    m_HighlightedColor: {r: 1, g: 0.81960785, b: 0, a: 1}
-    m_PressedColor: {r: 0.20754719, g: 0.20754719, b: 0.20754719, a: 1}
-    m_SelectedColor: {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 1}
-    m_DisabledColor: {r: 0.20754719, g: 0.20754719, b: 0.20754719, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.3882353, g: 1, b: 0.34509805, a: 1}
+    m_PressedColor: {r: 0.07450981, g: 0.40392157, b: 0.16078432, a: 1}
+    m_SelectedColor: {r: 0.05268779, g: 0.3018868, b: 0.11795419, a: 1}
+    m_DisabledColor: {r: 0.03671236, g: 0.23584908, b: 0.08886721, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.2
   m_SpriteState:
@@ -7215,7 +7236,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1732959794}
+  m_TargetGraphic: {fileID: 2068808610}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -7877,6 +7898,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2083270076}
   - component: {fileID: 2083270077}
+  - component: {fileID: 2083270078}
   m_Layer: 0
   m_Name: Fortress 1
   m_TagString: Untagged
@@ -7893,7 +7915,7 @@ Transform:
   m_GameObject: {fileID: 2083270075}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0, z: -590.9552}
-  m_LocalScale: {x: 85.07083, y: 85.07083, z: 85.07083}
+  m_LocalScale: {x: 87.94099, y: 87.94099, z: 87.94099}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 195397336}
@@ -7941,7 +7963,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1d1c5cd9f6280544d885c4f4f7296984, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.682984, g: 0.745283, b: 0.66442686, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -7951,6 +7973,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2083270078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083270075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3637a0ce4393ab4fbfc6c22b3ecc87c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offsetMultiplier: 3
+  smoothTime: 0.2
 --- !u!1 &2087056251
 GameObject:
   m_ObjectHideFlags: 0
