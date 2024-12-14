@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e61a25c28efb7f489541554a32df5de, type: 3}
   m_Name: Weapons
   m_EditorClassIdentifier: 
-  shotgunDamage: 2
+  shotgunDamage: 3
   shotgunFireRate: 0.7
   shotgunReloadTime: 2
   shotgunBulletCount: 8

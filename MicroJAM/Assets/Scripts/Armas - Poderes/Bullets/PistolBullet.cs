@@ -3,11 +3,10 @@ using UnityEngine.TextCore.Text;
 
 public class PistolBullet : MonoBehaviour
 {
-    public float speed = 10f; // Velocidade do projétil
-    public float lifeTime = 3f; // Tempo de vida antes de ser destruído
-    public float spreadRadius = 1f; // Raio de dispersão ao redor do mouse
-    public float penetration = 0f;
-    private OnHitDamage onHitDamage;
+    public float speed; // Velocidade do projétil
+    public float lifeTime; // Tempo de vida antes de ser destruído
+    public float spreadRadius; // Raio de dispersão ao redor do mouse
+    public float penetration;
 
     public Weapons weapons;
 
@@ -15,13 +14,6 @@ public class PistolBullet : MonoBehaviour
 
     void Start()
     {
-        onHitDamage = GetComponent<OnHitDamage>();
-
-        onHitDamage.damage = weapons.pistolDamage;
-        speed = weapons.pistolShotSpeed;
-        lifeTime = weapons.pistolRange;
-        spreadRadius = weapons.pistolSpread;
-        penetration = weapons.pistolPenetration;
 
         // Obtém a posição do mouse no mundo
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);

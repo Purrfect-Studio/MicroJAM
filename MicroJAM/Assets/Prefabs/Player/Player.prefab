@@ -161,7 +161,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3df6b15bd3cd3f41abaa9e078c40e25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 3696234118922433258, guid: 653cffdda5235ec4898ea49b7be4de89, type: 3}
+  bulletPrefab:
+  - {fileID: 3696234118922433258, guid: 9e550106eba1d154181af89432ddc446, type: 3}
+  - {fileID: 3696234118922433258, guid: 9fac85e657d905b4e8489491756484c5, type: 3}
+  - {fileID: 3696234118922433258, guid: af8ebb3885f7fbc4ea1a6be8e36ad21a, type: 3}
+  - {fileID: 3696234118922433258, guid: 653cffdda5235ec4898ea49b7be4de89, type: 3}
   fireRate: 0.2
   maxAmmo: 10
   currentAmmo: 0

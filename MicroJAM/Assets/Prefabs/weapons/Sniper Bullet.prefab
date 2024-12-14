@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetTag: Enemy
-  damage: 1
+  damage: 10
 --- !u!70 &7817181792428653633
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

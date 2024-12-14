@@ -6,7 +6,7 @@ public class OnHitDamage : MonoBehaviour
 {
     [Header("Configurações")]
     public string targetTag; // Tag do alvo (por exemplo, "enemy")
-    public float damage = 10; // Dano causado ao inimigo
+    public float damage; // Dano causado ao inimigo
 
     // Esse método é chamado quando o objeto com este script colide com outro objeto (via trigger)
     void OnTriggerEnter2D(Collider2D other)
