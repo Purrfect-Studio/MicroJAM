@@ -13,10 +13,11 @@ GameObject:
   - component: {fileID: 1897920953069598293}
   - component: {fileID: 1897920953069598282}
   - component: {fileID: -2961563056445545545}
-  - component: {fileID: 6207858956703062021}
+  - component: {fileID: 1038233149}
+  - component: {fileID: 1038233150}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,7 +77,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 76
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 0, b: 0.79383564, a: 1}
   m_FlipX: 0
@@ -105,7 +106,7 @@ MonoBehaviour:
   playerSpeed: 10
   KBForce: 2
   KBCount: 0
-  KBTime: 4
+  KBTime: 0.2
   isKnockRight: 0
   invulnerabilityDuration: 2
   isInvulnerable: 0
@@ -146,7 +147,7 @@ MonoBehaviour:
   scanRadius: 15
   closestTarget: {fileID: 0}
   closestDistance: 0
---- !u!114 &6207858956703062021
+--- !u!114 &1038233149
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -155,8 +156,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 1897920953069598294}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ad7dbf62ea35eb4486177e7163c2dbf, type: 3}
+  m_Script: {fileID: 11500000, guid: e3df6b15bd3cd3f41abaa9e078c40e25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
-  stopDistance: 1
+  bulletPrefab: {fileID: 3696234118922433258, guid: 9fac85e657d905b4e8489491756484c5, type: 3}
+  fireRate: 0.2
+  maxAmmo: 10
+  currentAmmo: 0
+  reloadTime: 2
+--- !u!114 &1038233150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897920953069598294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08133ca7d985b684fa9b75bde2185651, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vida: 10
+  vidaMaxima: 10
+  sliderVida: {fileID: 0}
