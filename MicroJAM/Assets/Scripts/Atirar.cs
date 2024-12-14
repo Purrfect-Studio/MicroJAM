@@ -4,7 +4,6 @@ using System.Collections;
 public class Atirar : MonoBehaviour
 {
     public GameObject bulletPrefab; // Prefab do projétil
-    public GameObject shotgunBulletPrefab; // Prefab da espingarda
     public float fireRate = 0.2f; // Taxa de disparo (tempo entre cada tiro)
     public int maxAmmo = 10; // Máximo de munição
     public int currentAmmo; // Munição atual
