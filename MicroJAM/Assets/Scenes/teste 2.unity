@@ -910,6 +910,111 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1619642270
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1619642275}
+  - component: {fileID: 1619642274}
+  - component: {fileID: 1619642273}
+  - component: {fileID: 1619642272}
+  - component: {fileID: 1619642271}
+  m_Layer: 0
+  m_Name: GAME MANAGER
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1619642271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619642270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 442910ab15c3bdd48a568f7aa808dc37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poderesDisponiveis:
+  - nome: RABADDON
+    sprite: {fileID: 21300000, guid: 269eee5bd0392044cb38fd13171b84f6, type: 3}
+    descricao: Capuz da Morte de Rabaddon
+    raridade: 1
+  - nome: Stattick
+    sprite: {fileID: -1371230915, guid: c5e5a2513d1f8ce4dae4e116a9ab57b0, type: 3}
+    descricao: Eletrocuta inimigos
+    raridade: 0
+  - nome: "Anjo guardi\xE3o"
+    sprite: {fileID: -1371230915, guid: c5e5a2513d1f8ce4dae4e116a9ab57b0, type: 3}
+    descricao: Te revive 1 vez
+    raridade: 2
+  powerUpDisplay: {fileID: 1619642272}
+--- !u!114 &1619642272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619642270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2736d625d40301d4183f40497396457c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imagemPoder1: {fileID: 0}
+  imagemPoder2: {fileID: 0}
+  nomePoder1: {fileID: 0}
+  nomePoder2: {fileID: 0}
+  descricaoPoder1: {fileID: 0}
+  descricaoPoder2: {fileID: 0}
+  raridadePoder1: {fileID: 0}
+  raridadePoder2: {fileID: 0}
+--- !u!114 &1619642273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619642270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b1301b2a56a1b4ab87e921444c1ff5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1619642274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619642270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d8c026df428ea4ea769e3d51364d08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1619642275
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619642270}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.9718704, y: 2.1447034, z: -1.4533446}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1779052501
 GameObject:
   m_ObjectHideFlags: 0
