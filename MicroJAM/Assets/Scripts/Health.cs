@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [Unity.Burst.BurstCompile(DisableDirectCall = true)]
@@ -7,6 +5,10 @@ public class Health : MonoBehaviour
 {
     public float life; // Vida do inimigo
     public GameObject floatingDamagePrefab; // Prefab de dano flutuante
+
+    // Evento que será chamado quando a vida mudar
+    public delegate void LifeChanged(float newLife);
+    public event LifeChanged onLifeChanged;
 
     // Método para aplicar dano
     public void TakeDamage(float damage)
@@ -16,6 +18,9 @@ public class Health : MonoBehaviour
 
         // Exibe o dano flutuante
         ShowFloatingDamage(damage);
+
+        // Notifica os ouvintes sobre a mudança na vida
+        onLifeChanged?.Invoke(life);
 
         // Checa se o inimigo morreu
         if (life <= 0)
