@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Weapons
   m_EditorClassIdentifier: 
   shotgunDamage: 1
-  shotgunFireRate: 1
+  shotgunFireRate: 0.7
   shotgunReloadTime: 2
   shotgunBulletCount: 8
-  shotgunShotSpeed: 3
-  shotgunRange: 5
-  shotgunSpread: 3
-  shotgunMagazine: 1
+  shotgunShotSpeed: 10
+  shotgunRange: 10
+  shotgunSpread: 2.5
+  shotgunMagazine: 2
   shotgunPenetration: 0
   sniperDamage: 5
   sniperFireRate: 1.5
@@ -31,20 +31,20 @@ MonoBehaviour:
   sniperMagazine: 5
   sniperPenetration: 1
   pistolDamage: 2
-  pistolFireRate: 0.4
+  pistolFireRate: 0.18
   pistolReloadTime: 2
   pistolBulletCount: 1
-  pistolShotSpeed: 4
+  pistolShotSpeed: 15
   pistolRange: 10
-  pistolSpread: 2
-  pistolMagazine: 15
+  pistolSpread: 1.5
+  pistolMagazine: 20
   pistolPenetration: 0
   machineGunDamage: 1
-  machineGunFireRate: 0.1
+  machineGunFireRate: 0.03
   machineGunReloadTime: 4
   machineGunBulletCount: 1
-  machineGunShotSpeed: 4
-  machineGunRange: 10
-  machineGunSpread: 5
+  machineGunShotSpeed: 30
+  machineGunRange: 12
+  machineGunSpread: 1.5
   machineGunMagazine: 50
   machineGunPenetration: 0
