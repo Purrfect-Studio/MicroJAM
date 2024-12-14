@@ -30,4 +30,17 @@ public class DarDanoNoPlayer : MonoBehaviour
             StartCoroutine(playerController.InvulnerabilityCoroutine()); // Ativa a invulnerabilidade
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player") && !playerController.isInvulnerable)
+        {
+            playerController.KBCount = playerController.KBTime; // Inicia o knockback
+            playerController.isKnockRight = collision.transform.position.x < transform.position.x; // Define a direção do knockback
+
+            playerHealthSystem.takeDamage(damage); // Reduz a vida do player
+
+            StartCoroutine(playerController.InvulnerabilityCoroutine()); // Ativa a invulnerabilidade
+        }
+    }
 }

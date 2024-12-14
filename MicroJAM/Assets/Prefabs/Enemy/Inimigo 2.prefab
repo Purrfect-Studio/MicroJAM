@@ -191,6 +191,9 @@ MonoBehaviour:
   pontoDestino: {x: 0, y: 0}
   emMovimento: 0
   raioMovimentoAleatorio: 5
+  projetilPrefab: {fileID: 9008992326949002304, guid: b9d66891cbab5b247b9168dfe3d9fabd, type: 3}
+  cooldownAtirar: 2.5
+  projetilSpeed: 2
 --- !u!114 &1651734852181066130
 MonoBehaviour:
   m_ObjectHideFlags: 0
