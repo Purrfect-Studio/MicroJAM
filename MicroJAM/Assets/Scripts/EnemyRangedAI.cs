@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using Unity.VisualScripting;
 
 [RequireComponent(typeof(TargetsScanner))]
 public class EnemyRangedAI : MonoBehaviour
@@ -14,10 +15,30 @@ public class EnemyRangedAI : MonoBehaviour
     public float raioMovimentoAleatorio = 10f; // Raio de movimento aleatório
 
     private bool followPlayer = true;
+
+    [Header("Projetil")]
+    public GameObject projetil;
+    public float cooldownAtirar;
+    private float cooldownRestanteAtirar;
     void Start()
     {
         targetsScanner = GetComponent<TargetsScanner>();
         StartCoroutine(AcoesInimigo());
+
+        cooldownRestanteAtirar = cooldownAtirar;
+    }
+
+    private void Update()
+    {
+        if(target != null)
+        {
+            atirar();
+        }
+    }
+
+    void atirar()
+    {
+
     }
 
     IEnumerator AcoesInimigo()

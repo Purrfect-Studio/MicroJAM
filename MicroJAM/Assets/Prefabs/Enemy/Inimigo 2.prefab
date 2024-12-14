@@ -185,7 +185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  areaDeDistancia: 6
+  areaDeDistancia: 9
   targetsScanner: {fileID: 0}
   target: {fileID: 0}
   pontoDestino: {x: 0, y: 0}
