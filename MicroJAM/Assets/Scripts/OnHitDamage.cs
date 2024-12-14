@@ -5,7 +5,7 @@ using UnityEngine;
 public class OnHitDamage : MonoBehaviour
 {
     [Header("Configurações")]
-    public string targetTag = "Enemy"; // Tag do alvo (por exemplo, "enemy")
+    public string targetTag; // Tag do alvo (por exemplo, "enemy")
     public float damage = 10; // Dano causado ao inimigo
 
     // Esse método é chamado quando o objeto com este script colide com outro objeto (via trigger)
