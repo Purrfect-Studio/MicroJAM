@@ -97,16 +97,15 @@ public class EnemyRangedAI : MonoBehaviour
                 }
 
             }
-            else
+            
+            if (!followPlayer && target == null)
             {
-                if (!followPlayer)
-                {
-                    GetComponent<EnemyAI>().enabled = true;
-                    followPlayer = true;
-                }
-                // Se não houver alvo, mover para posição aleatória
-                //EscolherNovoPontoAleatorio();
+                GetComponent<EnemyAI>().enabled = true;
+                followPlayer = true;
             }
+            // Se não houver alvo, mover para posição aleatória
+            //EscolherNovoPontoAleatorio();
+
 
             // Move até o ponto de destino
             if (!followPlayer)
