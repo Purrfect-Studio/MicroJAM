@@ -1040,7 +1040,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 1394563038553025955, guid: 1d727dd0d129d2d4da142179fdd2068d, type: 3}
-  enemyCount: 3
+  enemyCount: 8
 --- !u!114 &1034208818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1057,6 +1057,9 @@ MonoBehaviour:
   enemyGroups:
   - {fileID: 1034208817}
   - {fileID: 1034208816}
+  - {fileID: 1034208815}
+  - {fileID: 1034208817}
+  - {fileID: 1034208815}
   spawnInterval: 1
   spawnPoints:
   - {fileID: 1228634197}
