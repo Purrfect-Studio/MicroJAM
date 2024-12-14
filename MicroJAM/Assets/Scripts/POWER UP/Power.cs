@@ -1,4 +1,7 @@
+using System;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum PowerUpRarity
 {
@@ -10,8 +13,8 @@ public enum PowerUpRarity
 [System.Serializable]
 public class Power
 {
-    public string nome;
+    public String nome;
     public Sprite sprite;
-    public string descricao;
+    public String descricao;
     public PowerUpRarity raridade;
 }

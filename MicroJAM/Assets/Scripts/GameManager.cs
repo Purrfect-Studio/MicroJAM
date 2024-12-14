@@ -2,7 +2,21 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public bool jogoAtivo = true;
+    public static bool jogoAtivo = true;
+
+    public static void desativarJogo()
+    {
+        jogoAtivo = false;
+    }
+
+
+     public static void ativarJogo()
+    {
+        jogoAtivo = true;
+    }
+
+
+
 
     void Start()
     {

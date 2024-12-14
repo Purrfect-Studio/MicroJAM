@@ -9,22 +9,22 @@ public class ContatoTrigger : MonoBehaviour
     [Header("Evento")]
     public UnityEvent evento;
 
-    [Header("Configurações")]
+    [Header("Configuraï¿½ï¿½es")]
     public bool ativarSempre = true; // True = ativa o evento sempre / False = LimitarAtivacoes
-    public int quantidadeAtivacoes; // Quantidade de ativações permitidas
+    public int quantidadeAtivacoes; // Quantidade de ativaï¿½ï¿½es permitidas
     
 
-    private int ativacoesRestantes = 0; // Contador de ativações restantes
+    private int ativacoesRestantes = 0; // Contador de ativaï¿½ï¿½es restantes
 
     private void Start()
     {
-        // Inicializa o contador de ativações restantes
+        // Inicializa o contador de ativaï¿½ï¿½es restantes
         ativacoesRestantes = quantidadeAtivacoes;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Jogador"))
+        if (collision.gameObject.CompareTag("Player"))
         {
                 if (ativarSempre)
             {
@@ -33,9 +33,9 @@ public class ContatoTrigger : MonoBehaviour
             }
             else if (ativacoesRestantes > 0)
             {
-                // Invoca o evento se ainda houver ativações restantes
+                // Invoca o evento se ainda houver ativaï¿½ï¿½es restantes
                 evento.Invoke();
-                ativacoesRestantes--; // Decrementa o contador de ativações restantes
+                ativacoesRestantes--; // Decrementa o contador de ativaï¿½ï¿½es restantes
             }
         }
     }
