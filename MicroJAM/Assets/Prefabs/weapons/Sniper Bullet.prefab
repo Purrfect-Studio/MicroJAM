@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 2881039399342363622}
   - component: {fileID: 6042604094670407515}
   - component: {fileID: 5635816109682110759}
-  - component: {fileID: 7397737783341664121}
   - component: {fileID: 686063065802715098}
   - component: {fileID: 7817181792428653633}
+  - component: {fileID: 1592936788785761289}
   m_Layer: 0
   m_Name: Sniper Bullet
   m_TagString: Bullet
@@ -109,20 +109,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &7397737783341664121
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3696234118922433258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 102dab11b93e89347bcf9115d79324d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  lifeTime: 3
 --- !u!114 &686063065802715098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,3 +139,20 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1.0000002, y: 2.0000005}
   m_Direction: 0
+--- !u!114 &1592936788785761289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3696234118922433258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 238e7e2fb3509774fa84ff7b1009786a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  lifeTime: 3
+  spreadRadius: 1
+  penetration: 0
+  weapons: {fileID: 11400000, guid: c06970bad28a0c749be9649c523b567d, type: 2}
