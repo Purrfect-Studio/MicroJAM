@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1038233149}
   - component: {fileID: 1038233150}
   - component: {fileID: 4327138128192675938}
-  - component: {fileID: 6727121898378683428}
+  - component: {fileID: 2221616064463729821}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -172,6 +172,7 @@ MonoBehaviour:
   bulletCount: 0
   reloadTime: 2
   ammoText: {fileID: 0}
+  recharge: {fileID: 0}
 --- !u!114 &1038233150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,7 +204,7 @@ MonoBehaviour:
   levelText: {fileID: 0}
   currentXP: 0
   maxXP: 10
---- !u!58 &6727121898378683428
+--- !u!58 &2221616064463729821
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -216,6 +217,6 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00063795433, y: 0}
+  m_Offset: {x: -0.006483885, y: -0.24316059}
   serializedVersion: 2
-  m_Radius: 0.07256788
+  m_Radius: 0.16471061
