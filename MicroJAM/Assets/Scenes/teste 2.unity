@@ -799,7 +799,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1897920953069598294, guid: c54550f56b9ce9a45a9084a1f8eac76e, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3395900492737436632, guid: c54550f56b9ce9a45a9084a1f8eac76e, type: 3}
+      propertyPath: targetTag
+      value: Enemy
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3395900492737436632, guid: c54550f56b9ce9a45a9084a1f8eac76e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c54550f56b9ce9a45a9084a1f8eac76e, type: 3}
 --- !u!1 &1897920954478212636 stripped
 GameObject:
@@ -818,6 +827,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52f95f752ffadcf4db33b2935093a658, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 10
+  currentHealth: 10
+  damage: 5
+  speed: 5
+  attackSpeed: 1
+  armor: 0
+  weapons: []
+--- !u!114 &1897920954478212643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897920954478212636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2856cd4560232b49974b96ca806d4ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTag: Enemy
+  scanRadius: 15
+  closestTarget: {fileID: 0}
+  closestDistance: 3.4028235e+38
+--- !u!58 &1897920954478212644
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897920954478212636}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.099999994
 --- !u!1001 &7911086697100278804
 PrefabInstance:
   m_ObjectHideFlags: 0
