@@ -16,12 +16,20 @@ public class SistemaDeDrop : MonoBehaviour
     {
         probabilidade = Random.Range(0, 101);
 
-        if(probabilidade <= 90)
+        if(probabilidade < 70)
         {
             return 0;
-        }else
+        }else if(probabilidade >= 70 && probabilidade <= 85)
         {
             return 1;
+        }
+        else if (probabilidade >= 85 && probabilidade < 90 )
+        {
+            return 2;
+        }
+        else
+        {
+            return 3;
         }
     }
 }

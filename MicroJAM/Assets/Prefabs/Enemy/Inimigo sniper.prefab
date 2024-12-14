@@ -20,7 +20,7 @@ GameObject:
   - component: {fileID: -8307374137636636294}
   - component: {fileID: 5490707031633283286}
   m_Layer: 0
-  m_Name: Inimigo 2
+  m_Name: Inimigo sniper
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -192,11 +192,14 @@ MonoBehaviour:
   pontoDestino: {x: 0, y: 0}
   emMovimento: 0
   raioMovimentoAleatorio: 5
-  projetil: {fileID: 0}
-  cooldownAtirar: 0
-  projetilPrefab: {fileID: 9008992326949002304, guid: b9d66891cbab5b247b9168dfe3d9fabd, type: 3}
-  cooldownAtirar: 2.5
-  projetilSpeed: 2
+  sniper: 1
+  shotgun: 0
+  projetilSniperPrefab: {fileID: 9008992326949002304, guid: b9d66891cbab5b247b9168dfe3d9fabd, type: 3}
+  cooldownAtirarSniper: 2
+  projetilSniperSpeed: 2
+  projetilShotgunPrefab: {fileID: 9008992326949002304, guid: 13e64dbe833f9c149aed401fb84c9628, type: 3}
+  cooldownAtirarShotgun: 3.5
+  projetilShotgunSpeed: 1.5
 --- !u!114 &1651734852181066130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,6 +214,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Drops:
   - {fileID: 7997043350092893619, guid: 276656a887f66e0458d7431d5ffbc777, type: 3}
+  - {fileID: 7997043350092893619, guid: cceff6dab70f7b94bbe1b62073974abe, type: 3}
+  - {fileID: 7997043350092893619, guid: 993ff61d2672f55488b74dd8a2eecffb, type: 3}
   - {fileID: 6497120134562151880, guid: 8407960ebd5dc824b82017bb9c719eff, type: 3}
 --- !u!114 &-8307374137636636294
 MonoBehaviour:

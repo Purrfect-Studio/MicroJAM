@@ -15,13 +15,23 @@ public class EnemyRangedAI : MonoBehaviour
     public float raioMovimentoAleatorio = 10f; // Raio de movimento aleatório
 
     private bool followPlayer = true;
-
-    [Header("Projetil")]
-    public GameObject projetilPrefab;
-    public float cooldownAtirar;
     private GameObject player;
-    private Vector2 direcaoMover;
-    public float projetilSpeed;
+
+    [Header("Tipo de inimigo")]
+    public bool sniper;
+    public bool shotgun;
+
+    [Header("Projetil Sniper")]
+    public GameObject projetilSniperPrefab;
+    public float cooldownAtirarSniper;
+    private Vector2 direcaoMoverSniper;
+    public float projetilSniperSpeed;
+
+    [Header("Projetil Shotgun")]
+    public GameObject projetilShotgunPrefab;
+    public float cooldownAtirarShotgun;
+    private Vector2 direcaoMoverShotgun;
+    public float projetilShotgunSpeed;
 
     void Start()
     {
@@ -60,11 +70,31 @@ public class EnemyRangedAI : MonoBehaviour
                     EscolherNovoPontoAleatorio();
                 }
 
-                GameObject projetil = Instantiate(projetilPrefab, transform.position, Quaternion.identity);
-                direcaoMover = (player.transform.position - this.transform.position);
-                projetil.GetComponent<Rigidbody2D>().velocity = direcaoMover * projetilSpeed;
-                Destroy(projetil, 4);
-                yield return new WaitForSeconds(cooldownAtirar);
+                if (sniper)
+                {
+                    GameObject projetil = Instantiate(projetilSniperPrefab, transform.position, Quaternion.identity);
+                    direcaoMoverSniper = (player.transform.position - this.transform.position);
+                    projetil.GetComponent<Rigidbody2D>().velocity = direcaoMoverSniper * projetilSniperSpeed;
+                    Destroy(projetil, 4);
+                    yield return new WaitForSeconds(cooldownAtirarSniper);
+                }
+
+                if(shotgun)
+                {
+
+                    for(int i=0; i<6; i++)
+                    {
+                        // Gera uma posição aleatória dentro de um círculo de spreadRadius em torno do mouse (somente X e Y)
+                        Vector2 randomOffset = Random.insideUnitCircle * 6f;
+                        Vector2 targetPosition = new Vector2(player.transform.position.x, player.transform.position.y) + randomOffset;
+                        // Calcula a direção em relação à posição aleatória calculada
+                        direcaoMoverShotgun = (targetPosition - (Vector2)transform.position).normalized;
+                        GameObject projetil = Instantiate(projetilShotgunPrefab, transform.position, Quaternion.identity);
+                        projetil.GetComponent<Rigidbody2D>().velocity = direcaoMoverShotgun * projetilShotgunSpeed;
+                        Destroy(projetil, 2);
+                    }
+                    yield return new WaitForSeconds(cooldownAtirarShotgun);
+                }
 
             }
             else
