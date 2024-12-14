@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using TMPro;
 
 public class Atirar : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class Atirar : MonoBehaviour
     private bool isReloading = false; // Verifica se está recarregando
 
     private float fireCooldown = 0f; // Contador para o cooldown do disparo
-    
+    public TextMeshProUGUI ammoText;
     private Weapons weapon;
 
     void Start()
@@ -53,6 +54,7 @@ public class Atirar : MonoBehaviour
         }
 
         currentAmmo = maxAmmo; // Inicializa a munição atual
+        UpdateAmmoText();
     }
 
     void Update()
@@ -67,12 +69,18 @@ public class Atirar : MonoBehaviour
                 Fire(); // Dispara
                 currentAmmo--; // Reduz a munição a cada disparo
                 fireCooldown = fireRate; // Reinicia o cooldown
+                UpdateAmmoText();
             }
             else
             {
                 StartCoroutine(Reload()); // Inicia a recarga quando a munição acabar
             }
         }
+    }
+
+      void UpdateAmmoText()
+    {
+        ammoText.text = "Munição: " + currentAmmo.ToString(); // Exibe a quantidade atual de munição
     }
 
     void Fire()
@@ -94,5 +102,6 @@ public class Atirar : MonoBehaviour
         currentAmmo = maxAmmo; // Restaura a munição ao valor máximo
         isReloading = false;
         Debug.Log("Recarga concluída.");
+        UpdateAmmoText(); // Atualiza o texto após a recarga
     }
 }
