@@ -17,29 +17,20 @@ public class EnemyRangedAI : MonoBehaviour
     private bool followPlayer = true;
 
     [Header("Projetil")]
-    public GameObject projetil;
+    public GameObject projetilPrefab;
     public float cooldownAtirar;
-    private float cooldownRestanteAtirar;
+    private GameObject player;
+    private Vector2 direcaoMover;
+    public float projetilSpeed;
+
     void Start()
     {
         targetsScanner = GetComponent<TargetsScanner>();
+        player = GameObject.FindGameObjectWithTag("Player");
+
         StartCoroutine(AcoesInimigo());
-
-        cooldownRestanteAtirar = cooldownAtirar;
     }
 
-    private void Update()
-    {
-        if(target != null)
-        {
-            atirar();
-        }
-    }
-
-    void atirar()
-    {
-
-    }
 
     IEnumerator AcoesInimigo()
     {
@@ -68,6 +59,13 @@ public class EnemyRangedAI : MonoBehaviour
                     // Alvo está fora da área de distância: mover para posição aleatória
                     EscolherNovoPontoAleatorio();
                 }
+
+                GameObject projetil = Instantiate(projetilPrefab, transform.position, Quaternion.identity);
+                direcaoMover = (player.transform.position - this.transform.position);
+                projetil.GetComponent<Rigidbody2D>().velocity = direcaoMover * projetilSpeed;
+                Destroy(projetil, 4);
+                yield return new WaitForSeconds(cooldownAtirar);
+
             }
             else
             {
