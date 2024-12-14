@@ -7,9 +7,9 @@ public class AudioControlador : MonoBehaviour
 {
     public static AudioControlador Instancia { get; private set; }
 
-    [Header("Mixers de áudio")]
+    [Header("Mixers de ï¿½udio")]
     public AudioMixerGroup grupoPrincipal;
-    public AudioMixerGroup grupoMusicas; // Grupo do mixer para músicas
+    public AudioMixerGroup grupoMusicas; // Grupo do mixer para mï¿½sicas
     public AudioMixerGroup grupoSFX; // Grupo do mixer para efeitos sonoros
 
     [Header("Volumes")]
@@ -17,8 +17,8 @@ public class AudioControlador : MonoBehaviour
     public float volumeMusicaConfiguracao = 1;
     public float volumeEfeitosAudioConfiguracao = 1;
 
-    [Header("Configurações do Slider")]
-    public float valorMaximoSlider = 10f; // Valor máximo do slider, deve ser ajustado conforme a configuração do slider
+    [Header("Configuraï¿½ï¿½es do Slider")]
+    public float valorMaximoSlider = 10f; // Valor mï¿½ximo do slider, deve ser ajustado conforme a configuraï¿½ï¿½o do slider
 
     private void Awake()
     {
@@ -34,37 +34,44 @@ public class AudioControlador : MonoBehaviour
         }
         else if (Instancia != this)
         {
-            Destroy(Instancia.gameObject); // Destrói a instância antiga em vez de destruir a nova
+            Destroy(Instancia.gameObject); // Destrï¿½i a instï¿½ncia antiga em vez de destruir a nova
             Instancia = this;
             DontDestroyOnLoad(gameObject);
         }
     }
 
 
-    // Muda o volume da música através do AudioMixerGroup
+    // Muda o volume da mï¿½sica atravï¿½s do AudioMixerGroup
     public void MudarVolumeGeral(float valorSlider)
     {
         float volume = Mathf.Lerp(-80f, 0f, valorSlider / valorMaximoSlider); // Converte o valor do slider para o intervalo -80dB a 0dB
-        grupoPrincipal.audioMixer.SetFloat("VolumeGlobal", volume);
+        grupoPrincipal.audioMixer.SetFloat("Master", volume);
         volumeGeralConfiguracao = valorSlider / valorMaximoSlider;
     }
 
     public void MudarVolumeMusica(float valorSlider)
+{
+    float volume = Mathf.Lerp(-80f, 0f, valorSlider / valorMaximoSlider);
+    bool sucesso = grupoMusicas.audioMixer.SetFloat("Soundtrack", volume);
+
+    if (!sucesso)
     {
-        float volume = Mathf.Lerp(-80f, 0f, valorSlider / valorMaximoSlider); // Converte o valor do slider para o intervalo -80dB a 0dB
-        grupoMusicas.audioMixer.SetFloat("VolumeMusica", volume);
-        volumeMusicaConfiguracao = valorSlider / valorMaximoSlider;
+        Debug.LogError("O parÃ¢metro 'Soundtrack' nÃ£o foi encontrado no AudioMixer!");
     }
 
-    // Muda o volume dos efeitos sonoros através do AudioMixerGroup
+    volumeMusicaConfiguracao = valorSlider / valorMaximoSlider;
+}
+
+
+    // Muda o volume dos efeitos sonoros atravï¿½s do AudioMixerGroup
     public void MudarVolumeEfeitos(float valorSlider)
     {
         float volume = Mathf.Lerp(-80f, 0f, valorSlider / valorMaximoSlider); // Converte o valor do slider para o intervalo -80dB a 0dB
-        grupoSFX.audioMixer.SetFloat("VolumeEfeitos", volume);
+        grupoSFX.audioMixer.SetFloat("SFX", volume);
         volumeEfeitosAudioConfiguracao = valorSlider / valorMaximoSlider;
     }
 
-    // Configura o slider para mudar o volume da música
+    // Configura o slider para mudar o volume da mï¿½sica
     public void ConfigurarSliderVolumeGeral(Slider slider)
     {
         slider.onValueChanged.AddListener(MudarVolumeGeral);
