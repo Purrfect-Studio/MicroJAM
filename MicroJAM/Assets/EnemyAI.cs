@@ -3,7 +3,20 @@ using UnityEngine;
 [RequireComponent(typeof(TargetsScanner))]
 public class EnemyAI : MonoBehaviour
 {
-    [Header("Configurações de Movimento")]
+    GameObject player;
+    public float speed = 3;
+    // Start is called before the first frame update
+    void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+    }
+    /*[Header("Configurações de Movimento")]
     public float moveSpeed = 3f; // Velocidade de movimento padrão
     public float maxMoveSpeed = 5f; // Velocidade máxima que o inimigo pode atingir
     public float acceleration = 2f; // Taxa de aceleração
@@ -75,5 +88,5 @@ public class EnemyAI : MonoBehaviour
 
         // Atualiza a última posição
         lastPosition = transform.position;
-    }
+    }*/
 }
