@@ -7,9 +7,16 @@ public class Bullet : MonoBehaviour
 
     private Vector2 direction;
 
-    public void SetDirection(Vector2 dir)
+    void Start()
     {
-        direction = dir.normalized; // Normaliza para que a velocidade seja consistente
+        // Obtém a posição do mouse no mundo
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePosition.z = 0; // Definimos Z como 0 pois estamos em 2D
+
+        // Calcula a direção em relação à posição do mouse
+        direction = (mousePosition - transform.position).normalized;
+        Destroy(gameObject, lifeTime);
+
     }
 
     void Update()
@@ -18,15 +25,9 @@ public class Bullet : MonoBehaviour
         transform.position += (Vector3)direction * speed * Time.deltaTime;
     }
 
-    void Start()
-    {
-        // Destroi o projétil após 'lifeTime' segundos
-        Destroy(gameObject, lifeTime);
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Tag detectada: " + collision.gameObject.tag);
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Destroy(gameObject);

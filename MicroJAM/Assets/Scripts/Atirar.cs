@@ -1,42 +1,59 @@
 using UnityEngine;
+using System.Collections;
 
 public class Atirar : MonoBehaviour
 {
     public GameObject bulletPrefab; // Prefab do projétil
+    public GameObject shotgunBulletPrefab; // Prefab da espingarda
     public float fireRate = 0.2f; // Taxa de disparo (tempo entre cada tiro)
-    
+    public int maxAmmo = 10; // Máximo de munição
+    public int currentAmmo; // Munição atual
+    public float reloadTime = 2f; // Tempo de recarga
+    private bool isReloading = false; // Verifica se está recarregando
+
     private float fireCooldown = 0f; // Contador para o cooldown do disparo
+
+    void Start()
+    {
+        currentAmmo = maxAmmo; // Inicializa a munição atual
+    }
 
     void Update()
     {
         fireCooldown -= Time.deltaTime;
 
-        // Obtém a posição do mouse no mundo
-        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mousePosition.z = 0; // Definimos Z como 0 pois estamos em 2D
-
-        // Rotaciona o player para olhar na direção do mouse
-        Vector2 direction = (mousePosition - transform.position).normalized;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, angle);
-
-        // Dispara projéteis automaticamente (se o cooldown permitir)
-        if (fireCooldown <= 0f)
+        // Verifica se o jogador apertou o botão de disparo
+        if (Input.GetButton("Fire1") && fireCooldown <= 0f && !isReloading)
         {
-            Fire(mousePosition);
-            fireCooldown = fireRate; // Reinicia o cooldown
+            if (currentAmmo > 0)
+            {
+                Fire(); // Dispara
+                currentAmmo--; // Reduz a munição a cada disparo
+                fireCooldown = fireRate; // Reinicia o cooldown
+            }
+            else
+            {
+                StartCoroutine(Reload()); // Inicia a recarga quando a munição acabar
+            }
         }
     }
 
-    void Fire(Vector3 targetPosition)
+    void Fire()
     {
         // Instancia o projétil na posição do player
         GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
         
-        // Calcula a direção do projétil em relação ao mouse
-        Vector2 direction = (targetPosition - transform.position).normalized;
-        
-        // Define a direção do projétil
-        bullet.GetComponent<Bullet>().SetDirection(direction);
+        // A direção será configurada no próprio método Start() do projétil
+    }
+
+    public IEnumerator Reload()
+    {
+        // Inicia a recarga e impede o disparo durante esse tempo
+        isReloading = true;
+        Debug.Log("Recargando...");
+        yield return new WaitForSeconds(reloadTime); // Espera o tempo de recarga
+        currentAmmo = maxAmmo; // Restaura a munição ao valor máximo
+        isReloading = false;
+        Debug.Log("Recarga concluída.");
     }
 }
