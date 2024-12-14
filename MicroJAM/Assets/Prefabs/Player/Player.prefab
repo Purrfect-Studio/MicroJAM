@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -2961563056445545545}
   - component: {fileID: 1038233149}
   - component: {fileID: 1038233150}
+  - component: {fileID: 4327138128192675938}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -159,12 +160,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3df6b15bd3cd3f41abaa9e078c40e25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 3696234118922433258, guid: 9fac85e657d905b4e8489491756484c5, type: 3}
+  bulletPrefab: {fileID: 3696234118922433258, guid: 653cffdda5235ec4898ea49b7be4de89, type: 3}
   fireRate: 0.2
   maxAmmo: 10
   currentAmmo: 0
   bulletCount: 0
   reloadTime: 2
+  ammoText: {fileID: 0}
 --- !u!114 &1038233150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,6 +179,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08133ca7d985b684fa9b75bde2185651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: 10
-  vidaMaxima: 10
+  currentHealth: 10
+  maxHealth: 10
   sliderVida: {fileID: 0}
+--- !u!114 &4327138128192675938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897920953069598294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2514c4437b531804bb31b8fc63989f5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xpBar: {fileID: 0}
+  currentXP: 0
+  maxXP: 10
