@@ -10,6 +10,13 @@ public class Health : MonoBehaviour
     public delegate void LifeChanged(float newLife);
     public event LifeChanged onLifeChanged;
 
+    private SistemaDeDrop sistemaDeDrop;
+
+    void Start()
+    {
+        sistemaDeDrop = GetComponent<SistemaDeDrop>();
+    }
+
     // Método para aplicar dano
     public void TakeDamage(float damage)
     {
@@ -49,6 +56,7 @@ public class Health : MonoBehaviour
     // Método de morte
     void Die()
     {
+        sistemaDeDrop.Dropar();
         // Código de morte do inimigo
         Destroy(gameObject);
     }

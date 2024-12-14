@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 263072898897053412}
   - component: {fileID: -261471469395655089}
   - component: {fileID: 1129176379596084022}
+  - component: {fileID: 5065796705589175002}
   m_Layer: 0
   m_Name: Inimigo 3
   m_TagString: Enemy
@@ -183,3 +184,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 10
   floatingDamagePrefab: {fileID: 2876150859217713056, guid: 34bfe205efe4ef34d860a510c4aa2bb1, type: 3}
+--- !u!114 &5065796705589175002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394563038553025955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 347036fd2aa65f04fa0d9569f83a9bf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Drops:
+  - {fileID: 7997043350092893619, guid: 276656a887f66e0458d7431d5ffbc777, type: 3}
+  - {fileID: 6497120134562151880, guid: 8407960ebd5dc824b82017bb9c719eff, type: 3}

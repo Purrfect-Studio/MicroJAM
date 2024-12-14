@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 3796210945087980162}
   - component: {fileID: 14911854856823786}
   - component: {fileID: 1403568325215524610}
+  - component: {fileID: 459733357028647823}
   m_Layer: 0
   m_Name: Inimigo 1
   m_TagString: Enemy
@@ -221,3 +222,18 @@ MonoBehaviour:
   playerHealthSystem: {fileID: 0}
   playerController: {fileID: 0}
   damage: 1
+--- !u!114 &459733357028647823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394563038553025955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 347036fd2aa65f04fa0d9569f83a9bf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Drops:
+  - {fileID: 7997043350092893619, guid: 276656a887f66e0458d7431d5ffbc777, type: 3}
+  - {fileID: 6497120134562151880, guid: 8407960ebd5dc824b82017bb9c719eff, type: 3}
