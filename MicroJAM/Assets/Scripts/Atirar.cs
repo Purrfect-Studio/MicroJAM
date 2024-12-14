@@ -18,8 +18,12 @@ public class Atirar : MonoBehaviour
 
     private int chosenWeapon;
 
+    public GameObject recharge;
+
     void Start()
     {
+        recharge = GameObject.FindGameObjectWithTag("Recharge");
+        recharge.SetActive(false);
         Time.timeScale = 0;
         currentAmmo = maxAmmo; // Inicializa a munição atual
         UpdateAmmoText();
@@ -39,14 +43,14 @@ public class Atirar : MonoBehaviour
                 fireCooldown = fireRate; // Reinicia o cooldown
                 UpdateAmmoText();
             }
-            else
-            {
-                StartCoroutine(Reload()); // Inicia a recarga quando a munição acabar
-            }
+        }
+        if(currentAmmo <= 0 && !isReloading)
+        {
+            StartCoroutine(Reload()); // Inicia a recarga quando a munição acabar
         }
     }
 
-      void UpdateAmmoText()
+    void UpdateAmmoText()
     {
         ammoText.text = "Munição: " + currentAmmo.ToString(); // Exibe a quantidade atual de munição
     }
@@ -65,12 +69,15 @@ public class Atirar : MonoBehaviour
     {
         // Inicia a recarga e impede o disparo durante esse tempo
         isReloading = true;
+        recharge.SetActive(true);
         Debug.Log("Recargando...");
         yield return new WaitForSeconds(reloadTime); // Espera o tempo de recarga
         currentAmmo = maxAmmo; // Restaura a munição ao valor máximo
         isReloading = false;
         Debug.Log("Recarga concluída.");
         UpdateAmmoText(); // Atualiza o texto após a recarga
+        recharge.SetActive(false);
+
     }
 
     public void escolherArma(int arma)
@@ -92,8 +99,6 @@ public class Atirar : MonoBehaviour
             bulletPrefab[0].GetComponent<PistolBullet>().lifeTime = weapon.pistolRange;
             bulletPrefab[0].GetComponent<PistolBullet>().spreadRadius = weapon.pistolSpread;
             bulletPrefab[0].GetComponent<PistolBullet>().penetration = weapon.pistolPenetration;
-
-            currentAmmo = maxAmmo;
         }
         if (chosenWeapon == 1)
         {
@@ -110,8 +115,6 @@ public class Atirar : MonoBehaviour
             bulletPrefab[1].GetComponent<ShotgunBullet>().lifeTime = weapon.shotgunRange;
             bulletPrefab[1].GetComponent<ShotgunBullet>().spreadRadius = weapon.shotgunSpread;
             bulletPrefab[1].GetComponent<ShotgunBullet>().penetration = weapon.shotgunPenetration;
-
-            currentAmmo = maxAmmo;
         }
         if (chosenWeapon == 2)
         {
@@ -130,17 +133,6 @@ public class Atirar : MonoBehaviour
             sniper.lifeTime = weapon.sniperRange;
             sniper.spreadRadius = weapon.sniperSpread;
             sniper.penetration = weapon.sniperPenetration;
-
-            Debug.Log("Estatisticas da Sniper: ");
-            Debug.Log("Dano: " + onHitDamage.damage);
-            Debug.Log("speed: " + sniper.speed);
-            Debug.Log("range: " + sniper.lifeTime);
-            Debug.Log("Spread: " + sniper.spreadRadius);
-            Debug.Log("Penetracao: " + sniper.penetration);
-
-
-
-            currentAmmo = maxAmmo;
         }
         if (chosenWeapon == 3)
         {
@@ -157,8 +149,10 @@ public class Atirar : MonoBehaviour
             bulletPrefab[3].GetComponent<MachineGunBullet>().spreadRadius = weapon.machineGunSpread;
             bulletPrefab[3].GetComponent<MachineGunBullet>().penetration = weapon.machineGunPenetration;
 
-            currentAmmo = maxAmmo;
         }
+        
+        currentAmmo = maxAmmo;
+        UpdateAmmoText();
         Time.timeScale = 1;
     }
 }
