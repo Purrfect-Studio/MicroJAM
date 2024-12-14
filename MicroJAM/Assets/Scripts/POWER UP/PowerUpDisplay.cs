@@ -28,7 +28,7 @@ public class PowerUpDisplay : MonoBehaviour
     public void ApresentarPoderes(Power poder1, Power poder2)
     {
         canvas.SetActive(true);
-        //GameManager.desativarJogo();
+        GameManager.desativarJogo();
 
         // Armazena os poderes sorteados
         poderEscolhido1 = poder1;
