@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     public float KBCount = 0f; // Será inicializado na colisão
     public float KBTime = 0.2f; // Duração do knockback
     public bool isKnockRight;
-    public float invulnerabilityDuration = 0.5f;
+    public float invulnerabilityDuration = 0.1f;
     public bool isInvulnerable = false;
 
     void Start()

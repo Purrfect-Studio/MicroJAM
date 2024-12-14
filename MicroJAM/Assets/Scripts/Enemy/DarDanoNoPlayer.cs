@@ -17,7 +17,8 @@ public class DarDanoNoPlayer : MonoBehaviour
         playerHealthSystem = player.GetComponent<PlayerHealthSystem>();
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+
+    void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player") && !playerController.isInvulnerable)
         {

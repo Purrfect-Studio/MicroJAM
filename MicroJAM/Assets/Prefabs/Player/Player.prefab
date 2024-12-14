@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1038233149}
   - component: {fileID: 1038233150}
   - component: {fileID: 4327138128192675938}
+  - component: {fileID: 6727121898378683428}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -109,7 +110,7 @@ MonoBehaviour:
   KBCount: 0
   KBTime: 0.2
   isKnockRight: 0
-  invulnerabilityDuration: 2
+  invulnerabilityDuration: 0.1
   isInvulnerable: 0
 --- !u!50 &1897920953069598282
 Rigidbody2D:
@@ -195,5 +196,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xpBar: {fileID: 0}
+  levelText: {fileID: 0}
   currentXP: 0
   maxXP: 10
+--- !u!58 &6727121898378683428
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897920953069598294}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.00063795433, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.07256788
