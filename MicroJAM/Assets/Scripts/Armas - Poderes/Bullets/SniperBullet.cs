@@ -28,8 +28,11 @@ public class SniperBullet : MonoBehaviour
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = 0; // Definimos Z como 0 pois estamos em 2D
 
+        Vector2 randomOffset = Random.insideUnitCircle * spreadRadius;
+        Vector2 targetPosition = new Vector2(mousePosition.x, mousePosition.y) + randomOffset;
+
         // Calcula a direção em relação à posição do mouse
-        direction = (mousePosition - transform.position).normalized;
+        direction = (targetPosition - (Vector2)transform.position).normalized;
         Destroy(gameObject, lifeTime);
 
     }
