@@ -1685,8 +1685,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3df6b15bd3cd3f41abaa9e078c40e25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 3696234118922433258, guid: 9e550106eba1d154181af89432ddc446, type: 3}
-  fireRate: 0.2
+  bulletPrefab: {fileID: 3696234118922433258, guid: 9fac85e657d905b4e8489491756484c5, type: 3}
+  shotgunBulletPrefab: {fileID: 0}
+  fireRate: 0.00001
+  maxAmmo: 8
+  currentAmmo: 0
+  reloadTime: 2
 --- !u!1 &1556060000
 GameObject:
   m_ObjectHideFlags: 0

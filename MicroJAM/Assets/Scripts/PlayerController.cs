@@ -71,4 +71,6 @@ public class PlayerController : MonoBehaviour
         spriteRenderer.color = originalColor; // Retorna a cor original
         isInvulnerable = false;
     }
+
+    
 }
