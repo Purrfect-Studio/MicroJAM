@@ -13,7 +13,9 @@ GameObject:
   - component: {fileID: 9078174053618626892}
   - component: {fileID: 6508307863664502117}
   - component: {fileID: -1734784633824807563}
-  - component: {fileID: -8901762671269972192}
+  - component: {fileID: 1466208358989993087}
+  - component: {fileID: -7279222166837783413}
+  - component: {fileID: -7674725444707354827}
   m_Layer: 0
   m_Name: Inimigo 2
   m_TagString: Enemy
@@ -77,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0167a2d235421ca4f8095daaa1defd4f, type: 3}
+  m_Sprite: {fileID: -1972524017, guid: 5afc5372d87a38747a9ad87624493304, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -138,10 +140,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetTag: Player
-  scanRadius: 15
+  scanRadius: 8
   closestTarget: {fileID: 0}
   closestDistance: 0
---- !u!114 &-8901762671269972192
+--- !u!114 &1466208358989993087
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -150,7 +152,38 @@ MonoBehaviour:
   m_GameObject: {fileID: 1394563038553025955}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ad7dbf62ea35eb4486177e7163c2dbf, type: 3}
+  m_Script: {fileID: 11500000, guid: 141670b6d6a09bb42b842783e02aa52f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  health: {fileID: -7279222166837783413}
+--- !u!114 &-7279222166837783413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394563038553025955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09836d11af9e31147a7feb62cf04e024, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 10
+--- !u!114 &-7674725444707354827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394563038553025955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d0e0f414ba7cc94683313771e65bf08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  areaDeDistancia: 3
+  target: {fileID: 0}
+  pontoDestino: {x: 0, y: 0}
+  emMovimento: 0
+  raioMovimentoAleatorio: 5
