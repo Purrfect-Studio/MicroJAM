@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: -261471469395655089}
   - component: {fileID: 1129176379596084022}
   - component: {fileID: 5065796705589175002}
+  - component: {fileID: 4545341968096569833}
   m_Layer: 0
   m_Name: Inimigo 3
   m_TagString: Enemy
@@ -199,3 +200,24 @@ MonoBehaviour:
   Drops:
   - {fileID: 7997043350092893619, guid: 276656a887f66e0458d7431d5ffbc777, type: 3}
   - {fileID: 6497120134562151880, guid: 8407960ebd5dc824b82017bb9c719eff, type: 3}
+--- !u!95 &4545341968096569833
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394563038553025955}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

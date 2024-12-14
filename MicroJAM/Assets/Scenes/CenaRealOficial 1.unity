@@ -499,7 +499,7 @@ MonoBehaviour:
   m_Follow: {fileID: 443286512}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 5
+    OrthographicSize: 7.05
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -953,6 +953,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1897920953069598292, guid: c54550f56b9ce9a45a9084a1f8eac76e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 905050113, guid: 77887c4417873124fbcbd3210256de47, type: 3}
+    - target: {fileID: 1897920953069598292, guid: c54550f56b9ce9a45a9084a1f8eac76e, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1897920953069598292, guid: c54550f56b9ce9a45a9084a1f8eac76e, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1897920953069598292, guid: c54550f56b9ce9a45a9084a1f8eac76e, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1897920953069598294, guid: c54550f56b9ce9a45a9084a1f8eac76e, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1259,7 +1275,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "muni\xE7\xF5es restantes\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1670,7 +1686,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 'wave atual: '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1933,7 +1949,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 7.05
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
