@@ -440,8 +440,9 @@ GameObject:
   - component: {fileID: 524150499}
   - component: {fileID: 524150498}
   - component: {fileID: 524150502}
+  - component: {fileID: 524150503}
   m_Layer: 0
-  m_Name: enemy
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -566,6 +567,19 @@ MonoBehaviour:
   playerHealthSystem: {fileID: 1279942387}
   playerController: {fileID: 1279942389}
   damage: 1
+--- !u!114 &524150503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524150497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09836d11af9e31147a7feb62cf04e024, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 10
 --- !u!1 &689608629
 GameObject:
   m_ObjectHideFlags: 0
@@ -796,6 +810,7 @@ GameObject:
   - component: {fileID: 1279942387}
   - component: {fileID: 1279942388}
   - component: {fileID: 1279942389}
+  - component: {fileID: 1279942390}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -976,6 +991,20 @@ MonoBehaviour:
   isKnockRight: 0
   invulnerabilityDuration: 0.5
   isInvulnerable: 0
+--- !u!114 &1279942390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279942381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3df6b15bd3cd3f41abaa9e078c40e25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 3696234118922433258, guid: 9e550106eba1d154181af89432ddc446, type: 3}
+  fireRate: 0.2
 --- !u!1 &1556060000
 GameObject:
   m_ObjectHideFlags: 0
@@ -1055,7 +1084,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 476566544}
   m_FillRect: {fileID: 413705231}
   m_HandleRect: {fileID: 476566543}
