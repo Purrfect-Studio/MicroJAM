@@ -904,11 +904,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1897920953069598283, guid: c54550f56b9ce9a45a9084a1f8eac76e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.92
+      value: -2.22
       objectReference: {fileID: 0}
     - target: {fileID: 1897920953069598283, guid: c54550f56b9ce9a45a9084a1f8eac76e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.42
+      value: -1.38
       objectReference: {fileID: 0}
     - target: {fileID: 1897920953069598283, guid: c54550f56b9ce9a45a9084a1f8eac76e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -962,25 +962,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1897920953069598294, guid: c54550f56b9ce9a45a9084a1f8eac76e, type: 3}
   m_PrefabInstance: {fileID: 1897920954478212635}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1897920954478212637
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1897920954478212636}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52f95f752ffadcf4db33b2935093a658, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 10
-  currentHealth: 10
-  damage: 5
-  speed: 5
-  attackSpeed: 1
-  armor: 0
-  weapons: []
 --- !u!114 &1897920954478212643
 MonoBehaviour:
   m_ObjectHideFlags: 0

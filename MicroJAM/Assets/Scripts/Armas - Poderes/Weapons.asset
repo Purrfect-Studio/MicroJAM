@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e61a25c28efb7f489541554a32df5de, type: 3}
+  m_Name: Weapons
+  m_EditorClassIdentifier: 
+  shotgunDamage: 0
+  shotgunFireRate: 0
+  shotgunReloadTime: 0
+  shotgunBulletCount: 0
+  shotgunShotSpeed: 0
+  shotgunRange: 0
+  shotgunSpread: 0
+  shotgunMagazine: 0
+  sniperDamage: 0
+  sniperFireRate: 0
+  sniperReloadTime: 0
+  sniperBulletCount: 0
+  sniperShotSpeed: 0
+  sniperRange: 0
+  sniperSpread: 0
+  sniperMagazine: 0
+  pistolDamage: 0
+  pistolFireRate: 0
+  pistolReloadTime: 0
+  pistolBulletCount: 0
+  pistolShotSpeed: 0
+  pistolRange: 0
+  pistolSpread: 0
+  pistolMagazine: 0
+  metralhadoraDamage: 0
+  metralhadoraFireRate: 0
+  metralhadoraReloadTime: 0
+  metralhadoraBulletCount: 0
+  metralhadoraShotSpeed: 0
+  metralhadoraRange: 0
+  metralhadoraSpread: 0
+  metralhadoraMagazine: 0
