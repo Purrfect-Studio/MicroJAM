@@ -6,36 +6,61 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealthSystem : MonoBehaviour
 {
-    public int vida = 10;
-    public int vidaMaxima = 10;
+    public float currentHealth = 10;
+    public float maxHealth = 10;
     public Slider sliderVida;
 
     void Start()
     {
-        sliderVida.maxValue = vidaMaxima;
-        sliderVida.value = vida;
+        sliderVida.maxValue = maxHealth;
+        sliderVida.value = currentHealth;
     }
 
     void Update()
     {
-        morrer();
+        die();
         HealthVogic();
     }
 
     void HealthVogic()
     {
-        sliderVida.value = vida;
-        vida = Mathf.Clamp(vida, 0, vidaMaxima);
+        sliderVida.value = currentHealth;
+        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
     }
 
-    void morrer()
+    void die()
     {
-        if (vida <= 0)
+        if (currentHealth <= 0)
         {
             Debug.Log("morreu");
             //ReloadScene();
         }
     }
+
+    public void takeDamage(float damage)
+    {
+        if(currentHealth - damage < 0)
+        {
+            currentHealth = 0;
+        }
+        else
+        {
+            currentHealth -= 0;
+        }
+    }
+
+    public void heal(float heal)
+    {
+        if(currentHealth + heal > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+        else
+        {
+            currentHealth += heal;
+        }
+    }
+
 
     void ReloadScene()
     {
