@@ -39,13 +39,14 @@ public class PlayerHealthSystem : MonoBehaviour
 
     public void takeDamage(float damage)
     {
+        Debug.Log("jogador tomou dano");
         if(currentHealth - damage < 0)
         {
             currentHealth = 0;
         }
         else
         {
-            currentHealth -= 0;
+            currentHealth -= damage;
         }
     }
 

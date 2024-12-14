@@ -4,11 +4,20 @@ using UnityEngine;
 
 public class DarDanoNoPlayer : MonoBehaviour
 {
+    GameObject player;
     public PlayerHealthSystem playerHealthSystem;
     public PlayerController playerController;
     public float damage = 1;
 
-    void OnCollisionEnter2D(Collision2D collision)
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+
+        playerController = player.GetComponent<PlayerController>();
+        playerHealthSystem = player.GetComponent<PlayerHealthSystem>();
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player") && !playerController.isInvulnerable)
         {
