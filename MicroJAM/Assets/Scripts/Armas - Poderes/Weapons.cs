@@ -14,6 +14,7 @@ public class Weapons : ScriptableObject
     public float shotgunRange; // alcance maximo do projetil
     public float shotgunSpread; // precisao da arma
     public float shotgunMagazine; // quantidades de tiros antes de precisar recarregar a arma
+    public float shotgunPenetration; // quantidades de inimigos que a bala atravessa
 
     [Header("Sniper")]
     public float sniperDamage;
@@ -24,6 +25,7 @@ public class Weapons : ScriptableObject
     public float sniperRange;
     public float sniperSpread;
     public float sniperMagazine;
+    public float sniperPenetration;
 
     [Header("Pistol")]
     public float pistolDamage;
@@ -34,14 +36,16 @@ public class Weapons : ScriptableObject
     public float pistolRange;
     public float pistolSpread;
     public float pistolMagazine;
+    public float pistolPenetration;
 
-    [Header("Metralhadora")]
-    public float metralhadoraDamage;
-    public float metralhadoraFireRate;
-    public float metralhadoraReloadTime;
-    public float metralhadoraBulletCount;
-    public float metralhadoraShotSpeed;
-    public float metralhadoraRange;
-    public float metralhadoraSpread;
-    public float metralhadoraMagazine;
+    [Header("Machine Gun")]
+    public float machineGunDamage;
+    public float machineGunFireRate;
+    public float machineGunReloadTime;
+    public float machineGunBulletCount;
+    public float machineGunShotSpeed;
+    public float machineGunRange;
+    public float machineGunSpread;
+    public float machineGunMagazine;
+    public float machineGunPenetration;
 }
