@@ -50,12 +50,16 @@ public class ItensDisplay : MonoBehaviour
         playerHealthSystem = FindObjectOfType<PlayerHealthSystem>();
     }
 
+    public void atualizarVida()
+    {
+
+        VidaMaxima.text = playerHealthSystem.maxHealth.ToString() + " Max Health";
+
+    }
     public void ApresentarItens(Item item1, Item item2, Item item3)
     {
         canvas.SetActive(true);
-        VidaMaxima.text = playerHealthSystem.maxHealth.ToString() + " Max Health";
-
-
+        atualizarVida();
         playerExperience.pausar();
 
 
