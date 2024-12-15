@@ -22,7 +22,16 @@ public class OnHitDamage : MonoBehaviour
             {
                 targetHealth.TakeDamage(damage); // Chama o método para aplicar o dano
                 Debug.Log("Dano causado: " + damage);
+            }else
+            {
+                HealthBoss1 healthBoss1 = other.GetComponent<HealthBoss1>();
+                if(healthBoss1 != null)
+                {
+                    healthBoss1.TakeDamage(damage); // Chama o método para aplicar o dano
+                    Debug.Log("Dano causado: " + damage);
+                }
             }
+            
         }
     }
 }
