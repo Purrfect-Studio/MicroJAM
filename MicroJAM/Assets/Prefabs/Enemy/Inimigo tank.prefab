@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 1129176379596084022}
   - component: {fileID: 5065796705589175002}
   - component: {fileID: 4545341968096569833}
+  - component: {fileID: -7087259797502487165}
   m_Layer: 3
   m_Name: Inimigo tank
   m_TagString: Enemy
@@ -223,3 +224,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-7087259797502487165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394563038553025955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0140e9482f2031a4893491fff5bf0697, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealthSystem: {fileID: 0}
+  playerController: {fileID: 0}
+  damage: 5

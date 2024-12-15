@@ -37,6 +37,7 @@ public class EnemyRangedAI : MonoBehaviour
     {
         targetsScanner = GetComponent<TargetsScanner>();
         player = GameObject.FindGameObjectWithTag("Player");
+        Physics2D.IgnoreLayerCollision(3, 7);
 
         StartCoroutine(AcoesInimigo());
     }

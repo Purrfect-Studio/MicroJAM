@@ -74,7 +74,7 @@ public class WaveController : MonoBehaviour
     {
         if (waveInfoText != null)
         {
-            waveInfoText.text = $"Onda Atual: {waveName}"; // Exibe a onda atual
+            waveInfoText.text = $"Current Wave: {waveName}"; // Exibe a onda atual
         }
     }
 
@@ -84,7 +84,7 @@ public class WaveController : MonoBehaviour
         if (enemyCountText != null)
         {
             int enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
-            enemyCountText.text = $"Inimigos Restantes: {enemyCount}"; // Exibe a quantidade de inimigos restantes
+            enemyCountText.text = $"Remaining Enemies: {enemyCount}"; // Exibe a quantidade de inimigos restantes
         }
     }
 }
