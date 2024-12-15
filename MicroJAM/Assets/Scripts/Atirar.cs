@@ -13,6 +13,7 @@ public class Atirar : MonoBehaviour
     public int bulletCount; // quantidade de tiros disparados por vez
     public float reloadTime = 2f; // Tempo de recarga
     private bool isReloading = false; // Verifica se está recarregando
+    public AudioSource somRecarga;
 
     private float fireCooldown = 0f; // Contador para o cooldown do disparo
     public TextMeshProUGUI ammoText;
@@ -93,6 +94,7 @@ public class Atirar : MonoBehaviour
         Debug.Log("Recarga concluída.");
         UpdateAmmoText();
         recharge.SetActive(false);
+        somRecarga.Play();
     }
 
     public void escolherArma(int arma)
