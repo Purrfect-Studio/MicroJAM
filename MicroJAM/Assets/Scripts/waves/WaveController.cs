@@ -44,7 +44,6 @@ public class WaveController : MonoBehaviour
 
         if(!AreEnemiesLeft() && podeAtivarStore)
         {
-            itensManager.GanharItem();
             podeAtivarStore = false;
             Time.timeScale = 0;
         }
@@ -89,6 +88,7 @@ public class WaveController : MonoBehaviour
 
         remainingCooldownBetweenWaves = cooldownBetweenWaves;
         currentWaveIndex++; // Avança para a próxima onda
+        itensManager.GanharItem();
         waveInProgress = false;
 
     }
