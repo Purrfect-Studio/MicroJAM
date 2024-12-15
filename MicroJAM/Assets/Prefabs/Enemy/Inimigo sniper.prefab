@@ -173,6 +173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 10
   floatingDamagePrefab: {fileID: 2876150859217713056, guid: 34bfe205efe4ef34d860a510c4aa2bb1, type: 3}
+  cura: 2
 --- !u!114 &-7674725444707354827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,7 +241,7 @@ Animator:
   m_GameObject: {fileID: 1394563038553025955}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0e3c6e18de0e1e84f9eeb1994e16d948, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
