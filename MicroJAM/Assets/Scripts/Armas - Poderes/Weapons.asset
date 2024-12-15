@@ -22,7 +22,7 @@ MonoBehaviour:
   shotgunMagazine: 2
   shotgunPenetration: 0
   shotgunMaxHp: 100
-  sniperDamage: 100
+  sniperDamage: 175
   sniperFireRate: 1.5
   sniperReloadTime: 1.5
   sniperBulletCount: 1
@@ -42,7 +42,7 @@ MonoBehaviour:
   pistolMagazine: 15
   pistolPenetration: 0
   pistolMaxHp: 125
-  machineGunDamage: 7
+  machineGunDamage: 10
   machineGunFireRate: 0.03
   machineGunReloadTime: 3.5
   machineGunBulletCount: 1

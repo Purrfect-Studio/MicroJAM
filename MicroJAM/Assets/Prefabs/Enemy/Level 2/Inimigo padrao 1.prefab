@@ -222,7 +222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealthSystem: {fileID: 0}
   playerController: {fileID: 0}
-  damage: 10
+  damage: 15
 --- !u!114 &459733357028647823
 MonoBehaviour:
   m_ObjectHideFlags: 0
