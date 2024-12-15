@@ -24,6 +24,7 @@ public class AtaquesBoss1 : MonoBehaviour
 
     [Header("Invocar")]
     public GameObject[] invocarPrefab;
+    public int inimigosInvocados;
 
     void Start()
     {
@@ -79,6 +80,7 @@ public class AtaquesBoss1 : MonoBehaviour
         direcaoTiro = (controladorBoss1.player.transform.position - this.transform.position);
         GameObject projetil = Instantiate(projetilPrefab, transform.position, Quaternion.identity);
         projetil.GetComponent<Rigidbody2D>().velocity = direcaoTiro * projetilSpeed;
+        Destroy(projetil, 4f);
         yield return new WaitForSeconds(2f);
         cooldownRestanteAtaque = cooldownAtaque;
         controladorBoss1.usandoAtaque = false;
@@ -90,7 +92,11 @@ public class AtaquesBoss1 : MonoBehaviour
         controladorBoss1.usandoAtaque = true;
         controladorBoss1.animator.SetTrigger("usandoInvocar");
         yield return new WaitForSeconds(0.6f);
-        GameObject inimigo = Instantiate(invocarPrefab[escolherInimigo()], transform.position, Quaternion.identity);
+        for(int i =0; i <= inimigosInvocados; i++)
+        {
+            GameObject inimigo = Instantiate(invocarPrefab[escolherInimigo()], transform.position, Quaternion.identity);
+            inimigo.GetComponent<SistemaDeDrop>().enabled = false;
+        }
         yield return new WaitForSeconds(2.3f);
         cooldownRestanteAtaque = cooldownAtaque;
         controladorBoss1.usandoAtaque = false;
