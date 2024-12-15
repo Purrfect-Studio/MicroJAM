@@ -9,7 +9,7 @@ public class EnemyAI : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        Physics2D.IgnoreLayerCollision(3, 7);
+        Physics2D.IgnoreLayerCollision(10, 7);
     }
 
     // Update is called once per frame
