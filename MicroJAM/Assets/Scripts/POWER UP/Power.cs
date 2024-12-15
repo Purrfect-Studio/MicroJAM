@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public enum PowerUpRarity
 {
-    Comum,
-    Raro,
-    Epico
+    Comun,
+    Rare,
+    Epic
 }
 
 [System.Serializable]
