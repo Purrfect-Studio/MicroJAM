@@ -10,7 +10,7 @@ public class WaveController : MonoBehaviour
     public List<Wave> waves; // Lista de ondas
     private int currentWaveIndex = 0;
     private bool waveInProgress = false;
-
+    private int contadorWave;
     // Referências para o UI TextMeshPro
     public TextMeshProUGUI waveInfoText; // Para exibir a onda atual
     public TextMeshProUGUI enemyCountText; // Para exibir a quantidade de inimigos
@@ -20,6 +20,8 @@ public class WaveController : MonoBehaviour
     public TextMeshProUGUI textCooldownBetweenWaves;
     public GameObject canvasStore;
     private bool podeAtivarStore = true;
+    public GameObject portal;
+    public GameObject luzPortal;
 
     void Start()
     {
@@ -29,6 +31,7 @@ public class WaveController : MonoBehaviour
         UpdateEnemyCountText();
 
         remainingCooldownBetweenWaves = 0;
+        contadorWave = 0;
     }
 
     void Update()
@@ -61,6 +64,11 @@ public class WaveController : MonoBehaviour
             podeAtivarStore = true;
         }
 
+        if(currentWaveIndex == waves.Count - 1 && !AreEnemiesLeft())
+        {
+            portal.SetActive(true);
+            luzPortal.SetActive(true);
+        }
     }
 
     IEnumerator SpawnWave(Wave wave)
