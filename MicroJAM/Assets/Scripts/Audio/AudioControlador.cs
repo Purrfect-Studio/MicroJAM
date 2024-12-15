@@ -57,6 +57,7 @@ public class AudioControlador : MonoBehaviour
     if (!sucesso)
     {
         Debug.LogError("O parâmetro 'Soundtrack' não foi encontrado no AudioMixer!");
+
     }
 
     volumeMusicaConfiguracao = valorSlider / valorMaximoSlider;
