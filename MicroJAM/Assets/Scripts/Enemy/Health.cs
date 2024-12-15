@@ -48,16 +48,22 @@ public class Health : MonoBehaviour
         print("entrou no ShowFloatingDamage");
         if (floatingDamagePrefab != null)
         {
-            // Instancia o texto de dano flutuante perto do inimigo
-            GameObject damageText = Instantiate(floatingDamagePrefab, transform.position, Quaternion.identity);
+            // Gera uma posição aleatória próxima ao inimigo
+            Vector3 randomOffset = new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(0.5f, 1f), 0);
+            Vector3 spawnPosition = transform.position + randomOffset;
+
+            // Instancia o texto de dano flutuante na posição aleatória
+            GameObject damageText = Instantiate(floatingDamagePrefab, spawnPosition, Quaternion.identity);
 
             // Configura o texto do dano e a cor
             damageText.GetComponent<FloatingDamage>().SetDamageText("-" + damage.ToString(), Color.red);
+
             // Colocar o texto em uma Sorting Layer e uma ordem mais alta
             damageText.GetComponent<MeshRenderer>().sortingLayerName = "UI";
             damageText.GetComponent<MeshRenderer>().sortingOrder = 10;
         }
     }
+
 
     // Método de morte
     void Die()
