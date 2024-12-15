@@ -3,9 +3,9 @@ using UnityEngine.TextCore.Text;
 
 public class MachineGunBullet : MonoBehaviour
 {
-    public float speed; // Velocidade do projétil
-    public float lifeTime; // Tempo de vida antes de ser destruído
-    public float spreadRadius; // Raio de dispersão ao redor do mouse
+    public float speed; // Velocidade do projï¿½til
+    public float lifeTime; // Tempo de vida antes de ser destruï¿½do
+    public float spreadRadius; // Raio de dispersï¿½o ao redor do mouse
     public float penetration;
 
     public Weapons weapons;
@@ -15,14 +15,14 @@ public class MachineGunBullet : MonoBehaviour
     void Start()
     {
 
-        // Obtém a posição do mouse no mundo
+        // Obtï¿½m a posiï¿½ï¿½o do mouse no mundo
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = 0; // Definimos Z como 0 pois estamos em 2D
 
         Vector2 randomOffset = Random.insideUnitCircle * spreadRadius;
         Vector2 targetPosition = new Vector2(mousePosition.x, mousePosition.y) + randomOffset;
 
-        // Calcula a direção em relação à posição do mouse
+        // Calcula a direï¿½ï¿½o em relaï¿½ï¿½o ï¿½ posiï¿½ï¿½o do mouse
         direction = (targetPosition - (Vector2)transform.position).normalized;
         Destroy(gameObject, lifeTime);
 
@@ -30,7 +30,7 @@ public class MachineGunBullet : MonoBehaviour
 
     void Update()
     {
-        // Move o projétil na direção fornecida
+        // Move o projï¿½til na direï¿½ï¿½o fornecida
         transform.position += (Vector3)direction * speed * Time.deltaTime;
     }
 
@@ -51,6 +51,10 @@ public class MachineGunBullet : MonoBehaviour
         if (collision.gameObject.CompareTag("Wall"))
         {
             Destroy(gameObject);
+        }
+         if (collision.gameObject.CompareTag("Vaso"))
+        {
+                Destroy(collision.gameObject);
         }
     }
 }

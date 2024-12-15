@@ -51,6 +51,10 @@ public class ShotgunBullet : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
+        
+         if (collision.gameObject.CompareTag("Vaso"))
+        {
+                Destroy(collision.gameObject);
+        }
     }
 }

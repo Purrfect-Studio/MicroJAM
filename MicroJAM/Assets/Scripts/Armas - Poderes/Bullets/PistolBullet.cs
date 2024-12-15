@@ -52,5 +52,9 @@ public class PistolBullet : MonoBehaviour
         {
             Destroy(gameObject);
         }
+         if (collision.gameObject.CompareTag("Vaso"))
+        {
+                Destroy(collision.gameObject);
+        }
     }
 }
