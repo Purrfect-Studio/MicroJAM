@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 14911854856823786}
   - component: {fileID: 1403568325215524610}
   - component: {fileID: 459733357028647823}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Inimigo padrao
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -222,6 +222,7 @@ MonoBehaviour:
   playerHealthSystem: {fileID: 0}
   playerController: {fileID: 0}
   damage: 1
+  projetil: 0
 --- !u!114 &459733357028647823
 MonoBehaviour:
   m_ObjectHideFlags: 0
