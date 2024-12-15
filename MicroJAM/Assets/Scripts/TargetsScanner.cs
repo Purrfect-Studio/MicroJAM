@@ -4,7 +4,7 @@ using UnityEngine;
 public class TargetsScanner : MonoBehaviour
 {
     [Header("Configurações")]
-    public string targetTag = "enemy"; // Tag para encontrar alvos
+    public string targetTag = "Enemy"; // Tag para encontrar alvos
     public float scanRadius = 15f; // Raio de varredura
 
     [Header("Estado")]

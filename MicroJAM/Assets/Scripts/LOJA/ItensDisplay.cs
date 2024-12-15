@@ -30,12 +30,10 @@ public class ItensDisplay : MonoBehaviour
 
 
 
-    public PoderesPlayer poderesPlayer; // Referência ao script PoderesPlayer
 
     private void Awake()
     {
         // Busca automaticamente o componente PoderesPlayer no jogador
-        poderesPlayer = FindObjectOfType<PoderesPlayer>();
     }
 
     public void ApresentarItens(Item item1, Item item2, Item item3)
@@ -69,33 +67,20 @@ public class ItensDisplay : MonoBehaviour
 
     public void EscolherItem1()
     {
-        if (poderesPlayer != null)
-        {
-            
-        }
-
+        //Ligar o item no scriptable
         FecharCanvas();
     }
 
     public void EscolherPoder2()
     {
-        if (poderesPlayer != null)
-        {
-            // Adiciona o segundo poder aos poderes do jogador
-            //
-        }
-
+       
+        //Ligar o item no scriptable
         FecharCanvas();
     }
 
      public void EscolherPoder3()
     {
-        if (poderesPlayer != null)
-        {
-            // Adiciona o segundo poder aos poderes do jogador
-            //
-        }
-
+        //ligar no scriptable
         FecharCanvas();
     }
 
