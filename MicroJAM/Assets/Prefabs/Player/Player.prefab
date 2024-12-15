@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7282916528069252833}
   - component: {fileID: 394462038294015847}
+  - component: {fileID: 6464152975442372375}
   m_Layer: 0
   m_Name: Arma
   m_TagString: Untagged
@@ -33,6 +34,7 @@ Transform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &394462038294015847
+--- !u!212 &6464152975442372375
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -102,6 +104,7 @@ GameObject:
   - component: {fileID: 4327138128192675938}
   - component: {fileID: 6823494715066338606}
   - component: {fileID: -2877356266379853888}
+  - component: {fileID: 5214248268296763418}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -338,6 +341,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5214248268296763418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897920953069598294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d478180d5fbac64ba1f02080bc8572b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poderesAtivos: []
 --- !u!1 &8812157612310321693
 GameObject:
   m_ObjectHideFlags: 0
