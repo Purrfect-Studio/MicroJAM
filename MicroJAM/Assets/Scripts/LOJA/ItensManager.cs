@@ -18,6 +18,7 @@ public class ItensManager : MonoBehaviour
 
         // Envia os power-ups para o PowerUpDisplay
         itensDisplay.ApresentarItens(item1, item2, item3);
+        Debug.Log("Itens enviados: "+ item1.nome +"   " + item2.nome + "  " + item3.nome );
     }
 
 

@@ -5,6 +5,8 @@ using TMPro; // Importa o namespace do TextMeshPro
 
 public class WaveController : MonoBehaviour
 {
+
+    public ItensManager itensManager;
     public List<Wave> waves; // Lista de ondas
     private int currentWaveIndex = 0;
     private bool waveInProgress = false;
@@ -22,6 +24,7 @@ public class WaveController : MonoBehaviour
     void Start()
     {
         // Inicializa a UI com a primeira onda e o número de inimigos na cena
+        itensManager = FindObjectOfType<ItensManager>();
         UpdateWaveText(waves[currentWaveIndex].waveName);
         UpdateEnemyCountText();
 
@@ -41,7 +44,7 @@ public class WaveController : MonoBehaviour
 
         if(!AreEnemiesLeft() && podeAtivarStore)
         {
-            canvasStore.SetActive(true);
+            itensManager.GanharItem();
             podeAtivarStore = false;
             Time.timeScale = 0;
         }
