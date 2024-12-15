@@ -232,7 +232,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8538361637385915098, guid: 99c404d5978db35449bc1fb9eeff248b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99c404d5978db35449bc1fb9eeff248b, type: 3}
@@ -13539,6 +13539,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PortalTrocaFase
       objectReference: {fileID: 0}
+    - target: {fileID: 6780478598896985502, guid: b4217d458714cb54b8334abec7b1f062, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6780478598896985503, guid: b4217d458714cb54b8334abec7b1f062, type: 3}
       propertyPath: m_RootOrder
       value: 19
@@ -21516,7 +21520,7 @@ PrefabInstance:
       objectReference: {fileID: 1021513541}
     - target: {fileID: 3543257654281840738, guid: 73737594067a09b4e92cf3ed1a258c1b, type: 3}
       propertyPath: cooldownBetweenWaves
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3543257654281840738, guid: 73737594067a09b4e92cf3ed1a258c1b, type: 3}
       propertyPath: textCooldownBetweenWaves
