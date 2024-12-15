@@ -140,35 +140,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5565653707611096205, guid: 168ec4a95c776e34d95b14c38d1e1e23, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5565653707611096205, guid: 168ec4a95c776e34d95b14c38d1e1e23, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5565653707611096205, guid: 168ec4a95c776e34d95b14c38d1e1e23, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 1625.625
       objectReference: {fileID: 0}
     - target: {fileID: 5565653707611096205, guid: 168ec4a95c776e34d95b14c38d1e1e23, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -539.777
       objectReference: {fileID: 0}
     - target: {fileID: 5565653707658139066, guid: 168ec4a95c776e34d95b14c38d1e1e23, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5565653707658139066, guid: 168ec4a95c776e34d95b14c38d1e1e23, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5565653707658139066, guid: 168ec4a95c776e34d95b14c38d1e1e23, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 1181.875
       objectReference: {fileID: 0}
     - target: {fileID: 5565653707658139066, guid: 168ec4a95c776e34d95b14c38d1e1e23, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -539.777
       objectReference: {fileID: 0}
     - target: {fileID: 5565653707658139067, guid: 168ec4a95c776e34d95b14c38d1e1e23, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -188,35 +188,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5565653708528755533, guid: 168ec4a95c776e34d95b14c38d1e1e23, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5565653708528755533, guid: 168ec4a95c776e34d95b14c38d1e1e23, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5565653708528755533, guid: 168ec4a95c776e34d95b14c38d1e1e23, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 738.125
       objectReference: {fileID: 0}
     - target: {fileID: 5565653708528755533, guid: 168ec4a95c776e34d95b14c38d1e1e23, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -539.777
       objectReference: {fileID: 0}
     - target: {fileID: 5565653709198278484, guid: 168ec4a95c776e34d95b14c38d1e1e23, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5565653709198278484, guid: 168ec4a95c776e34d95b14c38d1e1e23, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5565653709198278484, guid: 168ec4a95c776e34d95b14c38d1e1e23, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 294.375
       objectReference: {fileID: 0}
     - target: {fileID: 5565653709198278484, guid: 168ec4a95c776e34d95b14c38d1e1e23, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -539.777
       objectReference: {fileID: 0}
     - target: {fileID: 5565653709198278485, guid: 168ec4a95c776e34d95b14c38d1e1e23, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -320,7 +320,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5565653709263830222, guid: 168ec4a95c776e34d95b14c38d1e1e23, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 168ec4a95c776e34d95b14c38d1e1e23, type: 3}
