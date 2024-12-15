@@ -121,6 +121,13 @@ public class ItensDisplay : MonoBehaviour
             Debug.Log("Ligando torreta");
             itensAtivados.ligarTorreta();
             break;
+
+            case("Bat"):
+            Debug.Log("Ligando morcego");
+            itensLoja.possuiMorcego = true;
+            itensAtivados.ligarMorcego();
+            break;
+
             
             default:
             Debug.Log("Tem esse item ai nao meo: " + nomeItem);
