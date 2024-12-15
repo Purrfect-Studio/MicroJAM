@@ -6,7 +6,8 @@ public class PlayerHealthSystem : MonoBehaviour
     public float currentHealth = 10;
     public float maxHealth = 10;
 
-    private Slider sliderVida; // Referência automática ao Slider da barra de vida
+    public Slider sliderVida; // Referência automática ao Slider da barra de vida
+    public GameObject sliderObject;
     public Vector3 offset = new Vector3(0, 2f, 0); // Ajuste da posição acima do jogador
 
     private Camera mainCamera; // Referência à câmera principal
@@ -14,8 +15,8 @@ public class PlayerHealthSystem : MonoBehaviour
     void Start()
     {
         // Procura o Slider na cena pela tag "HealthBar"
-        GameObject sliderObject = GameObject.FindWithTag("HealthBar");
-        
+        sliderObject = GameObject.FindGameObjectWithTag("HealthBar");
+
         if (sliderObject != null)
         {
             sliderVida = sliderObject.GetComponent<Slider>();
@@ -35,23 +36,11 @@ public class PlayerHealthSystem : MonoBehaviour
     {
         if (sliderVida != null)
         {
-            UpdateHealthBarPosition();
             HealthLogic();
             CheckDeath();
         }
     }
 
-    void UpdateHealthBarPosition()
-    {
-        if (sliderVida != null && mainCamera != null)
-        {
-            // Converte a posição do jogador do mundo para a posição da tela
-            Vector3 screenPosition = mainCamera.WorldToScreenPoint(transform.position + offset);
-
-            // Atualiza a posição da barra de vida
-            sliderVida.transform.position = screenPosition;
-        }
-    }
 
     void HealthLogic()
     {
