@@ -12,10 +12,14 @@ public class PlayerExperience : MonoBehaviour
     public float currentXP = 0;
     public float maxXP = 10;
     private int currentLevel = 0;
+    public PowerUpManager powerUpManager;
 
 
     void Start()
     {
+
+        powerUpManager = FindObjectOfType<PowerUpManager>();
+
         xpBar.maxValue = maxXP;
         xpBar.value = currentXP;
         levelText.text = "Level: " + currentLevel.ToString();
@@ -38,6 +42,8 @@ public class PlayerExperience : MonoBehaviour
             levelText.text = "Level: " + currentLevel.ToString();
             canvasPower.SetActive(true);
             Time.timeScale = 0;
+            powerUpManager.GanharPoder();
+
         }
     }
 

@@ -28,7 +28,6 @@ public class PowerUpDisplay : MonoBehaviour
     public void ApresentarPoderes(Power poder1, Power poder2)
     {
         canvas.SetActive(true);
-        GameManager.desativarJogo();
 
         // Armazena os poderes sorteados
         poderEscolhido1 = poder1;
@@ -52,8 +51,7 @@ public class PowerUpDisplay : MonoBehaviour
         if (poderesPlayer != null)
         {
             // Adiciona o primeiro poder aos poderes do jogador
-            poderesPlayer.AdicionarPoder(poderEscolhido1);
-            GameManager.ativarJogo();
+            poderesPlayer.AdicionarPoder(poderEscolhido1.nome);
         }
 
         FecharCanvas();
@@ -64,8 +62,7 @@ public class PowerUpDisplay : MonoBehaviour
         if (poderesPlayer != null)
         {
             // Adiciona o segundo poder aos poderes do jogador
-            poderesPlayer.AdicionarPoder(poderEscolhido2);
-            GameManager.ativarJogo();
+            poderesPlayer.AdicionarPoder(poderEscolhido2.nome);
         }
 
         FecharCanvas();

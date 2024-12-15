@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1543795091664588608
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7282916528069252833}
+  m_Layer: 0
+  m_Name: Arma
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7282916528069252833
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543795091664588608}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1897920953069598283}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1897920953069598294
 GameObject:
   m_ObjectHideFlags: 0
@@ -38,6 +69,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4607229085617849745}
+  - {fileID: 7282916528069252833}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -168,6 +200,12 @@ MonoBehaviour:
   - {fileID: 3696234118922433258, guid: 9fac85e657d905b4e8489491756484c5, type: 3}
   - {fileID: 3696234118922433258, guid: af8ebb3885f7fbc4ea1a6be8e36ad21a, type: 3}
   - {fileID: 3696234118922433258, guid: 653cffdda5235ec4898ea49b7be4de89, type: 3}
+  spritesArma:
+  - {fileID: 2104057154, guid: c1175860626a15f47951fda9545f1f4c, type: 3}
+  - {fileID: -132624831, guid: c1175860626a15f47951fda9545f1f4c, type: 3}
+  - {fileID: 1225498006, guid: c1175860626a15f47951fda9545f1f4c, type: 3}
+  - {fileID: -1219091168, guid: c1175860626a15f47951fda9545f1f4c, type: 3}
+  armaObjeto: {fileID: 1543795091664588608}
   fireRate: 0.2
   maxAmmo: 10
   currentAmmo: 0
@@ -209,6 +247,7 @@ MonoBehaviour:
   canvasPower: {fileID: 0}
   currentXP: 0
   maxXP: 10
+  powerUpManager: {fileID: 0}
 --- !u!70 &6823494715066338606
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
