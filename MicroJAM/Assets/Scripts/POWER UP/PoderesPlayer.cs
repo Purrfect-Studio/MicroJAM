@@ -110,7 +110,7 @@ public class PoderesPlayer : MonoBehaviour
     void Update()
     {
         // Exemplos de teste para ativar os poderes
-        if (Input.GetKeyDown(KeyCode.Alpha1)) AdicionarPoder("Velocidade");
+        /*if (Input.GetKeyDown(KeyCode.Alpha1)) AdicionarPoder("Velocidade");
         if (Input.GetKeyDown(KeyCode.Alpha2)) AdicionarPoder("Saude");
         if (Input.GetKeyDown(KeyCode.Alpha3)) AdicionarPoder("Munição");
         if (Input.GetKeyDown(KeyCode.Alpha4)) AdicionarPoder("FogoRapido");
@@ -119,7 +119,7 @@ public class PoderesPlayer : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P)) RemoverPoder("Velocidade");
         if (Input.GetKeyDown(KeyCode.L)) RemoverPoder("Saude");
         if (Input.GetKeyDown(KeyCode.K)) RemoverPoder("Munição");
-        if (Input.GetKeyDown(KeyCode.M)) RemoverPoder("FogoRapido");
+        if (Input.GetKeyDown(KeyCode.M)) RemoverPoder("FogoRapido");*/
     }
 
 }
