@@ -205,6 +205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xpBar: {fileID: 0}
   levelText: {fileID: 0}
+  canvasPower: {fileID: 0}
   currentXP: 0
   maxXP: 10
 --- !u!70 &6823494715066338606
@@ -281,7 +282,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: -552292303
   m_SortingOrder: 2
   m_TargetDisplay: 0
@@ -492,19 +493,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 904628788905368423, guid: 71020c31402676a4daeccd9426b28f21, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 20
+      value: 20.59
       objectReference: {fileID: 0}
     - target: {fileID: 904628788905368423, guid: 71020c31402676a4daeccd9426b28f21, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5998395
+      value: 0.5945369
       objectReference: {fileID: 0}
     - target: {fileID: 904628788905368423, guid: 71020c31402676a4daeccd9426b28f21, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5998395
+      value: 0.5945369
       objectReference: {fileID: 0}
     - target: {fileID: 904628788905368423, guid: 71020c31402676a4daeccd9426b28f21, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.5998395
+      value: 0.5945369
       objectReference: {fileID: 0}
     - target: {fileID: 904628788905368423, guid: 71020c31402676a4daeccd9426b28f21, type: 3}
       propertyPath: m_LocalPosition.x
@@ -536,11 +537,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 904628788905368423, guid: 71020c31402676a4daeccd9426b28f21, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.00005722
+      value: 0.000000010979
       objectReference: {fileID: 0}
     - target: {fileID: 904628788905368423, guid: 71020c31402676a4daeccd9426b28f21, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -45.6
+      value: -42.92
       objectReference: {fileID: 0}
     - target: {fileID: 904628788905368423, guid: 71020c31402676a4daeccd9426b28f21, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -553,6 +554,10 @@ PrefabInstance:
     - target: {fileID: 904628788905368423, guid: 71020c31402676a4daeccd9426b28f21, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 904628789124983499, guid: 71020c31402676a4daeccd9426b28f21, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.0000047683716
       objectReference: {fileID: 0}
     - target: {fileID: 904628789599663156, guid: 71020c31402676a4daeccd9426b28f21, type: 3}
       propertyPath: m_AnchorMax.y
