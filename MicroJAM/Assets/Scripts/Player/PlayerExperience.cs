@@ -12,15 +12,15 @@ public class PlayerExperience : MonoBehaviour
     public float maxXP = 10;
     private int currentLevel = 0;
     public PowerUpManager powerUpManager;
+    public CurrentPlayerStats currentPlayerStats;
 
 
     void Start()
     {
-
         powerUpManager = FindObjectOfType<PowerUpManager>();
-
-        xpBar.maxValue = maxXP;
-        xpBar.value = currentXP;
+        xpBar.maxValue = currentPlayerStats.maxXp;
+        xpBar.value = currentPlayerStats.currentXp;
+        currentLevel = currentPlayerStats.currentLevel;
         levelText.text = "Level: " + currentLevel.ToString();
     }
 
@@ -39,6 +39,9 @@ public class PlayerExperience : MonoBehaviour
             xpBar.value = currentXP;
             currentLevel += 1;
             levelText.text = "Level: " + currentLevel.ToString();
+            currentPlayerStats.currentLevel = currentLevel;
+            currentPlayerStats.maxXp = maxXP;
+            currentPlayerStats.currentXp = currentXP;
             Time.timeScale = 0;
             powerUpManager.GanharPoder();
 
@@ -49,6 +52,7 @@ public class PlayerExperience : MonoBehaviour
     {
         currentXP += xpGain;
         xpBar.value = currentXP;
+        currentPlayerStats.currentXp = currentXP;
     }
 
     public void despausar()

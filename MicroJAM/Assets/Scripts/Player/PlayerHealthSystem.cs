@@ -3,17 +3,20 @@ using UnityEngine.UI;
 
 public class PlayerHealthSystem : MonoBehaviour
 {
-    public float currentHealth = 10;
-    public float maxHealth = 10;
+    public float currentHealth;
+    public float maxHealth;
 
     public Slider sliderVida; // Referência automática ao Slider da barra de vida
     public GameObject sliderObject;
     public Vector3 offset = new Vector3(0, 2f, 0); // Ajuste da posição acima do jogador
 
     private Camera mainCamera; // Referência à câmera principal
+    public CurrentPlayerStats currentPlayerStats;
 
     void Start()
     {
+        maxHealth = currentPlayerStats.maxHealth;
+        currentHealth = maxHealth;
         // Procura o Slider na cena pela tag "HealthBar"
         sliderObject = GameObject.FindGameObjectWithTag("HealthBar");
 

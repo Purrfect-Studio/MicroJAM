@@ -1,23 +1,25 @@
 using UnityEngine;
 using System.Collections;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Atirar : MonoBehaviour
 {
     public GameObject[] bulletPrefab; // Prefab do projétil
     public Sprite[] spritesArma; // Array de sprites das armas
     public SpriteRenderer armaSpriteRenderer; // Objeto que exibirá o sprite da arma
-    public float fireRate = 0.2f; // Taxa de disparo (tempo entre cada tiro)
-    public int maxAmmo = 10; // Máximo de munição
+    public float fireRate; // Taxa de disparo (tempo entre cada tiro)
+    public int maxAmmo; // Máximo de munição
     public int currentAmmo; // Munição atual
     public int bulletCount; // quantidade de tiros disparados por vez
-    public float reloadTime = 2f; // Tempo de recarga
+    public float reloadTime; // Tempo de recarga
     private bool isReloading = false; // Verifica se está recarregando
     public AudioSource somRecarga;
 
-    private float fireCooldown = 0f; // Contador para o cooldown do disparo
+    private float fireCooldown; // Contador para o cooldown do disparo
     public TextMeshProUGUI ammoText;
     private Weapons weapon;
+    public CurrentPlayerStats currentPlayerStats;
 
     private int chosenWeapon;
 
@@ -27,7 +29,46 @@ public class Atirar : MonoBehaviour
     {
         recharge = GameObject.FindGameObjectWithTag("Recharge");
         recharge.SetActive(false);
-        Time.timeScale = 0;
+        if (SceneManager.GetActiveScene().name == "Level 01")
+        {
+            Time.timeScale = 0;
+        }
+        else
+        {
+            fireRate = currentPlayerStats.fireRate;
+            maxAmmo = currentPlayerStats.maxAmmo;
+            currentAmmo = maxAmmo;
+            bulletCount = currentPlayerStats.bulletCount;
+            reloadTime = currentPlayerStats.reloadTime;
+            chosenWeapon = currentPlayerStats.currentWeapon;
+            if(chosenWeapon == 0)
+            {
+                bulletPrefab[0].GetComponent<OnHitDamage>().damage = currentPlayerStats.damage;
+                bulletPrefab[0].GetComponent<PistolBullet>().speed = currentPlayerStats.bulletSpeed;
+                bulletPrefab[0].GetComponent<PistolBullet>().lifeTime = currentPlayerStats.lifeTime;
+                bulletPrefab[0].GetComponent<PistolBullet>().spreadRadius = currentPlayerStats.spreadRadius;
+                bulletPrefab[0].GetComponent<PistolBullet>().penetration = currentPlayerStats.penetration;
+            }
+            else if(chosenWeapon == 1)
+            {
+                bulletPrefab[1].GetComponent<OnHitDamage>().damage = currentPlayerStats.damage;
+                bulletPrefab[1].GetComponent<ShotgunBullet>().speed = currentPlayerStats.bulletSpeed;
+                bulletPrefab[1].GetComponent<ShotgunBullet>().lifeTime = currentPlayerStats.lifeTime;
+                bulletPrefab[1].GetComponent<ShotgunBullet>().spreadRadius = currentPlayerStats.spreadRadius;
+                bulletPrefab[1].GetComponent<ShotgunBullet>().penetration = currentPlayerStats.penetration;
+            }
+            else if(chosenWeapon == 2)
+            {
+
+            }else if(chosenWeapon == 3)
+            {
+                bulletPrefab[3].GetComponent<OnHitDamage>().damage = currentPlayerStats.damage;
+                bulletPrefab[3].GetComponent<MachineGunBullet>().speed = currentPlayerStats.bulletSpeed;
+                bulletPrefab[3].GetComponent<MachineGunBullet>().lifeTime = currentPlayerStats.lifeTime;
+                bulletPrefab[3].GetComponent<MachineGunBullet>().spreadRadius = currentPlayerStats.spreadRadius;
+                bulletPrefab[3].GetComponent<MachineGunBullet>().penetration = currentPlayerStats.penetration;
+            }
+        }
         currentAmmo = maxAmmo; // Inicializa a munição atual
         UpdateAmmoText();
     }
@@ -72,7 +113,7 @@ public class Atirar : MonoBehaviour
 
     void UpdateAmmoText()
     {
-        ammoText.text = "Munição: " + currentAmmo.ToString(); // Exibe a quantidade atual de munição
+        ammoText.text = "Ammo: " + currentAmmo.ToString(); // Exibe a quantidade atual de munição
     }
 
     void Fire()
@@ -103,9 +144,6 @@ public class Atirar : MonoBehaviour
         chosenWeapon = arma;
         Debug.Log("Arma escolhida: " + chosenWeapon);
 
-        // Define o sprite da arma correspondente
-        
-
         if (chosenWeapon == 0) // Pistola
         {
             weapon = bulletPrefab[0].GetComponent<PistolBullet>().weapons;
@@ -120,7 +158,16 @@ public class Atirar : MonoBehaviour
             bulletPrefab[0].GetComponent<PistolBullet>().spreadRadius = weapon.pistolSpread;
             bulletPrefab[0].GetComponent<PistolBullet>().penetration = weapon.pistolPenetration;
 
-            
+            currentPlayerStats.currentWeapon = chosenWeapon;
+            currentPlayerStats.fireRate = fireRate;
+            currentPlayerStats.maxAmmo = maxAmmo;
+            currentPlayerStats.reloadTime = reloadTime;
+            currentPlayerStats.bulletCount = bulletCount;
+            currentPlayerStats.damage = weapon.pistolDamage;
+            currentPlayerStats.bulletSpeed = weapon.pistolShotSpeed;
+            currentPlayerStats.lifeTime = weapon.pistolRange;
+            currentPlayerStats.spreadRadius = weapon.pistolSpread;
+            currentPlayerStats.penetration = weapon.pistolPenetration;
         }
         else if (chosenWeapon == 1) // Shotgun
         {
@@ -135,6 +182,18 @@ public class Atirar : MonoBehaviour
             bulletPrefab[1].GetComponent<ShotgunBullet>().lifeTime = weapon.shotgunRange;
             bulletPrefab[1].GetComponent<ShotgunBullet>().spreadRadius = weapon.shotgunSpread;
             bulletPrefab[1].GetComponent<ShotgunBullet>().penetration = weapon.shotgunPenetration;
+
+            currentPlayerStats.currentWeapon = chosenWeapon;
+            currentPlayerStats.fireRate = fireRate;
+            currentPlayerStats.maxAmmo = maxAmmo;
+            currentPlayerStats.reloadTime = reloadTime;
+            currentPlayerStats.bulletCount = bulletCount;
+            currentPlayerStats.damage = weapon.shotgunDamage;
+            currentPlayerStats.bulletSpeed = weapon.shotgunShotSpeed;
+            currentPlayerStats.lifeTime = weapon.shotgunRange;
+            currentPlayerStats.spreadRadius = weapon.shotgunSpread;
+            currentPlayerStats.penetration = weapon.shotgunPenetration;
+
         }
         else if (chosenWeapon == 2) // Sniper
         {
@@ -152,6 +211,18 @@ public class Atirar : MonoBehaviour
             sniper.lifeTime = weapon.sniperRange;
             sniper.spreadRadius = weapon.sniperSpread;
             sniper.penetration = weapon.sniperPenetration;
+
+            currentPlayerStats.currentWeapon = chosenWeapon;
+            currentPlayerStats.fireRate = fireRate;
+            currentPlayerStats.maxAmmo = maxAmmo;
+            currentPlayerStats.reloadTime = reloadTime;
+            currentPlayerStats.bulletCount = bulletCount;
+            currentPlayerStats.damage = weapon.sniperDamage;
+            currentPlayerStats.bulletSpeed = weapon.sniperShotSpeed;
+            currentPlayerStats.lifeTime = weapon.sniperRange;
+            currentPlayerStats.spreadRadius = weapon.sniperSpread;
+            currentPlayerStats.penetration = weapon.sniperPenetration;
+
         }
         else if (chosenWeapon == 3) // Metralhadora
         {
@@ -166,9 +237,22 @@ public class Atirar : MonoBehaviour
             bulletPrefab[3].GetComponent<MachineGunBullet>().lifeTime = weapon.machineGunRange;
             bulletPrefab[3].GetComponent<MachineGunBullet>().spreadRadius = weapon.machineGunSpread;
             bulletPrefab[3].GetComponent<MachineGunBullet>().penetration = weapon.machineGunPenetration;
+
+            currentPlayerStats.currentWeapon = chosenWeapon;
+            currentPlayerStats.fireRate = fireRate;
+            currentPlayerStats.maxAmmo = maxAmmo;
+            currentPlayerStats.reloadTime = reloadTime;
+            currentPlayerStats.bulletCount = bulletCount;
+            currentPlayerStats.damage = weapon.machineGunDamage;
+            currentPlayerStats.bulletSpeed = weapon.machineGunShotSpeed;
+            currentPlayerStats.lifeTime = weapon.machineGunRange;
+            currentPlayerStats.spreadRadius = weapon.machineGunSpread;
+            currentPlayerStats.penetration = weapon.machineGunPenetration;
+
         }
 
         armaSpriteRenderer.sprite = spritesArma[chosenWeapon];
+        currentPlayerStats.sprite = spritesArma[chosenWeapon];
         currentAmmo = maxAmmo;
         UpdateAmmoText();
         Time.timeScale = 1;

@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public CurrentPlayerStats currentPlayerStats;
     private Rigidbody2D playerRigidBody2D;
     public SpriteRenderer spriteRenderer;
     public Animator playerAnimator;
     private Vector2 playerDirection;
     private Vector2 lastPlayerDirection; // Direção do último movimento
-    public float playerSpeed = 5f;
-    public float stairSpeed = 2.5f; // Velocidade reduzida nas escadas
+    public float playerSpeed;
+    public float stairSpeed; // Velocidade reduzida nas escadas
     private float currentSpeed; // Velocidade atual
     public float KBForce = 10f;
     public float KBCount = 0f; // Será inicializado na colisão
@@ -35,6 +36,8 @@ public class PlayerController : MonoBehaviour
         {
             Debug.LogWarning("AudioSource de passos não atribuído.");
         }
+        playerSpeed = currentPlayerStats.playerSpeed;
+        stairSpeed = currentPlayerStats.playerStairSpeed;
     }
 
     void Update()

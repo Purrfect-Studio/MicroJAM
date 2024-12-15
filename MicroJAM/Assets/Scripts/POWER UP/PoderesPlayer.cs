@@ -6,6 +6,7 @@ public class PoderesPlayer : MonoBehaviour
     private PlayerController playerController;
     private PlayerHealthSystem playerHealthSystem;
     private Atirar atirar;
+    public CurrentPlayerStats currentPlayerStats;
 
     public List<string> poderesAtivos = new List<string>(); // Lista para armazenar os poderes ativos
 
@@ -35,20 +36,24 @@ public class PoderesPlayer : MonoBehaviour
         {
             case "Velocidade":
                 playerController.playerSpeed += 3f; // Aumenta a velocidade do jogador
+                currentPlayerStats.playerSpeed = playerController.playerSpeed;
                 break;
 
             case "Saude":
                 playerHealthSystem.maxHealth += 15f; // Aumenta a saúde máxima
                 playerHealthSystem.currentHealth += 5f; // Cura o jogador em relação ao aumento
+                currentPlayerStats.maxHealth = playerHealthSystem.maxHealth;
                 break;
 
             case "Munição":
                 atirar.maxAmmo += 5; // Aumenta a capacidade máxima de munição
                 atirar.currentAmmo += 5; // Recarrega a munição atual
+                currentPlayerStats.maxAmmo = atirar.maxAmmo;
                 break;
 
             case "FogoRapido":
                 atirar.fireRate /= 1.5f; // Reduz o tempo entre disparos
+                currentPlayerStats.fireRate = atirar.fireRate;
                 break;
 
             default:
