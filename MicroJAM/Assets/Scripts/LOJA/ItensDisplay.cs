@@ -24,6 +24,7 @@ public class ItensDisplay : MonoBehaviour
     public TMP_Text custoItem1; // TextMeshPro para a raridade do poder 1
     public TMP_Text custoItem2; // TextMeshPro para a raridade do poder 2
     public TMP_Text custoItem3; // TextMeshPro para a raridade do poder 2
+    public TMP_Text VidaMaxima; // TextMeshPro para a raridade do poder 1
 
 
     private Item itemEscolhido1; // Referência para o primeiro poder sorteado
@@ -33,6 +34,12 @@ public class ItensDisplay : MonoBehaviour
     public ItensAtivados itensAtivados;
     private PlayerExperience playerExperience;
 
+    private PlayerHealthSystem playerHealthSystem;
+
+    public GameObject painel1;
+        public GameObject painel2;
+    public GameObject painel3;
+
 
 
 
@@ -40,12 +47,18 @@ public class ItensDisplay : MonoBehaviour
     {
         itensAtivados = FindObjectOfType<ItensAtivados>();
         playerExperience = FindObjectOfType<PlayerExperience>();
+        playerHealthSystem = FindObjectOfType<PlayerHealthSystem>();
     }
 
     public void ApresentarItens(Item item1, Item item2, Item item3)
     {
         canvas.SetActive(true);
+        VidaMaxima.text = playerHealthSystem.maxHealth.ToString() + " Max Health";
+
+
         playerExperience.pausar();
+
+
 
 
         // Armazena os poderes sorteados
@@ -75,33 +88,29 @@ public class ItensDisplay : MonoBehaviour
 
     public void EscolherItem1()
     {
+        
         LigarItem(nomeItem1.text.ToString());
-        playerExperience.despausar();
-        FecharCanvas();
-
+        painel1.SetActive(false);
 
     }
 
     public void EscolherPoder2()
     {
        LigarItem(nomeItem2.text.ToString());
-        playerExperience.despausar();
+               painel2.SetActive(false);
 
-        FecharCanvas();
     }
 
      public void EscolherPoder3()
     {
        LigarItem(nomeItem3.text.ToString());
-               playerExperience.despausar();
+               painel3.SetActive(false);
 
-        FecharCanvas();
     }
 
     public void Pular()
     {
         playerExperience.despausar();
-
         FecharCanvas();
         
     }
