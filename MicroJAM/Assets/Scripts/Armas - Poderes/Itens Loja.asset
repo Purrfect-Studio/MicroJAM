@@ -10,5 +10,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f552468885aaca41bb588e89a042648, type: 3}
-  m_Name: Upgrades
+  m_Name: Itens Loja
   m_EditorClassIdentifier: 
