@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09836d11af9e31147a7feb62cf04e024, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 130
+  life: 180
   floatingDamagePrefab: {fileID: 2876150859217713056, guid: 34bfe205efe4ef34d860a510c4aa2bb1, type: 3}
   cura: 2
 --- !u!114 &-7674725444707354827
@@ -195,10 +195,10 @@ MonoBehaviour:
   raioMovimentoAleatorio: 5
   sniper: 0
   shotgun: 1
-  projetilSniperPrefab: {fileID: 9008992326949002304, guid: b9d66891cbab5b247b9168dfe3d9fabd, type: 3}
+  projetilSniperPrefab: {fileID: 9008992326949002304, guid: 8b0450403efcb63489fbb8aedab69ecf, type: 3}
   cooldownAtirarSniper: 2.5
   projetilSniperSpeed: 2
-  projetilShotgunPrefab: {fileID: 9008992326949002304, guid: 13e64dbe833f9c149aed401fb84c9628, type: 3}
+  projetilShotgunPrefab: {fileID: 9008992326949002304, guid: 1a5c3ff2cf3c19e428beb9e0d889e5e7, type: 3}
   cooldownAtirarShotgun: 3.5
   projetilShotgunSpeed: 15
 --- !u!114 &1651734852181066130
