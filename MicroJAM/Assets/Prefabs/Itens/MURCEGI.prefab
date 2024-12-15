@@ -98,5 +98,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 880603187116086234, guid: 666ce03dc38f3a0418e247f80857bdb8, type: 3}
-  cooldown: 1
-  filho: 1
+  cooldown: 7
+  filho: 0
