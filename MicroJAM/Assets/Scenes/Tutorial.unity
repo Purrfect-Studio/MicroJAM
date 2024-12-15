@@ -227,8 +227,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -105}
-  m_SizeDelta: {x: 1094.18, y: 688.15}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1094.18, y: 760.51}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &868318065
 Animator:
@@ -271,44 +271,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Tutorial Movement:
-
-
-    Use WASD or arrow keys to move.
-
-    Aiming and
-    Shooting:
-
-
-    Aim with the mouse.
-
-    Fire with the left mouse button.
-
-    Position
-    yourself strategically and stay mobile to avoid getting overwhelmed.
-
-
-    Collecting
-    XP:
-
-    Defeat enemies to collect radioactive particles (XP).
-
-    XP levels
-    you up, allowing you to choose new perks.
-
-
-    Health is the Currency:
-
-    Your
-    health is your most valuable resource. It is used for:
-
-    - Purchasing perks.
-
-    -
-    Activating powerful abilities.
-
-
-'
+  m_text: "Controls:\n\n- Move: Use WASD or arrow keys.\n- Aim: Move your mouse.\n-
+    Shoot: Press the left mouse button.\n\nKey Mechanics:\n\n- Toxic Environment:
+    The zone drains your strength. Stay on the move to find health.\n- Enemies: Killing
+    mutants restores health and drops XP for upgrades.\n- XP: Level up by collecting
+    XP to choose powerful perks.\n- Life as Currency: Trade your health to unlock
+    perks, but balance your choices carefully\u2014spend too much, and you\u2019ll
+    risk everything.\n\nObjective:\n\nSurvive as long as possible. Keep fighting
+    to grow stronger and uncover your escape."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: eeed23a5384da0141b1fb2b292a7b437, type: 2}
   m_sharedMaterial: {fileID: -4374242796753270230, guid: eeed23a5384da0141b1fb2b292a7b437, type: 2}
@@ -646,7 +616,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 337}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1094.15, y: 93.16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1352482098
