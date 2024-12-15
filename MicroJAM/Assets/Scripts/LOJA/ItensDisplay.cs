@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System;
-using UnityEditor.Networking.PlayerConnection;
 
 public class ItensDisplay : MonoBehaviour
 {
