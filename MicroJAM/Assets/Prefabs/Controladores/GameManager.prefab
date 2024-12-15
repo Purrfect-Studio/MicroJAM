@@ -80,7 +80,7 @@ MonoBehaviour:
   - nome: Ammo
     sprite: {fileID: 866891258, guid: c1175860626a15f47951fda9545f1f4c, type: 3}
     descricao: Increase your max ammo by 50%
-    raridade: 2
+    raridade: 1
   - nome: FireRate
     sprite: {fileID: -1186347866, guid: c1175860626a15f47951fda9545f1f4c, type: 3}
     descricao: decrease your fireRate by 50%
@@ -88,6 +88,10 @@ MonoBehaviour:
   - nome: Reload
     sprite: {fileID: 1812679121, guid: a70345b5039f55241b08c1c2e4428f51, type: 3}
     descricao: decrease your reload time by 50%
+    raridade: 0
+  - nome: bulletCount
+    sprite: {fileID: 817304195, guid: c1175860626a15f47951fda9545f1f4c, type: 3}
+    descricao: Now your gun will fire one more shot
     raridade: 2
   powerUpDisplay: {fileID: 7343404689884724934}
 --- !u!114 &7343404689884724930
@@ -125,7 +129,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7343404691178499766}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.9718704, y: 2.1447034, z: -1.4533446}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -146,6 +150,7 @@ GameObject:
   - component: {fileID: 7343404691752667553}
   - component: {fileID: 7343404691752667583}
   - component: {fileID: 7343404691752667552}
+  - component: {fileID: 1897544460}
   m_Layer: 0
   m_Name: ItensManager
   m_TagString: Untagged
@@ -181,26 +186,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itens:
-  - nome: Faca de Statikk
-    sprite: {fileID: 1543655790, guid: c1175860626a15f47951fda9545f1f4c, type: 3}
-    descricao: AAAAAAAAAAAAAAAAA
-    preco: 12
-  - nome: TEU CU NO MEU PAUI
-    sprite: {fileID: 870996134, guid: c1175860626a15f47951fda9545f1f4c, type: 3}
-    descricao: AAAAAAAAAAAAAAAAA
-    preco: 20000000
-  - nome: "ado ado ado quem leu \xE9 viado"
-    sprite: {fileID: 2093264446, guid: c1175860626a15f47951fda9545f1f4c, type: 3}
-    descricao: AAAAAAAAAAAAAAAAA
-    preco: 1
-  - nome: cuVBucetaPaupenis
-    sprite: {fileID: -907383297, guid: c1175860626a15f47951fda9545f1f4c, type: 3}
-    descricao: AAAAAAAAAAAAAAAAA
-    preco: 8
-  - nome: ???????????@!#@$!#!@
-    sprite: {fileID: -1439239610, guid: c1175860626a15f47951fda9545f1f4c, type: 3}
-    descricao: AAAAAAAAAAAAAAAAA
-    preco: 69
+  - nome: Turret
+    sprite: {fileID: 491085894, guid: 76907c29b18fc9840b248a1b47f34afe, type: 3}
+    descricao: An automated turret that attacks nearby enemies.
+    preco: 15
+  - nome: Pulse Fire
+    sprite: {fileID: 676836212, guid: a70345b5039f55241b08c1c2e4428f51, type: 3}
+    descricao: A ring of fire that deals continuous damage to enemies within range.
+    preco: 10
+  - nome: Ember
+    sprite: {fileID: -1216992041, guid: 3b054d03cb47538478282b1d894e8c7a, type: 3}
+    descricao: A companion pet that emits a shockwave, pushing back nearby enemies.
+    preco: 20
   itensDisplay: {fileID: 7343404691752667552}
 --- !u!114 &7343404691752667552
 MonoBehaviour:
@@ -227,5 +224,25 @@ MonoBehaviour:
   custoItem1: {fileID: 0}
   custoItem2: {fileID: 0}
   custoItem3: {fileID: 0}
-  itensLoja: {fileID: 0}
-  itensAtivados: {fileID: 0}
+  VidaMaxima: {fileID: 0}
+  itensLoja: {fileID: 11400000, guid: dd0bbdff9192e234897210f21d417258, type: 2}
+  itensAtivados: {fileID: 1897544460}
+  painel1: {fileID: 0}
+  painel2: {fileID: 0}
+  painel3: {fileID: 0}
+--- !u!114 &1897544460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7343404691752667554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef54fb60fcc8d04580eea808b04eb63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itensLoja: {fileID: 11400000, guid: dd0bbdff9192e234897210f21d417258, type: 2}
+  torreta: {fileID: 7246590507515454949, guid: 6dc8e3e265869af4a81a34ce46563049, type: 3}
+  pulsefire: {fileID: 5703746925015831858, guid: 4b69d3251611d7344ab7ec51f7c69b0a, type: 3}
+  morcego: {fileID: 1084043712823014221, guid: c9ac3f564e085124eaa2c2ddca0b9aa8, type: 3}
