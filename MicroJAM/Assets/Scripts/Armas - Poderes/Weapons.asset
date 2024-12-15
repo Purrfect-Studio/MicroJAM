@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e61a25c28efb7f489541554a32df5de, type: 3}
   m_Name: Weapons
   m_EditorClassIdentifier: 
-  shotgunDamage: 3
+  shotgunDamage: 20
   shotgunFireRate: 0.7
   shotgunReloadTime: 2
   shotgunBulletCount: 8
@@ -21,27 +21,27 @@ MonoBehaviour:
   shotgunSpread: 1.2
   shotgunMagazine: 2
   shotgunPenetration: 0
-  sniperDamage: 10
+  sniperDamage: 100
   sniperFireRate: 1.5
-  sniperReloadTime: 2.5
+  sniperReloadTime: 1.5
   sniperBulletCount: 1
   sniperShotSpeed: 30
   sniperRange: 2
   sniperSpread: 0
-  sniperMagazine: 5
-  sniperPenetration: 1
-  pistolDamage: 2
+  sniperMagazine: 8
+  sniperPenetration: 2
+  pistolDamage: 30
   pistolFireRate: 0.4
-  pistolReloadTime: 2
+  pistolReloadTime: 1.5
   pistolBulletCount: 1
   pistolShotSpeed: 13
   pistolRange: 2
   pistolSpread: 1
   pistolMagazine: 15
   pistolPenetration: 0
-  machineGunDamage: 1
+  machineGunDamage: 7
   machineGunFireRate: 0.03
-  machineGunReloadTime: 4
+  machineGunReloadTime: 3.5
   machineGunBulletCount: 1
   machineGunShotSpeed: 30
   machineGunRange: 1.5

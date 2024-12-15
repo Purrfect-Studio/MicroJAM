@@ -426,7 +426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f071f7d2acff9c74aabe4b474e5267c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 150
+  maxHealth: 5000
   currentHealth: 0
   floatingDamagePrefab: {fileID: 2876150859217713056, guid: 34bfe205efe4ef34d860a510c4aa2bb1, type: 3}
   healthBar: {fileID: 8556680772851155337}

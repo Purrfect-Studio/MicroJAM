@@ -195,8 +195,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
   playerAnimator: {fileID: 0}
-  playerSpeed: 10
-  stairSpeed: 2.5
+  playerSpeed: 6
+  stairSpeed: 4.5
   KBForce: 2
   KBCount: 0
   KBTime: 0.2
@@ -283,8 +283,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08133ca7d985b684fa9b75bde2185651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 10
-  maxHealth: 10
+  currentHealth: 100
+  maxHealth: 100
   sliderVida: {fileID: 0}
   sliderObject: {fileID: 0}
   offset: {x: 0, y: 2, z: 0}

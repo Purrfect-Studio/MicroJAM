@@ -205,8 +205,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09836d11af9e31147a7feb62cf04e024, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 10
+  life: 200
   floatingDamagePrefab: {fileID: 2876150859217713056, guid: 34bfe205efe4ef34d860a510c4aa2bb1, type: 3}
+  cura: 2
 --- !u!114 &1403568325215524610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,8 +222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealthSystem: {fileID: 0}
   playerController: {fileID: 0}
-  damage: 1
-  projetil: 0
+  damage: 10
 --- !u!114 &459733357028647823
 MonoBehaviour:
   m_ObjectHideFlags: 0
