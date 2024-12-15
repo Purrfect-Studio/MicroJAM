@@ -15,6 +15,9 @@ public class Voadora : MonoBehaviour
 
     void Start()
     {
+        //Physics2D.IgnoreLayerCollision(3, 9, true);
+
+
         // Obtém o componente TargetsScanner para varrer a área
         scanner = GetComponent<TargetsScanner>();
 
