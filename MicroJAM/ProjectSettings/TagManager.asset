@@ -9,6 +9,7 @@ TagManager:
   - Bullet
   - Wall
   - Recharge
+  - HealthBar
   layers:
   - Default
   - TransparentFX

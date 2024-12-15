@@ -1,70 +1,81 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class PlayerHealthSystem : MonoBehaviour
 {
     public float currentHealth = 10;
     public float maxHealth = 10;
-    public Slider sliderVida;
+
+    private Slider sliderVida; // Referência automática ao Slider da barra de vida
+    public Vector3 offset = new Vector3(0, 2f, 0); // Ajuste da posição acima do jogador
+
+    private Camera mainCamera; // Referência à câmera principal
 
     void Start()
     {
-        sliderVida.maxValue = maxHealth;
-        sliderVida.value = currentHealth;
+        // Procura o Slider na cena pela tag "HealthBar"
+        GameObject sliderObject = GameObject.FindWithTag("HealthBar");
+        
+        if (sliderObject != null)
+        {
+            sliderVida = sliderObject.GetComponent<Slider>();
+            sliderVida.maxValue = maxHealth;
+            sliderVida.value = currentHealth;
+        }
+        else
+        {
+            Debug.LogError("Slider com a tag 'HealthBar' não foi encontrado na cena. Certifique-se de que o GameObject está com a tag 'HealthBar'.");
+        }
+
+        // Captura a câmera principal para referência
+        mainCamera = Camera.main;
     }
 
     void Update()
     {
-        die();
-        HealthVogic();
+        if (sliderVida != null)
+        {
+            UpdateHealthBarPosition();
+            HealthLogic();
+            CheckDeath();
+        }
     }
 
-    void HealthVogic()
+    void UpdateHealthBarPosition()
+    {
+        if (sliderVida != null && mainCamera != null)
+        {
+            // Converte a posição do jogador do mundo para a posição da tela
+            Vector3 screenPosition = mainCamera.WorldToScreenPoint(transform.position + offset);
+
+            // Atualiza a posição da barra de vida
+            sliderVida.transform.position = screenPosition;
+        }
+    }
+
+    void HealthLogic()
     {
         sliderVida.value = currentHealth;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
     }
 
-    void die()
+    void CheckDeath()
     {
         if (currentHealth <= 0)
         {
-            Debug.Log("morreu");
-            //ReloadScene();
+            Debug.Log("Player morreu");
         }
     }
 
     public void takeDamage(float damage)
     {
-        Debug.Log("jogador tomou dano");
-        if(currentHealth - damage < 0)
-        {
-            currentHealth = 0;
-        }
-        else
-        {
-            currentHealth -= damage;
-        }
+        currentHealth -= damage;
+        Debug.Log("Jogador tomou dano: " + damage);
     }
 
-    public void heal(float heal)
+    public void heal(float healAmount)
     {
-        if(currentHealth + heal > maxHealth)
-        {
-            currentHealth = maxHealth;
-        }
-        else
-        {
-            currentHealth += heal;
-        }
-    }
-
-
-    void ReloadScene()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        currentHealth += healAmount;
+        Debug.Log("Jogador curou: " + healAmount);
     }
 }
