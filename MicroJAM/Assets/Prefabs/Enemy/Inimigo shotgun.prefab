@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 1651734852181066130}
   - component: {fileID: -8307374137636636294}
   - component: {fileID: 5490707031633283286}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Inimigo shotgun
   m_TagString: Enemy
   m_Icon: {fileID: 0}
