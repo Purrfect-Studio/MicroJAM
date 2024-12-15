@@ -248,6 +248,7 @@ MonoBehaviour:
   - {fileID: 1394563038553025955, guid: eedc6ce71bb9d2a4293d2ddb037f11af, type: 3}
   - {fileID: 1394563038553025955, guid: db19e0bf3d213e648b96d25892d37415, type: 3}
   - {fileID: 1394563038553025955, guid: 42dd6f69681549a4e831ef465ea1affd, type: 3}
+  inimigosInvocados: 2
 --- !u!114 &2343230968795032734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -302,7 +303,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 40
   m_LinearDrag: 1
   m_AngularDrag: 0.5
   m_GravityScale: 0

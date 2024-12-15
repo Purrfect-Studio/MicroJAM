@@ -136,8 +136,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7911086697299377756, guid: c8fc6e27a21fe0d4dbe9daa93ec0a6b7, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7911086697299377758, guid: c8fc6e27a21fe0d4dbe9daa93ec0a6b7, type: 3}
+      propertyPath: grupoSFX
+      value: 
+      objectReference: {fileID: 2902468290740671818, guid: d814d919e8e7c5e4cabaebf85a438b81, type: 2}
+    - target: {fileID: 7911086697299377758, guid: c8fc6e27a21fe0d4dbe9daa93ec0a6b7, type: 3}
+      propertyPath: grupoMusicas
+      value: 
+      objectReference: {fileID: -2975102460998399490, guid: d814d919e8e7c5e4cabaebf85a438b81, type: 2}
     - target: {fileID: 7911086697299377758, guid: c8fc6e27a21fe0d4dbe9daa93ec0a6b7, type: 3}
       propertyPath: valorMaximoSlider
       value: 1
@@ -6523,7 +6531,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 2902468290740671818, guid: d814d919e8e7c5e4cabaebf85a438b81, type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4c5d235e3ca86e64c9a976819005a9d2, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
@@ -6622,7 +6630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trilhasSonoras:
-  - {fileID: 8300000, guid: 9cbbc611f5b67894fa9b11946ba9b80f, type: 3}
+  - {fileID: 8300000, guid: 4c5d235e3ca86e64c9a976819005a9d2, type: 3}
   tocadorMusica: {fileID: 1143397680}
   comecarAutomaticamente: 1
   duracaoFade: 3
