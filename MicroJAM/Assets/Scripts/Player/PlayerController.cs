@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public Animator playerAnimator;
     private Vector2 playerDirection;
-    private Vector2 lastPlayerDirection;
+    private Vector2 lastPlayerDirection; // Direção do último movimento
     public float playerSpeed = 5f;
     public float KBForce = 10f;
     public float KBCount = 0f; // Será inicializado na colisão
@@ -29,12 +29,22 @@ public class PlayerController : MonoBehaviour
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 
-        if (moveX == 0 && moveY == 0 && (playerDirection.x != 0 || playerDirection.y != 0)) 
+        // Atualiza a direção do jogador
+        playerDirection = new Vector2(moveX, moveY).normalized;
+
+        // Se o jogador está se movendo, atualiza a última direção
+        if (playerDirection != Vector2.zero)
         {
             lastPlayerDirection = playerDirection;
         }
 
-        playerDirection = new Vector2(moveX, moveY).normalized;
+        // Define os parâmetros do Blend Tree
+        playerAnimator.SetFloat("XInput", lastPlayerDirection.x); 
+        playerAnimator.SetFloat("YInput", lastPlayerDirection.y);
+
+        // Indica se o jogador está em movimento ou parado
+        //bool isMoving = playerDirection.magnitude > 0;
+       //playerAnimator.SetBool("isMoving", isMoving);
     }
 
     void FixedUpdate()
@@ -71,6 +81,4 @@ public class PlayerController : MonoBehaviour
         spriteRenderer.color = originalColor; // Retorna a cor original
         isInvulnerable = false;
     }
-
-    
 }
