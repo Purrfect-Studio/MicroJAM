@@ -74,43 +74,7 @@ public class PoderesPlayer : MonoBehaviour
     }
 
     // Método para remover poderes
-    public void RemoverPoder(string poder)
-    {
-        if (poderesAtivos.Contains(poder)) // Verifica se o poder está ativo
-        {
-            poderesAtivos.Remove(poder); // Remove da lista
-            Debug.Log($"Poder {poder} removido!");
-
-
-            switch (poder)
-            {
-                case "Velocidade":
-                    playerController.playerSpeed -= 3f; // Aumenta a velocidade do jogador
-                    break;
-
-                case "Saude":
-                    playerHealthSystem.maxHealth -= 15f; // Aumenta a saúde máxima
-                    playerHealthSystem.currentHealth -= 5f; // Cura o jogador em relação ao aumento
-                    break;
-
-                case "Munição":
-                    atirar.maxAmmo -= 5; // Aumenta a capacidade máxima de munição
-                    atirar.currentAmmo -= 5; // Recarrega a munição atual
-                    break;
-
-                case "FogoRapido":
-                    atirar.fireRate *= 1.5f; // Reduz o tempo entre disparos
-                    break;
-
-                default:
-                    Debug.LogWarning("Poder não reconhecido: " + poder);
-                    break;
-            }
-
-            MostrarPoderesAtivos();
-        }
-    }
-
+    
     void MostrarPoderesAtivos()
     {
         string poderes = poderesAtivos.Count > 0
