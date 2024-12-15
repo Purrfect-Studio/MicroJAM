@@ -9,6 +9,7 @@ public class HealthBoss1 : MonoBehaviour
     public float maxHealth;
     public float currentHealth;
     public GameObject floatingDamagePrefab; // Prefab de dano flutuante
+    private ControladorBoss1 controladorBoss1;
 
     public Slider healthBar;
 
@@ -17,6 +18,7 @@ public class HealthBoss1 : MonoBehaviour
 
     void Start()
     {
+        controladorBoss1 = GetComponent<ControladorBoss1>();
         currentHealth = maxHealth;
         healthBar.maxValue = maxHealth;
         healthBar.value = currentHealth;
@@ -34,7 +36,7 @@ public class HealthBoss1 : MonoBehaviour
         // Checa se o inimigo morreu
         if (currentHealth <= 0)
         {
-            Die();
+            StartCoroutine(Die());
         }
     }
 
@@ -56,8 +58,10 @@ public class HealthBoss1 : MonoBehaviour
     }
 
     // Método de morte
-    void Die()
+    IEnumerator Die()
     {
+        controladorBoss1.animator.SetTrigger("Death");
+        yield return new WaitForSeconds(1f);
         // Código de morte do inimigo
         Destroy(gameObject);
     }

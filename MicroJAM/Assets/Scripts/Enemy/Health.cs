@@ -5,6 +5,9 @@ public class Health : MonoBehaviour
 {
     public float life; // Vida do inimigo
     public GameObject floatingDamagePrefab; // Prefab de dano flutuante
+    private GameObject player;
+    private PlayerHealthSystem playerHealthSystem;
+    public float cura = 2;
 
     // Evento que será chamado quando a vida mudar
     public delegate void LifeChanged(float newLife);
@@ -15,6 +18,8 @@ public class Health : MonoBehaviour
 
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerHealthSystem = player.GetComponent<PlayerHealthSystem>();
         sistemaDeDrop = GetComponent<SistemaDeDrop>();
     }
 
@@ -62,6 +67,7 @@ public class Health : MonoBehaviour
             podeDropar = false;
             sistemaDeDrop.Dropar();
         }
+        playerHealthSystem.heal(cura);
         // Código de morte do inimigo
         Destroy(gameObject);
     }

@@ -38,9 +38,14 @@ public class PlayerHealthSystem : MonoBehaviour
         {
             HealthLogic();
             CheckDeath();
+            Envenenado();
         }
     }
 
+    void Envenenado()
+    {
+        currentHealth -= Time.deltaTime * 0.2f;
+    }
 
     void HealthLogic()
     {

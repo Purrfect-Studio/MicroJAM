@@ -9,6 +9,7 @@ public class ControladorBoss1 : MonoBehaviour
     public GameObject player;
     public Rigidbody2D rigidbody2d;
     SpriteRenderer sprite;
+    public Animator animator;
 
 
     public float speed;
@@ -24,6 +25,7 @@ public class ControladorBoss1 : MonoBehaviour
         targetsScanner = GetComponent<TargetsScanner>();
         rigidbody2d = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
 
         player = GameObject.FindGameObjectWithTag("Player");
         Physics2D.IgnoreLayerCollision(3, 7);
@@ -40,10 +42,12 @@ public class ControladorBoss1 : MonoBehaviour
             if (target != null)
             {
                 podeAtacar = true;
+                animator.SetBool("estaAndando", false);
             }
             else
             {
                 podeAtacar = false;
+                animator.SetBool("estaAndando", true);
                 transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
             }
         }
@@ -51,7 +55,7 @@ public class ControladorBoss1 : MonoBehaviour
 
     void flip()
     {
-        if(transform.position.x - player.transform.position.x > 0 && olhandoDireita || transform.position.x - player.transform.position.x < 0 && !olhandoDireita) 
+        if(transform.position.x - player.transform.position.x > 0 && !olhandoDireita || transform.position.x - player.transform.position.x < 0 && olhandoDireita) 
         {
             olhandoDireita = !olhandoDireita;
             sprite.flipX = !sprite.flipX;

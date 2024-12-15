@@ -62,6 +62,7 @@ public class AtaquesBoss1 : MonoBehaviour
     {
         controladorBoss1.usandoAtaque = true;
         direcaoDash = (controladorBoss1.player.transform.position - this.transform.position);
+        controladorBoss1.animator.SetTrigger("usandoDash");
         yield return new WaitForSeconds(0.2f);
         controladorBoss1.rigidbody2d.velocity = direcaoDash * speedDash;
         yield return new WaitForSeconds(1.5f);
@@ -73,10 +74,12 @@ public class AtaquesBoss1 : MonoBehaviour
     IEnumerator atirar()
     {
         controladorBoss1.usandoAtaque = true;
+        controladorBoss1.animator.SetTrigger("usandoRanged");
+        yield return new WaitForSeconds(0.8f);
         direcaoTiro = (controladorBoss1.player.transform.position - this.transform.position);
         GameObject projetil = Instantiate(projetilPrefab, transform.position, Quaternion.identity);
         projetil.GetComponent<Rigidbody2D>().velocity = direcaoTiro * projetilSpeed;
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
         cooldownRestanteAtaque = cooldownAtaque;
         controladorBoss1.usandoAtaque = false;
         ataqueAtual = 3;
@@ -85,8 +88,10 @@ public class AtaquesBoss1 : MonoBehaviour
     IEnumerator invocar()
     {
         controladorBoss1.usandoAtaque = true;
+        controladorBoss1.animator.SetTrigger("usandoInvocar");
+        yield return new WaitForSeconds(0.6f);
         GameObject inimigo = Instantiate(invocarPrefab[escolherInimigo()], transform.position, Quaternion.identity);
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2.3f);
         cooldownRestanteAtaque = cooldownAtaque;
         controladorBoss1.usandoAtaque = false;
         ataqueAtual = 1;
