@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1084043712823014222}
   - component: {fileID: 7345375802707850317}
   - component: {fileID: 3822554059290390170}
+  - component: {fileID: 2197539989430960137}
   m_Layer: 0
   m_Name: MURCEGI
   m_TagString: Untagged
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: -1337996677
   m_SortingLayer: 1
   m_SortingOrder: 6
-  m_Sprite: {fileID: -1042300897, guid: aaa5b84fdf7ce9542aa1f4f0c808156e, type: 3}
+  m_Sprite: {fileID: -1216992041, guid: 3b054d03cb47538478282b1d894e8c7a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,3 +101,24 @@ MonoBehaviour:
   prefab: {fileID: 880603187116086234, guid: 666ce03dc38f3a0418e247f80857bdb8, type: 3}
   cooldown: 7
   filho: 0
+--- !u!95 &2197539989430960137
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084043712823014221}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6e940342ffd102747b1717df42d23a72, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
