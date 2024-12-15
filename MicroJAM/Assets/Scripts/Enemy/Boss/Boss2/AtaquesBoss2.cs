@@ -13,18 +13,26 @@ public class AtaquesBoss2 : MonoBehaviour
 
     [Header("Explosao")]
     public float danoExplosao;
-    public float areaDeDistancia = 3f; // Raio de distância segura do alvo
-    public float distanciaAoAlvo;
+    public float areaDeDistancia; // Raio de distância segura do alvo
+    private float distanciaAoAlvo;
     public float aumentoSpeed;
 
-    [Header("Ranged")]
-    public float danoRanged1;
+    [Header("Shotgun")]
+    public GameObject projetilShotgunPrefab;
+    public float danoShotgun;
+    public float projetilShotgunSpeed;
+    private Vector2 direcaoMoverShotgun;
+
+    [Header("Invocar")]
+    public GameObject[] invocarPrefab;
+    public int inimigosInvocados;
 
     // Start is called before the first frame update
     void Start()
     {
         controladorBoss2 = GetComponent<ControladorBoss2>();
         cooldownRestanteAtaque = cooldownAtaque;
+        projetilShotgunPrefab.GetComponent<DarDanoNoPlayer>().damage = danoShotgun;
     }
 
     // Update is called once per frame
@@ -36,16 +44,16 @@ public class AtaquesBoss2 : MonoBehaviour
             {
                 if (ataqueAtual == 1)
                 {
-                    controladorBoss2.usandoExplosao = true;
-                    controladorBoss2.usandoAtaque = true;
+                    StartCoroutine(atirarShotgun());
                 }
                 else if (ataqueAtual == 2)
                 {
-                    //StartCoroutine(atirar());
+                    controladorBoss2.usandoExplosao = true;
+                    controladorBoss2.usandoAtaque = true;
                 }
                 else if (ataqueAtual == 3)
                 {
-                    //StartCoroutine(invocar());
+                    StartCoroutine(invocar());
                 }
             }
             else
@@ -72,6 +80,28 @@ public class AtaquesBoss2 : MonoBehaviour
         }
     }
 
+    IEnumerator atirarShotgun()
+    {
+        controladorBoss2.usandoAtaque = true;
+        controladorBoss2.animator.SetTrigger("Ranged");
+        yield return new WaitForSeconds(0.8f);
+        for (int i = 0; i < 8; i++)
+        {
+            // Gera uma posição aleatória dentro de um círculo de spreadRadius em torno do mouse (somente X e Y)
+            Vector2 randomOffset = Random.insideUnitCircle * 6f;
+            Vector2 targetPosition = new Vector2(controladorBoss2.player.transform.position.x, controladorBoss2.player.transform.position.y) + randomOffset;
+            // Calcula a direção em relação à posição aleatória calculada
+            direcaoMoverShotgun = (targetPosition - (Vector2)transform.position).normalized;
+            GameObject projetil = Instantiate(projetilShotgunPrefab, transform.position, Quaternion.identity);
+            projetil.GetComponent<Rigidbody2D>().velocity = direcaoMoverShotgun * projetilShotgunSpeed;
+            Destroy(projetil, 3);
+        }
+        yield return new WaitForSeconds(2f);
+        controladorBoss2.usandoAtaque = false;
+        cooldownRestanteAtaque = cooldownAtaque;
+        ataqueAtual = 2;
+    }
+
     IEnumerator Explosao()
     {
         controladorBoss2.animator.SetTrigger("Explosion");
@@ -79,7 +109,28 @@ public class AtaquesBoss2 : MonoBehaviour
         controladorBoss2.usandoAtaque = false;
         controladorBoss2.usandoExplosao = false;
         cooldownRestanteAtaque = cooldownAtaque;
-        ataqueAtual = 2;
+        ataqueAtual = 3;
+    }
+
+    IEnumerator invocar()
+    {
+        controladorBoss2.usandoAtaque = true;
+        controladorBoss2.animator.SetTrigger("Ranged");
+        yield return new WaitForSeconds(0.8f);
+        for(int i =0; i <= inimigosInvocados; i++)
+        {
+            GameObject inimigo = Instantiate(invocarPrefab[escolherInimigo()], transform.position, Quaternion.identity);
+            inimigo.GetComponent<SistemaDeDrop>().enabled = false;
+        }
+        yield return new WaitForSeconds(2.3f);
+        cooldownRestanteAtaque = cooldownAtaque;
+        controladorBoss2.usandoAtaque = false;
+        ataqueAtual = 1;
+    }
+
+    private int escolherInimigo()
+    {
+        return Random.Range(0, invocarPrefab.Length);
     }
 
     public void aumentarDanoColisao()

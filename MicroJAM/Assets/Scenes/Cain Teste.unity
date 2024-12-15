@@ -2119,13 +2119,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bea90138ac66344d9379b3e79845799, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ataqueAtual: 1
+  ataqueAtual: 3
   cooldownAtaque: 3
   danoExplosao: 5
   areaDeDistancia: 2.5
-  distanciaAoAlvo: 0
   aumentoSpeed: 0
-  danoRanged1: 5
+  projetilShotgunPrefab: {fileID: 9008992326949002304, guid: 4286a44f056ee0c47888726a7ed5662c, type: 3}
+  danoShotgun: 6
+  projetilShotgunSpeed: 15
+  invocarPrefab:
+  - {fileID: 1394563038553025955, guid: 1d727dd0d129d2d4da142179fdd2068d, type: 3}
+  - {fileID: 1394563038553025955, guid: eedc6ce71bb9d2a4293d2ddb037f11af, type: 3}
+  - {fileID: 1394563038553025955, guid: db19e0bf3d213e648b96d25892d37415, type: 3}
+  - {fileID: 1394563038553025955, guid: 42dd6f69681549a4e831ef465ea1affd, type: 3}
+  inimigosInvocados: 4
 --- !u!114 &1725985747
 MonoBehaviour:
   m_ObjectHideFlags: 0

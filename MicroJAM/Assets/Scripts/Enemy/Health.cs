@@ -68,7 +68,7 @@ public class Health : MonoBehaviour
     // Método de morte
     void Die()
     {
-        if (podeDropar)
+        if (podeDropar && sistemaDeDrop.enabled == true)
         {
             podeDropar = false;
             sistemaDeDrop.Dropar();
