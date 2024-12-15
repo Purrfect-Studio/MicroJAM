@@ -77,6 +77,8 @@ public class Atirar : MonoBehaviour
             }
             armaSpriteRenderer.sprite = spritesArma[chosenWeapon];
         }
+        armaSpriteRenderer.sprite = spritesArma[chosenWeapon];
+
         currentAmmo = maxAmmo; // Inicializa a munição atual
         UpdateAmmoText();
     }
