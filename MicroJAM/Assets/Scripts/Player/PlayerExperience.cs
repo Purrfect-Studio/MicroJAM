@@ -34,7 +34,7 @@ public class PlayerExperience : MonoBehaviour
         if(currentXP >= maxXP)
         {
             currentXP -= maxXP;
-            maxXP *= 1.2f;
+            maxXP *= 1.4f;
             xpBar.maxValue = maxXP;
             xpBar.value = currentXP;
             currentLevel += 1;

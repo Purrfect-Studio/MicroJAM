@@ -16071,12 +16071,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1021513534 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3543257654281840767, guid: 73737594067a09b4e92cf3ed1a258c1b, type: 3}
+  m_PrefabInstance: {fileID: 1840207681}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1021513535 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3543257654281840766, guid: 73737594067a09b4e92cf3ed1a258c1b, type: 3}
   m_PrefabInstance: {fileID: 1840207681}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1021513534}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 27dc44cbfde946147b60d0329b70da26, type: 3}
@@ -21239,10 +21244,18 @@ PrefabInstance:
       propertyPath: enemyCount
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 3543257654281840736, guid: 73737594067a09b4e92cf3ed1a258c1b, type: 3}
+      propertyPath: enemyPrefab
+      value: 
+      objectReference: {fileID: 1394563038553025955, guid: 0b31f2fd9b03a7044991a31102d255d9, type: 3}
     - target: {fileID: 3543257654281840737, guid: 73737594067a09b4e92cf3ed1a258c1b, type: 3}
       propertyPath: enemyCount
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 3543257654281840737, guid: 73737594067a09b4e92cf3ed1a258c1b, type: 3}
+      propertyPath: enemyPrefab
+      value: 
+      objectReference: {fileID: 1394563038553025955, guid: 67cecd45801e2cf4c961a4319bd01e36, type: 3}
     - target: {fileID: 3543257654281840738, guid: 73737594067a09b4e92cf3ed1a258c1b, type: 3}
       propertyPath: portal
       value: 
@@ -21270,39 +21283,39 @@ PrefabInstance:
     - target: {fileID: 3543257654281840738, guid: 73737594067a09b4e92cf3ed1a258c1b, type: 3}
       propertyPath: waves.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1840207686}
     - target: {fileID: 3543257654281840738, guid: 73737594067a09b4e92cf3ed1a258c1b, type: 3}
       propertyPath: waves.Array.data[2]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1840207694}
     - target: {fileID: 3543257654281840738, guid: 73737594067a09b4e92cf3ed1a258c1b, type: 3}
       propertyPath: waves.Array.data[3]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1840207692}
     - target: {fileID: 3543257654281840738, guid: 73737594067a09b4e92cf3ed1a258c1b, type: 3}
       propertyPath: waves.Array.data[4]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1840207697}
     - target: {fileID: 3543257654281840738, guid: 73737594067a09b4e92cf3ed1a258c1b, type: 3}
       propertyPath: waves.Array.data[5]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1840207700}
     - target: {fileID: 3543257654281840738, guid: 73737594067a09b4e92cf3ed1a258c1b, type: 3}
       propertyPath: waves.Array.data[6]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1840207703}
     - target: {fileID: 3543257654281840738, guid: 73737594067a09b4e92cf3ed1a258c1b, type: 3}
       propertyPath: waves.Array.data[7]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1840207704}
     - target: {fileID: 3543257654281840738, guid: 73737594067a09b4e92cf3ed1a258c1b, type: 3}
       propertyPath: waves.Array.data[8]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1840207708}
     - target: {fileID: 3543257654281840738, guid: 73737594067a09b4e92cf3ed1a258c1b, type: 3}
       propertyPath: waves.Array.data[9]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1840207711}
     - target: {fileID: 3543257654281840738, guid: 73737594067a09b4e92cf3ed1a258c1b, type: 3}
       propertyPath: cooldownBetweenWaves
       value: 10
@@ -21415,6 +21428,10 @@ PrefabInstance:
       propertyPath: enemyCount
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 3543257654281840766, guid: 73737594067a09b4e92cf3ed1a258c1b, type: 3}
+      propertyPath: enemyPrefab
+      value: 
+      objectReference: {fileID: 1394563038553025955, guid: 06c4658e4885b3e4fb6ff99b12be6fb2, type: 3}
     - target: {fileID: 3543257654281840767, guid: 73737594067a09b4e92cf3ed1a258c1b, type: 3}
       propertyPath: m_Name
       value: WAVE CONTROLLER
@@ -21426,12 +21443,483 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3543257654281840737, guid: 73737594067a09b4e92cf3ed1a258c1b, type: 3}
   m_PrefabInstance: {fileID: 1840207681}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1021513534}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 27dc44cbfde946147b60d0329b70da26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1840207686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021513534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03a022fb004eda341a7dad8fb5e7bd8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveName: 2
+  enemyGroups:
+  - {fileID: 1840207690}
+  - {fileID: 1840207689}
+  - {fileID: 1840207688}
+  - {fileID: 1840207687}
+  spawnInterval: 1
+  spawnPoints:
+  - {fileID: 1691094257}
+  - {fileID: 935425458}
+  - {fileID: 937868450}
+  - {fileID: 879313294}
+  - {fileID: 1146282393}
+  - {fileID: 509859989}
+  - {fileID: 825640791}
+  - {fileID: 1347687405}
+--- !u!114 &1840207687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021513534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27dc44cbfde946147b60d0329b70da26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 1394563038553025955, guid: 06c4658e4885b3e4fb6ff99b12be6fb2, type: 3}
+  enemyCount: 10
+--- !u!114 &1840207688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021513534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27dc44cbfde946147b60d0329b70da26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 1394563038553025955, guid: 0b31f2fd9b03a7044991a31102d255d9, type: 3}
+  enemyCount: 40
+--- !u!114 &1840207689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021513534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27dc44cbfde946147b60d0329b70da26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 1394563038553025955, guid: 67cecd45801e2cf4c961a4319bd01e36, type: 3}
+  enemyCount: 15
+--- !u!114 &1840207690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021513534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27dc44cbfde946147b60d0329b70da26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 1394563038553025955, guid: 06c4658e4885b3e4fb6ff99b12be6fb2, type: 3}
+  enemyCount: 10
+--- !u!114 &1840207691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021513534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27dc44cbfde946147b60d0329b70da26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 1394563038553025955, guid: 06c4658e4885b3e4fb6ff99b12be6fb2, type: 3}
+  enemyCount: 35
+--- !u!114 &1840207692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021513534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03a022fb004eda341a7dad8fb5e7bd8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveName: 4
+  enemyGroups:
+  - {fileID: 1840207691}
+  spawnInterval: 0.4
+  spawnPoints:
+  - {fileID: 1691094257}
+  - {fileID: 935425458}
+  - {fileID: 937868450}
+  - {fileID: 879313294}
+  - {fileID: 1146282393}
+  - {fileID: 509859989}
+  - {fileID: 825640791}
+  - {fileID: 1347687405}
+--- !u!114 &1840207693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021513534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27dc44cbfde946147b60d0329b70da26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 1394563038553025955, guid: 0b31f2fd9b03a7044991a31102d255d9, type: 3}
+  enemyCount: 80
+--- !u!114 &1840207694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021513534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03a022fb004eda341a7dad8fb5e7bd8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveName: 3
+  enemyGroups:
+  - {fileID: 1840207693}
+  spawnInterval: 2
+  spawnPoints:
+  - {fileID: 1691094257}
+  - {fileID: 935425458}
+  - {fileID: 937868450}
+  - {fileID: 879313294}
+  - {fileID: 1146282393}
+  - {fileID: 509859989}
+  - {fileID: 825640791}
+  - {fileID: 1347687405}
+--- !u!114 &1840207695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021513534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27dc44cbfde946147b60d0329b70da26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 1394563038553025955, guid: b5c9e2c5ab2ce4248b6473978f70b3a1, type: 3}
+  enemyCount: 20
+--- !u!114 &1840207696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021513534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27dc44cbfde946147b60d0329b70da26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 1394563038553025955, guid: 06c4658e4885b3e4fb6ff99b12be6fb2, type: 3}
+  enemyCount: 10
+--- !u!114 &1840207697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021513534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03a022fb004eda341a7dad8fb5e7bd8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveName: 5
+  enemyGroups:
+  - {fileID: 1840207696}
+  - {fileID: 1840207695}
+  spawnInterval: 0.3
+  spawnPoints:
+  - {fileID: 1691094257}
+  - {fileID: 935425458}
+  - {fileID: 937868450}
+  - {fileID: 879313294}
+  - {fileID: 1146282393}
+  - {fileID: 509859989}
+  - {fileID: 825640791}
+  - {fileID: 1347687405}
+--- !u!114 &1840207698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021513534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27dc44cbfde946147b60d0329b70da26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 1394563038553025955, guid: 0b31f2fd9b03a7044991a31102d255d9, type: 3}
+  enemyCount: 75
+--- !u!114 &1840207699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021513534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27dc44cbfde946147b60d0329b70da26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 1394563038553025955, guid: 67cecd45801e2cf4c961a4319bd01e36, type: 3}
+  enemyCount: 10
+--- !u!114 &1840207700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021513534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03a022fb004eda341a7dad8fb5e7bd8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveName: 6
+  enemyGroups:
+  - {fileID: 1840207699}
+  - {fileID: 1840207698}
+  spawnInterval: 0.2
+  spawnPoints:
+  - {fileID: 1691094257}
+  - {fileID: 935425458}
+  - {fileID: 937868450}
+  - {fileID: 879313294}
+  - {fileID: 1146282393}
+  - {fileID: 509859989}
+  - {fileID: 825640791}
+  - {fileID: 1347687405}
+--- !u!114 &1840207701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021513534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27dc44cbfde946147b60d0329b70da26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 1394563038553025955, guid: 0b31f2fd9b03a7044991a31102d255d9, type: 3}
+  enemyCount: 80
+--- !u!114 &1840207702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021513534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27dc44cbfde946147b60d0329b70da26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 1394563038553025955, guid: 06c4658e4885b3e4fb6ff99b12be6fb2, type: 3}
+  enemyCount: 25
+--- !u!114 &1840207703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021513534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03a022fb004eda341a7dad8fb5e7bd8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveName: 7
+  enemyGroups:
+  - {fileID: 1840207702}
+  - {fileID: 1840207701}
+  spawnInterval: 0.1
+  spawnPoints:
+  - {fileID: 1691094257}
+  - {fileID: 935425458}
+  - {fileID: 937868450}
+  - {fileID: 879313294}
+  - {fileID: 1146282393}
+  - {fileID: 509859989}
+  - {fileID: 825640791}
+  - {fileID: 1347687405}
+--- !u!114 &1840207704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021513534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03a022fb004eda341a7dad8fb5e7bd8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveName: 8
+  enemyGroups:
+  - {fileID: 1840207705}
+  spawnInterval: 0.01
+  spawnPoints:
+  - {fileID: 1691094257}
+  - {fileID: 935425458}
+  - {fileID: 937868450}
+  - {fileID: 879313294}
+  - {fileID: 1146282393}
+  - {fileID: 509859989}
+  - {fileID: 825640791}
+  - {fileID: 1347687405}
+--- !u!114 &1840207705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021513534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27dc44cbfde946147b60d0329b70da26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 1394563038553025955, guid: 0b31f2fd9b03a7044991a31102d255d9, type: 3}
+  enemyCount: 115
+--- !u!114 &1840207706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021513534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27dc44cbfde946147b60d0329b70da26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 1394563038553025955, guid: 67cecd45801e2cf4c961a4319bd01e36, type: 3}
+  enemyCount: 20
+--- !u!114 &1840207707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021513534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27dc44cbfde946147b60d0329b70da26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 1394563038553025955, guid: b5c9e2c5ab2ce4248b6473978f70b3a1, type: 3}
+  enemyCount: 15
+--- !u!114 &1840207708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021513534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03a022fb004eda341a7dad8fb5e7bd8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveName: 9
+  enemyGroups:
+  - {fileID: 1840207707}
+  - {fileID: 1840207706}
+  spawnInterval: 0.5
+  spawnPoints:
+  - {fileID: 1691094257}
+  - {fileID: 935425458}
+  - {fileID: 937868450}
+  - {fileID: 879313294}
+  - {fileID: 1146282393}
+  - {fileID: 509859989}
+  - {fileID: 825640791}
+  - {fileID: 1347687405}
+--- !u!114 &1840207709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021513534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27dc44cbfde946147b60d0329b70da26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 1394563038553025955, guid: 0b31f2fd9b03a7044991a31102d255d9, type: 3}
+  enemyCount: 40
+--- !u!114 &1840207710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021513534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27dc44cbfde946147b60d0329b70da26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 8556680772787896168, guid: 854f9002ce8a5944b920f6d5aa36e93a, type: 3}
+  enemyCount: 2
+--- !u!114 &1840207711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021513534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03a022fb004eda341a7dad8fb5e7bd8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveName: 
+  enemyGroups:
+  - {fileID: 1840207710}
+  - {fileID: 1840207709}
+  spawnInterval: 2
+  spawnPoints:
+  - {fileID: 1691094257}
+  - {fileID: 935425458}
+  - {fileID: 937868450}
+  - {fileID: 879313294}
+  - {fileID: 1146282393}
+  - {fileID: 509859989}
+  - {fileID: 825640791}
+  - {fileID: 1347687405}
 --- !u!1001 &1840780596
 PrefabInstance:
   m_ObjectHideFlags: 0
