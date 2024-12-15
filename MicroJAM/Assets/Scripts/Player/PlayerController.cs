@@ -43,8 +43,8 @@ public class PlayerController : MonoBehaviour
         playerAnimator.SetFloat("YInput", lastPlayerDirection.y);
 
         // Indica se o jogador está em movimento ou parado
-        //bool isMoving = playerDirection.magnitude > 0;
-       //playerAnimator.SetBool("isMoving", isMoving);
+        bool isMoving = playerDirection.magnitude > 0;
+        playerAnimator.SetBool("isMoving", isMoving);
     }
 
     void FixedUpdate()
