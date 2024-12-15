@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
+using UnityEditor.Networking.PlayerConnection;
 
 public class ItensDisplay : MonoBehaviour
 {
@@ -27,18 +29,24 @@ public class ItensDisplay : MonoBehaviour
     private Item itemEscolhido1; // Referência para o primeiro poder sorteado
     private Item itemEscolhido2; // Referência para o segundo poder sorteado
     private Item itemEscolhido3; // Referência para o segundo poder sorteado
+    public ItensLoja itensLoja;
+    public ItensAtivados itensAtivados;
+    private PlayerExperience playerExperience;
 
 
 
 
     private void Awake()
     {
-        // Busca automaticamente o componente PoderesPlayer no jogador
+        itensAtivados = FindObjectOfType<ItensAtivados>();
+        playerExperience = FindObjectOfType<PlayerExperience>();
     }
 
     public void ApresentarItens(Item item1, Item item2, Item item3)
     {
         canvas.SetActive(true);
+        playerExperience.pausar();
+
 
         // Armazena os poderes sorteados
         itemEscolhido1 = item1;
@@ -67,21 +75,57 @@ public class ItensDisplay : MonoBehaviour
 
     public void EscolherItem1()
     {
-        //Ligar o item no scriptable
+        LigarItem(nomeItem1.text.ToString());
+        playerExperience.despausar();
         FecharCanvas();
+
+
     }
 
     public void EscolherPoder2()
     {
-       
-        //Ligar o item no scriptable
+       LigarItem(nomeItem2.text.ToString());
+        playerExperience.despausar();
+
         FecharCanvas();
     }
 
      public void EscolherPoder3()
     {
-        //ligar no scriptable
+       LigarItem(nomeItem3.text.ToString());
+               playerExperience.despausar();
+
         FecharCanvas();
+    }
+
+    public void Pular()
+    {
+        playerExperience.despausar();
+
+        FecharCanvas();
+        
+    }
+
+    public void LigarItem(String nomeItem)
+    {
+        switch (nomeItem)
+        {
+            case ("Dash"):
+            itensLoja.possuiDash = true;
+            break;
+
+
+            case("Torreta"):
+            itensLoja.possuiTorreta = true;
+            Debug.Log("Ligando torreta");
+            itensAtivados.ligarTorreta();
+            break;
+            
+            default:
+            Debug.Log("Tem esse item ai nao meo: " + nomeItem);
+
+            break;
+        }
     }
 
     private void FecharCanvas()
