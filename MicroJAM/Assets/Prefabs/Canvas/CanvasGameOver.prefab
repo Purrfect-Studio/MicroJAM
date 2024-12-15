@@ -146,6 +146,8 @@ GameObject:
   - component: {fileID: 4132636778182078082}
   - component: {fileID: 4132636778182078084}
   - component: {fileID: 4132636778182078083}
+  - component: {fileID: 5516636426323097905}
+  - component: {fileID: 6207936531552769598}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -215,6 +217,33 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5516636426323097905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4132636778182078081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61ff6f7f5230a1c42805d74e097830cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6207936531552769598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4132636778182078081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c701d9c9f1c71e4d94f3b0a6c83b599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentPlayerStats: {fileID: 11400000, guid: 4afb064810ce80a40a81da206de685d8, type: 2}
+  playerStats: {fileID: 11400000, guid: 4c5b18282bba38a47b2c9e34820552e7, type: 2}
+  weaponStats: {fileID: 11400000, guid: c06970bad28a0c749be9649c523b567d, type: 2}
 --- !u!1 &4132636778268300124
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,7 +257,7 @@ GameObject:
   - component: {fileID: 4132636778268300127}
   - component: {fileID: 4132636778268300126}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -336,7 +365,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4132636778268300127}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6207936531552769598}
+        m_TargetAssemblyTypeName: ResetarValores, Assembly-CSharp
+        m_MethodName: resetarValores
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5516636426323097905}
+        m_TargetAssemblyTypeName: Portal, Assembly-CSharp
+        m_MethodName: CarregarFase
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Menu
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4132636778268456804
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,7 +449,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!114 &4132636778268456806
 MonoBehaviour:
@@ -670,7 +723,7 @@ GameObject:
   - component: {fileID: 4132636779935524801}
   - component: {fileID: 4132636779935524800}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Retry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -778,7 +831,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4132636779935524801}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6207936531552769598}
+        m_TargetAssemblyTypeName: ResetarValores, Assembly-CSharp
+        m_MethodName: resetarValores
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5516636426323097905}
+        m_TargetAssemblyTypeName: Portal, Assembly-CSharp
+        m_MethodName: CarregarFase
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Level 01
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4132636780089956600
 GameObject:
   m_ObjectHideFlags: 0

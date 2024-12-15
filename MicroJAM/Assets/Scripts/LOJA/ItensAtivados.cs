@@ -74,23 +74,25 @@ public class ItensAtivados : MonoBehaviour
         playerHealthSystem.maxHealth -= 20;
         playerHealthSystem.currentHealth -= 20;
 
-        // Define uma área curta ao redor do jogador
-        Vector3 spawnOffset = new Vector3(Random.Range(-2f, 2f), Random.Range(-2f, 2f), 0f);
+        // Define uma direção aleatória ao redor do jogador
+        Vector2 randomDirection = Random.insideUnitCircle.normalized; // Vetor normalizado em uma direção aleatória
+        Vector3 spawnOffset = new Vector3(randomDirection.x, randomDirection.y, 0f) * 2f; // Distância fixa de 7 unidades
         Vector3 spawnPosition = player.transform.position + spawnOffset;
 
-        // Instancia o morcego em uma posição aleatória ao redor do jogador
+        // Instancia o morcego em uma posição a 7 unidades do jogador
         GameObject instanciaMorcego = Instantiate(morcego, spawnPosition, Quaternion.identity);
 
         // Define o objeto instanciado como filho do jogador
         instanciaMorcego.transform.SetParent(player.transform);
 
-        Debug.Log("Morcego foi instanciado e configurado como filho.");
+        Debug.Log("Morcego foi instanciado a 7 unidades do jogador e configurado como filho.");
     }
     else
     {
         Debug.LogWarning("Morcego ou PlayerHealthSystem não está configurado!");
     }
 }
+
 
 }
 
