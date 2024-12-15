@@ -30,38 +30,46 @@ public class PoderesPlayer : MonoBehaviour
         {
             poderesAtivos.Add(poder); // Adiciona à lista de poderes ativos
             Debug.Log($"Poder {poder} ativado!");
-        
 
-        switch (poder)
-        {
-            case "Velocidade":
-                playerController.playerSpeed += 3f; // Aumenta a velocidade do jogador
-                currentPlayerStats.playerSpeed = playerController.playerSpeed;
-                break;
 
-            case "Saude":
-                playerHealthSystem.maxHealth += 15f; // Aumenta a saúde máxima
-                playerHealthSystem.currentHealth += 5f; // Cura o jogador em relação ao aumento
-                currentPlayerStats.maxHealth = playerHealthSystem.maxHealth;
-                break;
+            switch (poder)
+            {
+                case "Velocity":
+                    playerController.playerSpeed += 3f; // Aumenta a velocidade do jogador
+                    currentPlayerStats.playerSpeed = playerController.playerSpeed;
+                    break;
 
-            case "Munição":
-                atirar.maxAmmo += 5; // Aumenta a capacidade máxima de munição
-                atirar.currentAmmo += 5; // Recarrega a munição atual
-                currentPlayerStats.maxAmmo = atirar.maxAmmo;
-                break;
+                case "Health":
+                    playerHealthSystem.maxHealth += 15f; // Aumenta a saúde máxima
+                    playerHealthSystem.currentHealth += 5f; // Cura o jogador em relação ao aumento
+                    currentPlayerStats.maxHealth = playerHealthSystem.maxHealth;
+                    break;
 
-            case "FogoRapido":
-                atirar.fireRate /= 1.5f; // Reduz o tempo entre disparos
-                currentPlayerStats.fireRate = atirar.fireRate;
-                break;
+                case "Ammo":
+                    atirar.maxAmmo = (int)(atirar.maxAmmo * 1.5f);
 
-            default:
-                Debug.LogWarning("Poder não reconhecido: " + poder);
-                break;
-        }
+                    atirar.currentAmmo += 5; // Recarrega a munição atual
+                    currentPlayerStats.maxAmmo = atirar.maxAmmo;
+                    break;
 
-        MostrarPoderesAtivos();
+                case "FireRate":
+                    atirar.fireRate /= 1.5f; // Reduz o tempo entre disparos
+                    currentPlayerStats.fireRate = atirar.fireRate;
+                    break;
+
+                case "Reload":
+                    atirar.reloadTime /= 1.5f; // Reduz o tempo de recarga
+                    break;
+                case "bulletCount":
+                    atirar.bulletCount += 1; // Reduz o tempo de recarga
+                    break;
+
+                default:
+                    Debug.LogWarning("Poder não reconhecido: " + poder);
+                    break;
+            }
+
+            MostrarPoderesAtivos();
         }
     }
 
@@ -72,41 +80,41 @@ public class PoderesPlayer : MonoBehaviour
         {
             poderesAtivos.Remove(poder); // Remove da lista
             Debug.Log($"Poder {poder} removido!");
-        
 
-        switch (poder)
-        {
-            case "Velocidade":
-                playerController.playerSpeed -= 3f; // Aumenta a velocidade do jogador
-            break;
 
-            case "Saude":
-                playerHealthSystem.maxHealth -= 15f; // Aumenta a saúde máxima
-                playerHealthSystem.currentHealth -= 5f; // Cura o jogador em relação ao aumento
-            break;
+            switch (poder)
+            {
+                case "Velocidade":
+                    playerController.playerSpeed -= 3f; // Aumenta a velocidade do jogador
+                    break;
 
-            case "Munição":
-                atirar.maxAmmo -= 5; // Aumenta a capacidade máxima de munição
-                atirar.currentAmmo -= 5; // Recarrega a munição atual
-                break;
+                case "Saude":
+                    playerHealthSystem.maxHealth -= 15f; // Aumenta a saúde máxima
+                    playerHealthSystem.currentHealth -= 5f; // Cura o jogador em relação ao aumento
+                    break;
 
-            case "FogoRapido":
-                atirar.fireRate *= 1.5f; // Reduz o tempo entre disparos
-                break;
+                case "Munição":
+                    atirar.maxAmmo -= 5; // Aumenta a capacidade máxima de munição
+                    atirar.currentAmmo -= 5; // Recarrega a munição atual
+                    break;
 
-            default:
-                Debug.LogWarning("Poder não reconhecido: " + poder);
-                break;
-        }
+                case "FogoRapido":
+                    atirar.fireRate *= 1.5f; // Reduz o tempo entre disparos
+                    break;
 
-        MostrarPoderesAtivos();
+                default:
+                    Debug.LogWarning("Poder não reconhecido: " + poder);
+                    break;
+            }
+
+            MostrarPoderesAtivos();
         }
     }
 
     void MostrarPoderesAtivos()
     {
-        string poderes = poderesAtivos.Count > 0 
-            ? string.Join(", ", poderesAtivos) 
+        string poderes = poderesAtivos.Count > 0
+            ? string.Join(", ", poderesAtivos)
             : "Nenhum poder ativo";
         Debug.Log("Poderes ativos: " + poderes);
     }
