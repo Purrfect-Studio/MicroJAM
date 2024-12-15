@@ -55,4 +55,9 @@ public class PlayerExperience : MonoBehaviour
     {
         Time.timeScale = 1;
     }
+    public void pausar()
+    {
+        Time.timeScale = 0;
+
+    }
 }
