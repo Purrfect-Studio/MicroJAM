@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1038233149}
   - component: {fileID: 1038233150}
   - component: {fileID: 4327138128192675938}
-  - component: {fileID: 2221616064463729821}
+  - component: {fileID: 6823494715066338606}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -204,8 +204,8 @@ MonoBehaviour:
   levelText: {fileID: 0}
   currentXP: 0
   maxXP: 10
---- !u!58 &2221616064463729821
-CircleCollider2D:
+--- !u!70 &6823494715066338606
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -217,6 +217,6 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.006483885, y: -0.24316059}
-  serializedVersion: 2
-  m_Radius: 0.16471061
+  m_Offset: {x: 0, y: -0.12495449}
+  m_Size: {x: 0.375, y: 0.5625909}
+  m_Direction: 0

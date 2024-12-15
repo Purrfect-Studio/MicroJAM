@@ -48,5 +48,9 @@ public class PistolBullet : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            Destroy(gameObject);
+        }
     }
 }

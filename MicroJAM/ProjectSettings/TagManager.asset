@@ -17,8 +17,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Ground
+  - Wall
   - 
   - 
   - 
@@ -49,4 +49,10 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 3742674993
+    locked: 0
+  - name: Ground
+    uniqueID: 2115090439
+    locked: 0
+  - name: Wall
+    uniqueID: 3072983673
     locked: 0

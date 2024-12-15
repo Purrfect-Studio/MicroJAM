@@ -9,6 +9,8 @@ public class DarDanoNoPlayer : MonoBehaviour
     public PlayerController playerController;
     public float damage = 1;
 
+    [Header("Projetil")]
+    public bool projetil = false;
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -41,6 +43,10 @@ public class DarDanoNoPlayer : MonoBehaviour
             playerHealthSystem.takeDamage(damage); // Reduz a vida do player
 
             StartCoroutine(playerController.InvulnerabilityCoroutine()); // Ativa a invulnerabilidade
+        }
+        if(collision.gameObject.CompareTag("Wall") && projetil)
+        {
+            Destroy(gameObject);
         }
     }
 }

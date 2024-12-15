@@ -47,5 +47,10 @@ public class ShotgunBullet : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            Destroy(gameObject);
+        }
+
     }
 }
