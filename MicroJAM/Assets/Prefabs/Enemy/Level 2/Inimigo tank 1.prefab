@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 5065796705589175002}
   - component: {fileID: 4545341968096569833}
   - component: {fileID: -7087259797502487165}
-  m_Layer: 3
+  m_Layer: 10
   m_Name: Inimigo tank 1
   m_TagString: Enemy
   m_Icon: {fileID: 0}

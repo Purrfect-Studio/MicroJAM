@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 14911854856823786}
   - component: {fileID: 1403568325215524610}
   - component: {fileID: 459733357028647823}
-  m_Layer: 3
+  m_Layer: 10
   m_Name: Inimigo padrao 1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
