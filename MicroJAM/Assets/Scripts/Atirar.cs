@@ -75,6 +75,7 @@ public class Atirar : MonoBehaviour
                 bulletPrefab[3].GetComponent<MachineGunBullet>().spreadRadius = currentPlayerStats.spreadRadius;
                 bulletPrefab[3].GetComponent<MachineGunBullet>().penetration = currentPlayerStats.penetration;
             }
+            armaSpriteRenderer.sprite = spritesArma[chosenWeapon];
         }
         currentAmmo = maxAmmo; // Inicializa a munição atual
         UpdateAmmoText();
