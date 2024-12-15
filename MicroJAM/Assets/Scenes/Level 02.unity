@@ -2874,9 +2874,9 @@ GameObject:
   - component: {fileID: 314888729}
   - component: {fileID: 314888728}
   - component: {fileID: 314888730}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TilemapForeground
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18900,9 +18900,9 @@ GameObject:
   - component: {fileID: 1504397890}
   - component: {fileID: 1504397889}
   - component: {fileID: 1504397891}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TilemapDeco
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
