@@ -19,12 +19,22 @@ public class PlayerController : MonoBehaviour
     public float invulnerabilityDuration = 0.1f;
     public bool isInvulnerable = false;
 
+    [Header("Audio Settings")]
+    public AudioSource footstepsAudioSource; // AudioSource já atribuído no Inspector
+    private bool isFootstepsPlaying = false; // Verifica se o som está tocando
+
     void Start()
     {   
         playerAnimator = GetComponent<Animator>();
         playerRigidBody2D = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         currentSpeed = playerSpeed; // Inicia com a velocidade normal
+
+        // Se o áudio de passos não estiver atribuído, emite um aviso
+        if (footstepsAudioSource == null)
+        {
+            Debug.LogWarning("AudioSource de passos não atribuído.");
+        }
     }
 
     void Update()
@@ -48,6 +58,17 @@ public class PlayerController : MonoBehaviour
         // Indica se o jogador está em movimento ou parado
         bool isMoving = playerDirection.magnitude > 0;
         playerAnimator.SetBool("isMoving", isMoving);
+
+        // Se o jogador estiver se movendo e o áudio ainda não estiver tocando, toca o áudio de passos
+        if (isMoving && !isFootstepsPlaying)
+        {
+            PlayFootsteps();
+        }
+        // Se o jogador parar de se mover e o áudio estiver tocando, pare o áudio de passos
+        else if (!isMoving && isFootstepsPlaying)
+        {
+            StopFootsteps();
+        }
     }
 
     void FixedUpdate()
@@ -101,5 +122,26 @@ public class PlayerController : MonoBehaviour
 
         spriteRenderer.color = originalColor; // Retorna a cor original
         isInvulnerable = false;
+    }
+
+    // Função para tocar o áudio de passos
+    private void PlayFootsteps()
+    {
+        if (footstepsAudioSource != null)
+        {
+            footstepsAudioSource.loop = true; // Loop para tocar o áudio continuamente
+            footstepsAudioSource.Play();
+            isFootstepsPlaying = true;
+        }
+    }
+
+    // Função para parar o áudio de passos
+    private void StopFootsteps()
+    {
+        if (footstepsAudioSource != null)
+        {
+            footstepsAudioSource.Stop();
+            isFootstepsPlaying = false;
+        }
     }
 }
