@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -59}
+  m_AnchoredPosition: {x: 0, y: -68}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5565653707287306028
@@ -72,7 +72,10 @@ MonoBehaviour:
 
     Medium Magazine
 
-    Medium Precision'
+    Medium Precision
+
+    Starts
+    with 125HP'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: eeed23a5384da0141b1fb2b292a7b437, type: 2}
   m_sharedMaterial: {fileID: -4374242796753270230, guid: eeed23a5384da0141b1fb2b292a7b437, type: 2}
@@ -176,7 +179,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -59}
+  m_AnchoredPosition: {x: 0, y: -68.9}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5565653707499270890
@@ -213,7 +216,10 @@ MonoBehaviour:
 
     Big Magazine
 
-    Low Precision'
+    Low Precision
+
+    Starts
+    with 150HP'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: eeed23a5384da0141b1fb2b292a7b437, type: 2}
   m_sharedMaterial: {fileID: -4374242796753270230, guid: eeed23a5384da0141b1fb2b292a7b437, type: 2}
@@ -748,7 +754,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -59}
+  m_AnchoredPosition: {x: 0, y: -66.2}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5565653707926469614
@@ -785,7 +791,10 @@ MonoBehaviour:
 
     Small Magazine
 
-    High Precision'
+    High Precision
+
+    Starts
+    with 125HP'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: eeed23a5384da0141b1fb2b292a7b437, type: 2}
   m_sharedMaterial: {fileID: -4374242796753270230, guid: eeed23a5384da0141b1fb2b292a7b437, type: 2}
@@ -2136,7 +2145,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -59}
+  m_AnchoredPosition: {x: 0, y: -68.9}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5565653709232314606
@@ -2174,7 +2183,9 @@ MonoBehaviour:
     Small Magazine
 
     Low
-    Precision'
+    Precision
+
+    Starts with 100HP'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: eeed23a5384da0141b1fb2b292a7b437, type: 2}
   m_sharedMaterial: {fileID: -4374242796753270230, guid: eeed23a5384da0141b1fb2b292a7b437, type: 2}
