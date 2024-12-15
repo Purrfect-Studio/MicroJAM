@@ -257,7 +257,7 @@ MonoBehaviour:
   spritesArma:
   - {fileID: 2104057154, guid: c1175860626a15f47951fda9545f1f4c, type: 3}
   - {fileID: -132624831, guid: c1175860626a15f47951fda9545f1f4c, type: 3}
-  - {fileID: 1225498006, guid: c1175860626a15f47951fda9545f1f4c, type: 3}
+  - {fileID: -114200194, guid: c1175860626a15f47951fda9545f1f4c, type: 3}
   - {fileID: -1219091168, guid: c1175860626a15f47951fda9545f1f4c, type: 3}
   armaSpriteRenderer: {fileID: 4890580550361817064}
   fireRate: 0.2
