@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     private Vector2 playerDirection;
     private Vector2 lastPlayerDirection; // Direção do último movimento
     public float playerSpeed = 5f;
+    public float stairSpeed = 2.5f; // Velocidade reduzida nas escadas
+    private float currentSpeed; // Velocidade atual
     public float KBForce = 10f;
     public float KBCount = 0f; // Será inicializado na colisão
     public float KBTime = 0.2f; // Duração do knockback
@@ -22,6 +24,7 @@ public class PlayerController : MonoBehaviour
         playerAnimator = GetComponent<Animator>();
         playerRigidBody2D = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        currentSpeed = playerSpeed; // Inicia com a velocidade normal
     }
 
     void Update()
@@ -55,7 +58,7 @@ public class PlayerController : MonoBehaviour
     void Move()
     {
         // Calcula a velocidade de movimento normal
-        Vector2 moveVelocity = playerDirection * playerSpeed;
+        Vector2 moveVelocity = playerDirection * currentSpeed;
 
         // Se ainda estiver em knockback, adiciona o knockback à velocidade
         if (KBCount > 0) 
@@ -68,6 +71,24 @@ public class PlayerController : MonoBehaviour
 
         // Move o jogador com a soma da velocidade do movimento e do knockback
         playerRigidBody2D.velocity = moveVelocity;
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        // Reduz a velocidade se entrar em uma área com a tag "Stairs"
+        if (other.CompareTag("Stair"))
+        {
+            currentSpeed = stairSpeed;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        // Restaura a velocidade normal ao sair da área com a tag "Stairs"
+        if (other.CompareTag("Stair"))
+        {
+            currentSpeed = playerSpeed;
+        }
     }
 
     public IEnumerator InvulnerabilityCoroutine()
