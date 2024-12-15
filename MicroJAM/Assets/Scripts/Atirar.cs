@@ -15,6 +15,7 @@ public class Atirar : MonoBehaviour
     public float reloadTime; // Tempo de recarga
     private bool isReloading = false; // Verifica se está recarregando
     public AudioSource somRecarga;
+    private PlayerHealthSystem playerHealthSystem;
 
     private float fireCooldown; // Contador para o cooldown do disparo
     public TextMeshProUGUI ammoText;
@@ -27,9 +28,10 @@ public class Atirar : MonoBehaviour
 
     void Start()
     {
+        playerHealthSystem = GetComponent<PlayerHealthSystem>();
         recharge = GameObject.FindGameObjectWithTag("Recharge");
         recharge.SetActive(false);
-        if (SceneManager.GetActiveScene().name == "Level 01")
+        if (SceneManager.GetActiveScene().name == "Level 01" || SceneManager.GetActiveScene().name == "Cain Teste")
         {
             Time.timeScale = 0;
         }
@@ -59,8 +61,13 @@ public class Atirar : MonoBehaviour
             }
             else if(chosenWeapon == 2)
             {
-
-            }else if(chosenWeapon == 3)
+                bulletPrefab[2].GetComponent<OnHitDamage>().damage = currentPlayerStats.damage;
+                bulletPrefab[2].GetComponent<SniperBullet>().speed = currentPlayerStats.bulletSpeed;
+                bulletPrefab[2].GetComponent<SniperBullet>().lifeTime = currentPlayerStats.lifeTime;
+                bulletPrefab[2].GetComponent<SniperBullet>().spreadRadius = currentPlayerStats.spreadRadius;
+                bulletPrefab[2].GetComponent<SniperBullet>().penetration = currentPlayerStats.penetration;
+            }
+            else if(chosenWeapon == 3)
             {
                 bulletPrefab[3].GetComponent<OnHitDamage>().damage = currentPlayerStats.damage;
                 bulletPrefab[3].GetComponent<MachineGunBullet>().speed = currentPlayerStats.bulletSpeed;
@@ -168,6 +175,11 @@ public class Atirar : MonoBehaviour
             currentPlayerStats.lifeTime = weapon.pistolRange;
             currentPlayerStats.spreadRadius = weapon.pistolSpread;
             currentPlayerStats.penetration = weapon.pistolPenetration;
+            currentPlayerStats.maxHealth = weapon.pistolMaxHp;
+            playerHealthSystem.maxHealth = weapon.pistolMaxHp;
+            playerHealthSystem.sliderVida.maxValue = weapon.pistolMaxHp;
+            playerHealthSystem.sliderVida.value = weapon.pistolMaxHp;
+
         }
         else if (chosenWeapon == 1) // Shotgun
         {
@@ -193,6 +205,11 @@ public class Atirar : MonoBehaviour
             currentPlayerStats.lifeTime = weapon.shotgunRange;
             currentPlayerStats.spreadRadius = weapon.shotgunSpread;
             currentPlayerStats.penetration = weapon.shotgunPenetration;
+            currentPlayerStats.maxHealth = weapon.shotgunMaxHp;
+            playerHealthSystem.maxHealth = weapon.shotgunMaxHp;
+            playerHealthSystem.sliderVida.maxValue = weapon.shotgunMaxHp;
+            playerHealthSystem.sliderVida.value = weapon.shotgunMaxHp;
+
 
         }
         else if (chosenWeapon == 2) // Sniper
@@ -222,6 +239,11 @@ public class Atirar : MonoBehaviour
             currentPlayerStats.lifeTime = weapon.sniperRange;
             currentPlayerStats.spreadRadius = weapon.sniperSpread;
             currentPlayerStats.penetration = weapon.sniperPenetration;
+            currentPlayerStats.maxHealth = weapon.sniperMaxHp;
+            playerHealthSystem.maxHealth = weapon.sniperMaxHp;
+            playerHealthSystem.sliderVida.maxValue = weapon.sniperMaxHp;
+            playerHealthSystem.sliderVida.value = weapon.sniperMaxHp;
+
 
         }
         else if (chosenWeapon == 3) // Metralhadora
@@ -248,6 +270,10 @@ public class Atirar : MonoBehaviour
             currentPlayerStats.lifeTime = weapon.machineGunRange;
             currentPlayerStats.spreadRadius = weapon.machineGunSpread;
             currentPlayerStats.penetration = weapon.machineGunPenetration;
+            currentPlayerStats.maxHealth = weapon.machineGunMaxHp;
+            playerHealthSystem.maxHealth = weapon.machineGunMaxHp;
+            playerHealthSystem.sliderVida.maxValue = weapon.machineGunMaxHp;
+            playerHealthSystem.sliderVida.value = weapon.machineGunMaxHp;
 
         }
 

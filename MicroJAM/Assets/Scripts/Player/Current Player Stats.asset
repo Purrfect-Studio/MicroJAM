@@ -12,20 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd5d6301ffb819246966087b5aa452a9, type: 3}
   m_Name: Current Player Stats
   m_EditorClassIdentifier: 
-  maxHealth: 0
+  maxHealth: 100
   playerSpeed: 6
   playerStairSpeed: 4.5
   maxXp: 10
   currentXp: 0
   currentLevel: 0
-  currentWeapon: 0
-  fireRate: 0
-  maxAmmo: 0
-  reloadTime: 0
-  bulletCount: 0
-  damage: 0
-  bulletSpeed: 0
-  lifetTime: 0
+  currentWeapon: 2
+  fireRate: 1.5
+  maxAmmo: 8
+  reloadTime: 1.5
+  bulletCount: 1
+  damage: 100
+  bulletSpeed: 30
+  lifeTime: 2
   spreadRadius: 0
-  penetration: 0
+  penetration: 2
   sprite: {fileID: 0}

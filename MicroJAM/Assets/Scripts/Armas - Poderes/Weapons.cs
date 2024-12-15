@@ -15,6 +15,7 @@ public class Weapons : ScriptableObject
     public float shotgunSpread; // precisao da arma
     public int shotgunMagazine; // quantidades de tiros antes de precisar recarregar a arma
     public float shotgunPenetration; // quantidades de inimigos que a bala atravessa
+    public float shotgunMaxHp;
 
     [Header("Sniper")]
     public float sniperDamage;
@@ -26,6 +27,8 @@ public class Weapons : ScriptableObject
     public float sniperSpread;
     public int sniperMagazine;
     public float sniperPenetration;
+    public float sniperMaxHp;
+
 
     [Header("Pistol")]
     public float pistolDamage;
@@ -37,6 +40,8 @@ public class Weapons : ScriptableObject
     public float pistolSpread;
     public int pistolMagazine;
     public float pistolPenetration;
+    public float pistolMaxHp;
+
 
     [Header("Machine Gun")]
     public float machineGunDamage;
@@ -48,4 +53,6 @@ public class Weapons : ScriptableObject
     public float machineGunSpread;
     public int machineGunMagazine;
     public float machineGunPenetration;
+    public float machineGunMaxHp;
+
 }

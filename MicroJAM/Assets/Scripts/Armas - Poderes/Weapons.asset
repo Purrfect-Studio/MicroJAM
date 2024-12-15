@@ -21,6 +21,7 @@ MonoBehaviour:
   shotgunSpread: 1.2
   shotgunMagazine: 2
   shotgunPenetration: 0
+  shotgunMaxHp: 100
   sniperDamage: 100
   sniperFireRate: 1.5
   sniperReloadTime: 1.5
@@ -30,6 +31,7 @@ MonoBehaviour:
   sniperSpread: 0
   sniperMagazine: 8
   sniperPenetration: 2
+  sniperMaxHp: 125
   pistolDamage: 30
   pistolFireRate: 0.4
   pistolReloadTime: 1.5
@@ -39,6 +41,7 @@ MonoBehaviour:
   pistolSpread: 1
   pistolMagazine: 15
   pistolPenetration: 0
+  pistolMaxHp: 125
   machineGunDamage: 7
   machineGunFireRate: 0.03
   machineGunReloadTime: 3.5
@@ -48,3 +51,4 @@ MonoBehaviour:
   machineGunSpread: 1.7
   machineGunMagazine: 50
   machineGunPenetration: 0
+  machineGunMaxHp: 150

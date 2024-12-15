@@ -41,7 +41,10 @@ public class PlayerHealthSystem : MonoBehaviour
         {
             HealthLogic();
             CheckDeath();
-            Envenenado();
+            if(Time.timeScale != 0)
+            {
+                Envenenado();
+            }
         }
     }
 
