@@ -69,6 +69,22 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7346388516164257230, guid: f3e35140d871db54b8d431eacf2f3dac, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7346388516164257230, guid: f3e35140d871db54b8d431eacf2f3dac, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7346388516164257230, guid: f3e35140d871db54b8d431eacf2f3dac, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7346388516164257230, guid: f3e35140d871db54b8d431eacf2f3dac, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7346388516164257230, guid: f3e35140d871db54b8d431eacf2f3dac, type: 3}
       propertyPath: m_SortingLayer
       value: 1
       objectReference: {fileID: 0}
@@ -179,6 +195,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c982af7a19beb24799eec9edf4c9b06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &3616435290464583781
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2856230177898242460}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7c2b59e9f308e304d9cf1cdc8a160a04, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!224 &9207906357510036771 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8383778340728284086, guid: f3e35140d871db54b8d431eacf2f3dac, type: 3}
