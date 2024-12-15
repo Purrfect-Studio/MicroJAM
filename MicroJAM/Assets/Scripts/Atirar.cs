@@ -6,7 +6,7 @@ public class Atirar : MonoBehaviour
 {
     public GameObject[] bulletPrefab; // Prefab do projétil
     public Sprite[] spritesArma; // Array de sprites das armas
-    public GameObject armaObjeto; // Objeto que exibirá o sprite da arma
+    public SpriteRenderer armaSpriteRenderer; // Objeto que exibirá o sprite da arma
     public float fireRate = 0.2f; // Taxa de disparo (tempo entre cada tiro)
     public int maxAmmo = 10; // Máximo de munição
     public int currentAmmo; // Munição atual
@@ -59,14 +59,14 @@ public class Atirar : MonoBehaviour
         Vector3 worldMousePos = Camera.main.ScreenToWorldPoint(mousePos);
         
         // Calcula a diferença entre a posição da arma e a posição do mouse
-        Vector3 direction = worldMousePos - armaObjeto.transform.position;
+        Vector3 direction = worldMousePos - armaSpriteRenderer.transform.position;
         direction.z = 0; // Apenas no plano 2D
 
         // Calcula o ângulo em radianos e converte para graus
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        
+
         // Define a rotação da arma no eixo Z (somente no eixo Z, para 2D)
-        armaObjeto.transform.rotation = Quaternion.Euler(0, 0, angle);
+        armaSpriteRenderer.transform.rotation = Quaternion.Euler(0, 0, angle);
     }
 
     void UpdateAmmoText()
@@ -97,12 +97,12 @@ public class Atirar : MonoBehaviour
 
     public void escolherArma(int arma)
     {
-        armaObjeto.SetActive(true);
+        armaSpriteRenderer.enabled = true;
         chosenWeapon = arma;
         Debug.Log("Arma escolhida: " + chosenWeapon);
 
         // Define o sprite da arma correspondente
-        armaObjeto.GetComponent<SpriteRenderer>().sprite = spritesArma[chosenWeapon];
+        
 
         if (chosenWeapon == 0) // Pistola
         {
@@ -117,6 +117,8 @@ public class Atirar : MonoBehaviour
             bulletPrefab[0].GetComponent<PistolBullet>().lifeTime = weapon.pistolRange;
             bulletPrefab[0].GetComponent<PistolBullet>().spreadRadius = weapon.pistolSpread;
             bulletPrefab[0].GetComponent<PistolBullet>().penetration = weapon.pistolPenetration;
+
+            
         }
         else if (chosenWeapon == 1) // Shotgun
         {
@@ -164,6 +166,7 @@ public class Atirar : MonoBehaviour
             bulletPrefab[3].GetComponent<MachineGunBullet>().penetration = weapon.machineGunPenetration;
         }
 
+        armaSpriteRenderer.sprite = spritesArma[chosenWeapon];
         currentAmmo = maxAmmo;
         UpdateAmmoText();
         Time.timeScale = 1;
