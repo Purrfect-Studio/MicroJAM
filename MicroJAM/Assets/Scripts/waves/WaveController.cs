@@ -16,6 +16,8 @@ public class WaveController : MonoBehaviour
     public float cooldownBetweenWaves;
     private float remainingCooldownBetweenWaves;
     public TextMeshProUGUI textCooldownBetweenWaves;
+    public GameObject canvasStore;
+    private bool podeAtivarStore = true;
 
     void Start()
     {
@@ -37,6 +39,13 @@ public class WaveController : MonoBehaviour
             StartCoroutine(SpawnWave(waves[currentWaveIndex]));
         }
 
+        if(!AreEnemiesLeft() && podeAtivarStore)
+        {
+            canvasStore.SetActive(true);
+            podeAtivarStore = false;
+            Time.timeScale = 0;
+        }
+
         if (remainingCooldownBetweenWaves >= 0)
         {
             textCooldownBetweenWaves.enabled = true;
@@ -47,6 +56,7 @@ public class WaveController : MonoBehaviour
         {
             textCooldownBetweenWaves.text = "";
             textCooldownBetweenWaves.enabled = false;
+            podeAtivarStore = true;
         }
 
     }

@@ -1,0 +1,225 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7343404689884724936
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7343404689884724931}
+  - component: {fileID: 7343404689884724934}
+  - component: {fileID: 7343404689884724935}
+  - component: {fileID: 7343404689884724930}
+  m_Layer: 0
+  m_Name: PowerUpManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7343404689884724931
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7343404689884724936}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7343404691178499765}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7343404689884724934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7343404689884724936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2736d625d40301d4183f40497396457c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
+  imagemPoder1: {fileID: 0}
+  imagemPoder2: {fileID: 0}
+  nomePoder1: {fileID: 0}
+  nomePoder2: {fileID: 0}
+  descricaoPoder1: {fileID: 0}
+  descricaoPoder2: {fileID: 0}
+  raridadePoder1: {fileID: 0}
+  raridadePoder2: {fileID: 0}
+  poderesPlayer: {fileID: 0}
+--- !u!114 &7343404689884724935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7343404689884724936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 442910ab15c3bdd48a568f7aa808dc37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poderesDisponiveis:
+  - nome: Velocidade
+    sprite: {fileID: 21300000, guid: 269eee5bd0392044cb38fd13171b84f6, type: 3}
+    descricao: Boots that make you faster
+    raridade: 0
+  - nome: Saude
+    sprite: {fileID: -1371230915, guid: c5e5a2513d1f8ce4dae4e116a9ab57b0, type: 3}
+    descricao: Eletrocuta inimigos
+    raridade: 0
+  - nome: "Muni\xE7\xE3o"
+    sprite: {fileID: -1371230915, guid: c5e5a2513d1f8ce4dae4e116a9ab57b0, type: 3}
+    descricao: Te revive 1 vez
+    raridade: 2
+  - nome: FogoRapido
+    sprite: {fileID: 1485880751, guid: c5e5a2513d1f8ce4dae4e116a9ab57b0, type: 3}
+    descricao: "Comi o cu de quem t\xE1 lendo"
+    raridade: 2
+  powerUpDisplay: {fileID: 7343404689884724934}
+--- !u!114 &7343404689884724930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7343404689884724936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b1301b2a56a1b4ab87e921444c1ff5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &7343404691178499766
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7343404691178499765}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7343404691178499765
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7343404691178499766}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.9718704, y: 2.1447034, z: -1.4533446}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7343404689884724931}
+  - {fileID: 7343404691752667553}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7343404691752667554
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7343404691752667553}
+  - component: {fileID: 7343404691752667583}
+  - component: {fileID: 7343404691752667552}
+  m_Layer: 0
+  m_Name: ItensManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7343404691752667553
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7343404691752667554}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7343404691178499765}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7343404691752667583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7343404691752667554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 999c133ad98d9b947acfdb1794ce84c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itens:
+  - nome: Faca de Statikk
+    sprite: {fileID: 1543655790, guid: c1175860626a15f47951fda9545f1f4c, type: 3}
+    descricao: AAAAAAAAAAAAAAAAA
+    preco: 12
+  - nome: TEU CU NO MEU PAUI
+    sprite: {fileID: 870996134, guid: c1175860626a15f47951fda9545f1f4c, type: 3}
+    descricao: AAAAAAAAAAAAAAAAA
+    preco: 20000000
+  - nome: "ado ado ado quem leu \xE9 viado"
+    sprite: {fileID: 2093264446, guid: c1175860626a15f47951fda9545f1f4c, type: 3}
+    descricao: AAAAAAAAAAAAAAAAA
+    preco: 1
+  - nome: cuVBucetaPaupenis
+    sprite: {fileID: -907383297, guid: c1175860626a15f47951fda9545f1f4c, type: 3}
+    descricao: AAAAAAAAAAAAAAAAA
+    preco: 8
+  - nome: ???????????@!#@$!#!@
+    sprite: {fileID: -1439239610, guid: c1175860626a15f47951fda9545f1f4c, type: 3}
+    descricao: AAAAAAAAAAAAAAAAA
+    preco: 69
+  itensDisplay: {fileID: 7343404691752667552}
+--- !u!114 &7343404691752667552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7343404691752667554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd67dc18f07338148bfc9f1e7e0afd82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
+  imagemItem1: {fileID: 0}
+  imagemItem2: {fileID: 0}
+  imagemItem3: {fileID: 0}
+  nomeItem1: {fileID: 0}
+  nomeItem2: {fileID: 0}
+  nomeItem3: {fileID: 0}
+  descricaoItem1: {fileID: 0}
+  descricaoItem2: {fileID: 0}
+  descricaoItem3: {fileID: 0}
+  custoItem1: {fileID: 0}
+  custoItem2: {fileID: 0}
+  custoItem3: {fileID: 0}
