@@ -11,6 +11,7 @@ public class Health : MonoBehaviour
     public event LifeChanged onLifeChanged;
 
     private SistemaDeDrop sistemaDeDrop;
+    private bool podeDropar = true;
 
     void Start()
     {
@@ -56,7 +57,11 @@ public class Health : MonoBehaviour
     // Método de morte
     void Die()
     {
-        sistemaDeDrop.Dropar();
+        if (podeDropar)
+        {
+            podeDropar = false;
+            sistemaDeDrop.Dropar();
+        }
         // Código de morte do inimigo
         Destroy(gameObject);
     }

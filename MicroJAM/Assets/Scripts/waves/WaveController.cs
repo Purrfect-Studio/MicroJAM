@@ -13,11 +13,17 @@ public class WaveController : MonoBehaviour
     public TextMeshProUGUI waveInfoText; // Para exibir a onda atual
     public TextMeshProUGUI enemyCountText; // Para exibir a quantidade de inimigos
 
+    public float cooldownBetweenWaves;
+    private float remainingCooldownBetweenWaves;
+    public TextMeshProUGUI textCooldownBetweenWaves;
+
     void Start()
     {
         // Inicializa a UI com a primeira onda e o número de inimigos na cena
         UpdateWaveText(waves[currentWaveIndex].waveName);
         UpdateEnemyCountText();
+
+        remainingCooldownBetweenWaves = 0;
     }
 
     void Update()
@@ -26,10 +32,23 @@ public class WaveController : MonoBehaviour
         UpdateEnemyCountText();
 
         // Verifica se a onda atual terminou e se ainda existem inimigos na cena
-        if (!waveInProgress && currentWaveIndex < waves.Count && !AreEnemiesLeft())
+        if (!waveInProgress && currentWaveIndex < waves.Count && !AreEnemiesLeft() && remainingCooldownBetweenWaves<=0)
         {
             StartCoroutine(SpawnWave(waves[currentWaveIndex]));
         }
+
+        if (remainingCooldownBetweenWaves >= 0)
+        {
+            textCooldownBetweenWaves.enabled = true;
+            remainingCooldownBetweenWaves -= Time.deltaTime;
+            textCooldownBetweenWaves.text = "Remaining Time until the next wave: " + remainingCooldownBetweenWaves.ToString("F0");
+        }
+        else
+        {
+            textCooldownBetweenWaves.text = "";
+            textCooldownBetweenWaves.enabled = false;
+        }
+
     }
 
     IEnumerator SpawnWave(Wave wave)
@@ -51,11 +70,14 @@ public class WaveController : MonoBehaviour
             }
         }
 
+
         // Espera até que todos os inimigos sejam derrotados antes de avançar para a próxima onda
         yield return new WaitUntil(() => !AreEnemiesLeft());
 
+        remainingCooldownBetweenWaves = cooldownBetweenWaves;
         currentWaveIndex++; // Avança para a próxima onda
         waveInProgress = false;
+
     }
 
     void SpawnEnemy(GameObject enemyPrefab, Transform spawnPoint)

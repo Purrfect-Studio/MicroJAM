@@ -9,7 +9,8 @@ public class SistemaDeDrop : MonoBehaviour
     private int probabilidade;
     public void Dropar()
     {
-        GameObject bullet = Instantiate(Drops[escolherDrop()], gameObject.transform.position, Quaternion.identity);
+        GameObject drop = Instantiate(Drops[escolherDrop()], gameObject.transform.position, Quaternion.identity);
+        Destroy(drop, 50f);
     }
 
     private int escolherDrop()
