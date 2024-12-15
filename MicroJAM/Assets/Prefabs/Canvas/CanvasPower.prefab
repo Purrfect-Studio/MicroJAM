@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 3586994599273613268}
   - component: {fileID: 174068871108452671}
   m_Layer: 5
-  m_Name: ButtonPistol (2)
+  m_Name: Opcao3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -272,7 +272,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 310728285259472204}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -990,7 +990,7 @@ GameObject:
   - component: {fileID: 1591432567793970739}
   - component: {fileID: 5430645640696792302}
   m_Layer: 5
-  m_Name: ButtonPistol
+  m_Name: Opcao1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1114,7 +1114,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3912396949699153894}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -2024,7 +2024,7 @@ GameObject:
   - component: {fileID: 1010493921809427995}
   - component: {fileID: 3199572405717229373}
   m_Layer: 5
-  m_Name: ButtonPistol (1)
+  m_Name: Opcao2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2148,7 +2148,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 6749664200833241933}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
