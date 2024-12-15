@@ -29,12 +29,12 @@ public class PoderesPlayer : MonoBehaviour
         {
             poderesAtivos.Add(poder); // Adiciona à lista de poderes ativos
             Debug.Log($"Poder {poder} ativado!");
-        }
+        
 
         switch (poder)
         {
             case "Velocidade":
-                playerController.playerSpeed += 10f; // Aumenta a velocidade do jogador
+                playerController.playerSpeed += 3f; // Aumenta a velocidade do jogador
                 break;
 
             case "Saude":
@@ -57,6 +57,7 @@ public class PoderesPlayer : MonoBehaviour
         }
 
         MostrarPoderesAtivos();
+        }
     }
 
     // Método para remover poderes
@@ -66,24 +67,26 @@ public class PoderesPlayer : MonoBehaviour
         {
             poderesAtivos.Remove(poder); // Remove da lista
             Debug.Log($"Poder {poder} removido!");
-        }
+        
 
         switch (poder)
         {
             case "Velocidade":
-             
-                break;
+                playerController.playerSpeed -= 3f; // Aumenta a velocidade do jogador
+            break;
 
             case "Saude":
-               
-                               break;
+                playerHealthSystem.maxHealth -= 15f; // Aumenta a saúde máxima
+                playerHealthSystem.currentHealth -= 5f; // Cura o jogador em relação ao aumento
+            break;
 
             case "Munição":
-                
+                atirar.maxAmmo -= 5; // Aumenta a capacidade máxima de munição
+                atirar.currentAmmo -= 5; // Recarrega a munição atual
                 break;
 
             case "FogoRapido":
-
+                atirar.fireRate *= 1.5f; // Reduz o tempo entre disparos
                 break;
 
             default:
@@ -92,6 +95,7 @@ public class PoderesPlayer : MonoBehaviour
         }
 
         MostrarPoderesAtivos();
+        }
     }
 
     void MostrarPoderesAtivos()

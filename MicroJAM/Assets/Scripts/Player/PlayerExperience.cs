@@ -8,7 +8,6 @@ public class PlayerExperience : MonoBehaviour
 {
     public Slider xpBar;
     public TextMeshProUGUI levelText;
-    public GameObject canvasPower;
     public float currentXP = 0;
     public float maxXP = 10;
     private int currentLevel = 0;
@@ -40,7 +39,6 @@ public class PlayerExperience : MonoBehaviour
             xpBar.value = currentXP;
             currentLevel += 1;
             levelText.text = "Level: " + currentLevel.ToString();
-            canvasPower.SetActive(true);
             Time.timeScale = 0;
             powerUpManager.GanharPoder();
 
