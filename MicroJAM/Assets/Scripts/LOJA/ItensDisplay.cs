@@ -92,8 +92,9 @@ public class ItensDisplay : MonoBehaviour
 
     public void EscolherItem1()
     {
-        
+                
         LigarItem(nomeItem1.text.ToString());
+        atualizarVida();
         painel1.SetActive(false);
 
     }
@@ -101,14 +102,16 @@ public class ItensDisplay : MonoBehaviour
     public void EscolherPoder2()
     {
        LigarItem(nomeItem2.text.ToString());
-               painel2.SetActive(false);
+        atualizarVida();
+        painel2.SetActive(false);
 
     }
 
      public void EscolherPoder3()
     {
        LigarItem(nomeItem3.text.ToString());
-               painel3.SetActive(false);
+        atualizarVida();
+        painel3.SetActive(false);
 
     }
 
