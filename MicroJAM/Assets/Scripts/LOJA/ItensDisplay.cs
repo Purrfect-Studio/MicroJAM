@@ -110,12 +110,13 @@ public class ItensDisplay : MonoBehaviour
     {
         switch (nomeItem)
         {
-            case ("Dash"):
+            case ("Pulse Fire"):
             itensLoja.possuiDash = true;
+            itensAtivados.ligarPulseFire();
             break;
 
 
-            case("Torreta"):
+            case("Turret"):
             itensLoja.possuiTorreta = true;
             Debug.Log("Ligando torreta");
             itensAtivados.ligarTorreta();

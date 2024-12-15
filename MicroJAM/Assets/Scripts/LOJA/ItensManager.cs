@@ -26,7 +26,7 @@ public class ItensManager : MonoBehaviour
     {
         // Exemplos de teste para ativar os poderes
        
-        //if (Input.GetKeyDown(KeyCode.M)) GanharItem();
+        if (Input.GetKeyDown(KeyCode.M)) GanharItem();
     }
 
 }

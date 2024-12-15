@@ -7,6 +7,8 @@ public class ItensAtivados : MonoBehaviour
 
     public ItensLoja itensLoja;
     public GameObject torreta;
+    public GameObject pulsefire;
+
     private GameObject player;
     private PlayerHealthSystem playerHealthSystem;
 
@@ -36,4 +38,29 @@ public class ItensAtivados : MonoBehaviour
             Debug.LogWarning("Player ou Torreta não está configurado!");
         }
    }
+
+          public void ligarPulseFire()
+{
+    Debug.Log("Ligando Pulsefire");
+
+    if (pulsefire != null && playerHealthSystem != null)
+    {
+        // Reduz os valores de vida
+        playerHealthSystem.maxHealth -= 10;
+        playerHealthSystem.currentHealth -= 15;
+
+        // Instancia o PulseFire na posição do objeto atual (transform) com rotação padrão
+        GameObject instancia = Instantiate(pulsefire, player.transform.position, Quaternion.identity);
+
+        // Define o objeto instanciado como filho deste objeto
+        instancia.transform.SetParent(player.transform);
+
+        Debug.Log("Pulsefire foi instanciado e configurado como filho.");
+    }
+    else
+    {
+        Debug.LogWarning("Pulsefire ou PlayerHealthSystem não está configurado!");
+    }
 }
+
+   }
