@@ -11,6 +11,7 @@ TagManager:
   - Recharge
   - HealthBar
   - Stair
+  - Vaso
   layers:
   - Default
   - TransparentFX
