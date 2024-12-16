@@ -57,6 +57,12 @@ public class ItensDisplay : MonoBehaviour
     }
     public void ApresentarItens(Item item1, Item item2, Item item3)
     {
+
+        painel1.SetActive(true);
+        painel2.SetActive(true);
+        painel3.SetActive(true);
+
+
         canvas.SetActive(true);
         atualizarVida();
         playerExperience.pausar();
